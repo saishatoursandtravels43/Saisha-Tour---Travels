@@ -1,0 +1,16 @@
+for upload "push" 
+
+git add .
+git commit -m "your message here"
+git push origin main
+
+For clone "pull" 
+git pull origin main
+
+
+extra tip before starting the work always pull first to get the previous work here : 
+
+git pull origin main
+git add .
+git commit -m "update"
+git push origin main
