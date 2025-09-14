@@ -1,0 +1,506 @@
+
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!-- Start of Footer Section -->
+<!-- /////////////////////////////////////////////////////////////////////// -->
+ 
+</script>
+<style>
+    @keyframes fadeInUpBtn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up-btn {
+      animation: fadeInUpBtn 0.6s ease-out both;
+      width: 100%;
+    }
+    
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+    font-family: 'Montserrat', sans-serif;
+    color: #183B4E;
+    scroll-behavior: smooth;
+    }
+    html, body {
+      overflow-x: hidden;
+    }
+    /* Footer Styles and Responsive Tweaks */
+    footer .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1.5fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .max-w-5xl {
+        padding: 0 1rem;
+      }
+      .ml-12, .md\:ml-20, .lg\:ml-12 {
+        margin-left: 0;
+      }
+      h2 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      /* Footer mobile optimizations */
+      footer .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem 0 1.5rem; /* Reduce right padding to move content left */
+        max-width: 100%;
+        margin: 0;
+      }
+      
+      .footer-bg {
+        padding: 0 0.5rem;
+      }
+      /* Policy links mobile adjustments */
+      .flex.flex-wrap.justify-center.space-x-6 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .flex.flex-wrap.justify-center.space-x-6 a {
+        margin: 0;
+        text-align: center;
+      }
+      /* First and last sections should span full width */
+      footer .grid > div:first-child,
+      footer .grid > div:last-child {
+        grid-column: 1 / -1;
+      }
+      
+      /* Align both columns to the left */
+      footer .grid > div:nth-child(2),
+      footer .grid > div:nth-child(3) {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        width: auto;
+      }
+      
+      /* Adjust heading styles for mobile */
+      .footer-heading {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        text-align: left;
+        white-space: nowrap;
+      }
+      
+      /* Adjust link styles for mobile */
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .footer-link {
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0.25rem 0;
+      }
+    }
+    </style>
+    <style>
+      /* Typography */
+      :root {
+        --heading-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      body {
+        font-family: var(--body-font);
+        color: #183B4E;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+      }
+      
+      h1, h2, h3, h4, h5, h6, .footer-heading {
+        font-family: var(--heading-font);
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+      }
+      
+      p, a, li, input, button, .text-base {
+        font-family: var(--body-font);
+        line-height: 1.6;
+      }
+    
+      /* Custom styles for the new color scheme */
+      .footer-bg {
+        background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-heading {
+        color: #3A3F78;
+        font-weight: 700;
+        font-size: 1.125rem;
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .footer-heading:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background: #FF6B35;
+        border-radius: 2px;
+      }
+      .footer-link {
+        color: #0076D6;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+      }
+      .footer-link:hover {
+        color: #FF6B35;
+        transform: translateX(5px);
+      }
+      .newsletter-input {
+        border: 2px solid #e2e8f0;
+        transition: all 0.3s ease;
+      }
+      .newsletter-input:focus {
+        border-color: #3A3F78;
+        box-shadow: 0 0 0 3px rgba(58, 63, 120, 0.1);
+      }
+      .btn-orange {
+        background: #FF6B35;
+        color: white;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-orange:hover {
+        background: #e05a28;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+      }
+      .contact-icon {
+        color: #FF6B35;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+      }
+      .footer-divider {
+        border-color: rgba(0, 118, 214, 0.1);
+      }
+      .policy-link {
+        color: #3A3F78;
+        font-weight: 500;
+        font-size: 0.9rem;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s ease;
+      }
+      .policy-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #FF6B35;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+      }
+      .policy-link:hover::after {
+        width: 100%;
+      }
+      
+      @keyframes pulseSlide {
+        0%, 100% {
+          transform: translateX(0) scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translateX(3px) scale(1.1);
+          opacity: 1;
+        }
+      }
+      
+      .subscribe-arrow {
+        display: inline-block;
+        animation: pulseSlide 1.5s ease-in-out infinite;
+        will-change: transform, opacity;
+      }
+    </style>
+    </head>
+    <body>
+        <footer class="text-[#0076D6] pt-16 pb-8 w-full">
+            <div class="w-full px-4 mx-auto" style="max-width: 1440px;">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 w-full">
+                    <!-- Company Info -->
+                    <div class="fade-in-up-btn" style="animation-delay: 0.1s;">
+                        <div class="flex items-center mb-8 -mt-8 -ml-6">
+                            <a href="/" class="flex items-center gap-3" aria-label="Concierge Global Services Home">
+                                <img src="https://www.dropbox.com/scl/fi/cukgk34yrqjoxqgnf65n6/Concierge-Transparent-Logo-Icon.png?rlkey=6ugd2c9c7lbzkm7dsw6685wmn&st=zxs192kc&raw=1" alt="Concierge Global Services" class="h-28 w-auto object-contain fade-in-up-btn">
+                                <div class="flex flex-col -ml-5">
+                                    <div class="text-[#3A3F78] font-bold text-xl tracking-tight">CONCIERGE</div>
+                                    <div class="text-[#1F2B38] text-sm tracking-wider whitespace-nowrap">GLOBAL SERVICES</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="w-full text-left fade-in-up-btn -mt-8">
+                            <p class="text-[#3A3F78] mb-8 leading-relaxed">Concierge Global Services is a leading IT support company that provides top-notch IT support services to individuals and businesses. Our team of experts is dedicated to helping you stay connected and protected in the digital world.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="w-10 h-10 rounded-full bg-[#3A3F78] text-white flex items-center justify-center hover:bg-[#FF6B35] transition-all duration-300">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-[#3A3F78] text-white flex items-center justify-center hover:bg-[#FF6B35] transition-all duration-300">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-[#3A3F78] text-white flex items-center justify-center hover:bg-[#FF6B35] transition-all duration-300">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="fade-in-up-btn ml-12 md:ml-20" style="animation-delay: 0.1s;">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="https://conciergegs.com/services/home-it-support" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> Home IT Support
+                            </a></li>
+                            <li><a href="https://conciergegs.com/services/business-it-support" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> Business IT Support
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="fade-in-up-btn ml-12 md:ml-20" style="animation-delay: 0.1s;">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="space-y-3">
+                            <li><a href="https://conciergegs.com/" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> Home
+                            </a></li>
+                            <li><a href="https://conciergegs.com/pricing" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> Pricing
+                            </a></li>
+                            <li><a href="https://conciergegs.com/about" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> About Us
+                            </a></li>
+                            <li><a href="https://conciergegs.com/contact" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> Contact Us
+                            </a></li>
+                            <li><a href="https://conciergegs.com/faq" class="footer-link flex items-center">
+                                <i class="ri-arrow-right-s-line mr-2"></i> FAQ
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="lg:ml-12 fade-in-up-btn" style="animation-delay: 0.1s;">
+                        <h4 class="footer-heading fade-in-up-btn">Contact Us</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start opacity-100 transition-opacity duration-300">
+                                <div class="contact-icon">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-[#3A3F78]">Our Location</p>
+                                    <p class="text-sm">2460 7th Ave Apt 56, New York, NY 10030</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start opacity-100 transition-opacity duration-300">
+                                <div class="contact-icon mt-0.5">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-[#3A3F78]">Phone Number</h5>
+                                    <a href="tel:8883102623" class="text-[#0076D6] hover:text-[#FF6B35] transition-colors text-sm">888-310-2623</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start opacity-100 transition-opacity duration-300">
+                                <div class="contact-icon mt-0.5">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-[#3A3F78]">Email Address</h5>
+                                    <a href="mailto:support@conciergegs.com" class="text-[#0076D6] hover:text-[#FF6B35] transition-colors text-sm break-all">support@conciergegs.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 max-w-sm fade-in-up-btn">
+                            <h5 class="text-[#3A3F78] font-semibold mb-4">Subscribe to Our Newsletter</h5>
+                            <form id="newsletterForm" class="relative">
+                                <div class="relative">
+                                    <input type="email" name="email" id="newsletterEmail" placeholder="Your email address" required 
+                                           class="w-full px-4 pr-28 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3A3F78] focus:border-transparent"
+                                           aria-label="Enter your email to subscribe">
+                                    <button type="submit" class="absolute right-1.5 top-1/2 transform -translate-y-1/2 bg-[#3A3F78] hover:bg-[#2a2e5a] text-white px-3 py-2 rounded-md flex items-center transition-all duration-300" id="subscribeBtn">
+                                        <span class="text-sm font-medium">Subscribe</span>
+                                        <i class="ri-arrow-right-line ml-1 subscribe-arrow"></i>
+                                    </button>
+                                </div>
+                                <div id="formMessage" class="mt-2 text-sm hidden"></div>
+                            </form>
+                        </div>
+                        <script>
+                        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            
+                            const emailInput = document.getElementById('newsletterEmail');
+                            const submitBtn = document.getElementById('subscribeBtn');
+                            const messageDiv = document.getElementById('formMessage');
+                            const originalBtnText = submitBtn.innerHTML;
+                            
+                            // Validate email
+                            if (!emailInput.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                                showMessage('Please enter a valid email address.', 'error');
+                                return;
+                            }
+                            
+                            // Show loading state
+                            submitBtn.disabled = true;
+                            submitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin"></i>';
+                            messageDiv.classList.add('hidden');
+                            
+                            // Submit form data
+                            const formData = new FormData();
+                            formData.append('email', emailInput.value);
+                            
+                            fetch('newsletter-subscribe.php', {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    showMessage(data.message, 'success');
+                                    emailInput.value = ''; // Clear the input on success
+                                } else {
+                                    showMessage(data.message || 'Subscription failed. Please try again.', 'error');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                showMessage('An error occurred. Please try again later.', 'error');
+                            })
+                            .finally(() => {
+                                submitBtn.disabled = false;
+                                submitBtn.innerHTML = originalBtnText;
+                            });
+                        });
+                        
+                        function showMessage(message, type) {
+                            const messageDiv = document.getElementById('formMessage');
+                            messageDiv.textContent = message;
+                            messageDiv.className = 'mt-2 text-sm';
+                            messageDiv.classList.add(type === 'error' ? 'text-red-600' : 'text-green-600');
+                            messageDiv.classList.remove('hidden');
+                            
+                            // Auto-hide success message after 5 seconds
+                            if (type === 'success') {
+                                setTimeout(() => {
+                                    messageDiv.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+                                    setTimeout(() => messageDiv.classList.add('hidden'), 500);
+                                }, 5000);
+                            }
+                        }
+                        </script>
+                    </div>
+                </div>
+                
+                <!-- Footer Bottom -->
+                <div class="border-t border-opacity-10 border-[#3A3F78] pt-8 pb-4 w-full fade-in-up-btn">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+                        <!-- Mobile View -->
+                        <div class="md:hidden w-full">
+                            <div class="flex flex-col items-center w-full fade-in-up-btn">
+                                <!-- Top Line -->
+                                <div class="w-full border-t border-gray-300 mt-1 mb-2"></div>
+                                
+                                <!-- Policy Links -->
+                                <div class="w-full text-center">
+                                    <div class="flex justify-center space-x-6 py-2 fade-in-up-btn">
+                                        <a href="https://conciergegs.com/policies/privacy-policy" class="text-[#3A3F78] text-sm hover:underline">Privacy Policy</a>
+                                        <span class="text-[#3A3F78] text-sm">|</span>
+                                        <a href="https://conciergegs.com/policies/service-policy" class="text-[#3A3F78] text-sm hover:underline">Terms of Service</a>
+                                    </div>
+                                    <div class="w-full text-center fade-in-up-btn">
+                                        <a href="https://conciergegs.com/policies/refund-policy" class="text-[#3A3F78] text-sm hover:underline py-2 inline-block">Refund Policy</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bottom Line -->
+                                <div class="w-full border-t border-gray-300 my-2"></div>
+                                
+                                <!-- Copyright -->
+                                <p class="text-[#3A3F78] text-sm text-center py-2">
+                                    2025 Concierge Global Services. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop View -->
+                        <div class="hidden md:flex items-center justify-between w-full fade-in-up-btn">
+                            <p class="text-[#3A3F78] text-sm">
+                                2025 Concierge Global Services. All rights reserved.
+                            </p>
+                            <div class="flex space-x-6">
+                                <a href="https://conciergegs.com/policies/privacy-policy" class="text-[#3A3F78] text-sm hover:underline">Privacy Policy</a>
+                                <a href="https://conciergegs.com/policies/service-policy" class="text-[#3A3F78] text-sm hover:underline">Terms of Service</a>
+                                <a href="https://conciergegs.com/policies/refund-policy" class="text-[#3A3F78] text-sm hover:underline">Refund Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chatBtn = document.querySelector('.live-chat-btn');
+      if(chatBtn) {
+        chatBtn.addEventListener('click', function(event) {
+          // Add click ripple effect
+          const ripple = document.createElement('div');
+          ripple.classList.add('absolute', 'bg-white', 'rounded-full', 'pointer-events-none', 'opacity-75');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          ripple.style.width = ripple.style.height = `${size}px`;
+          ripple.style.left = `${event.clientX - rect.left - size/2}px`;
+          ripple.style.top = `${event.clientY - rect.top - size/2}px`;
+          ripple.style.animation = 'ripple 0.75s ease-out';
+          this.appendChild(ripple);
+          setTimeout(() => ripple.remove(), 750);
+          // Open chat window logic here
+          console.log('Opening chat window...');
+        });
+      }
+    });
+    </script>
+    </body>
+    </html>
+        <!-- ==================== FOOTER SECTION END ==================== -->
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+    <!-- End of Footer Section -->
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+     

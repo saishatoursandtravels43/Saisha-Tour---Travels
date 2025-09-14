@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Odyssey to Thailand - Bangkok Phuket Krabi | Thrillophilia</title>
+    <meta name="description" content="Explore the best of Thailand with our 8-day Bangkok, Phuket & Krabi tour package. Experience culture, beaches, and adventure with FREE 4 Island Tour.">
+    
+    <!-- DaisyUI and Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --primary-orange: #FF6B35;
+            --secondary-grey: #F5F5F5;
+            --text-dark: #333333;
+            --accent-green: #28A745;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.9), rgba(255, 107, 53, 0.7));
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .price-highlight {
+            background: linear-gradient(45deg, #FF6B35, #FF8A65);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .sticky-booking {
+            position: sticky;
+            top: 20px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .rating-stars {
+            color: #FFD700;
+        }
+        
+        .discount-badge {
+            background: linear-gradient(45deg, #FF6B35, #FF8A65);
+            color: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-base-100">
+    
+    <!-- Hero Section -->
+    <section class="hero min-h-screen relative" style="background-image: url('images/krabi-limestone-cliffs.jpg');">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-4xl animate-fade-in-up">
+                <h1 class="mb-5 text-5xl font-bold">An Odyssey to Thailand</h1>
+                <h2 class="mb-5 text-3xl">Bangkok • Phuket • Krabi</h2>
+                <p class="mb-5 text-xl">Experience the perfect blend of culture, beaches, and adventure in the Land of Smiles</p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <div class="badge badge-lg bg-orange-500 text-white border-none">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        8 Days & 7 Nights
+                    </div>
+                    <div class="badge badge-lg bg-green-500 text-white border-none">
+                        <i class="fas fa-star mr-2"></i>
+                        4.8 Rating (2100+ Reviews)
+                    </div>
+                    <div class="badge badge-lg bg-blue-500 text-white border-none">
+                        <i class="fas fa-gift mr-2"></i>
+                        FREE 4 Island Tour
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange-400">$501</div>
+                        <div class="text-lg line-through opacity-70">$912</div>
+                        <div class="text-sm">per person</div>
+                    </div>
+                    <button class="btn btn-primary btn-lg bg-orange-500 border-orange-500 hover:bg-orange-600">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book Now
+                    </button>
+                    <button class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-black">
+                        <i class="fas fa-phone mr-2"></i>
+                        Request Callback
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Content -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Tour Overview -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl mb-4">
+                            <i class="fas fa-map-marked-alt text-orange-500"></i>
+                            Tour Overview
+                        </h2>
+                        <p class="text-lg mb-4">
+                            Embark on an unforgettable 8-day journey through Thailand's most captivating destinations. 
+                            From the bustling streets of Bangkok to the pristine beaches of Phuket and the dramatic 
+                            limestone cliffs of Krabi, this tour offers the perfect blend of culture, relaxation, and adventure.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                            <div class="stat bg-orange-50 rounded-lg">
+                                <div class="stat-figure text-orange-500">
+                                    <i class="fas fa-city text-2xl"></i>
+                                </div>
+                                <div class="stat-title">Bangkok</div>
+                                <div class="stat-value text-lg">2 Days</div>
+                                <div class="stat-desc">Cultural Exploration</div>
+                            </div>
+                            
+                            <div class="stat bg-blue-50 rounded-lg">
+                                <div class="stat-figure text-blue-500">
+                                    <i class="fas fa-umbrella-beach text-2xl"></i>
+                                </div>
+                                <div class="stat-title">Phuket</div>
+                                <div class="stat-value text-lg">3 Days</div>
+                                <div class="stat-desc">Beach Paradise</div>
+                            </div>
+                            
+                            <div class="stat bg-green-50 rounded-lg">
+                                <div class="stat-figure text-green-500">
+                                    <i class="fas fa-mountain text-2xl"></i>
+                                </div>
+                                <div class="stat-title">Krabi</div>
+                                <div class="stat-value text-lg">3 Days</div>
+                                <div class="stat-desc">Adventure & Nature</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl mb-4">
+                            <i class="fas fa-images text-orange-500"></i>
+                            Photo Gallery
+                        </h2>
+                        <div class="image-gallery">
+                            <div class="relative overflow-hidden rounded-lg cursor-pointer card-hover">
+                                <img src="images/bangkok-temple.jpg" alt="Bangkok Temple" class="w-full h-48 object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fas fa-search-plus text-white text-2xl opacity-0 hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-lg cursor-pointer card-hover">
+                                <img src="images/phuket-beach.webp" alt="Phuket Beach" class="w-full h-48 object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fas fa-search-plus text-white text-2xl opacity-0 hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-lg cursor-pointer card-hover">
+                                <img src="images/krabi-limestone-cliffs.jpg" alt="Krabi Cliffs" class="w-full h-48 object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fas fa-search-plus text-white text-2xl opacity-0 hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Itinerary -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl mb-4">
+                            <i class="fas fa-route text-orange-500"></i>
+                            Detailed Itinerary
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <!-- Day 1-2 Bangkok -->
+                            <div class="collapse collapse-plus bg-base-200">
+                                <input type="radio" name="itinerary-accordion" checked="checked" />
+                                <div class="collapse-title text-xl font-medium">
+                                    <div class="flex items-center gap-3">
+                                        <div class="badge badge-primary">Days 1-2</div>
+                                        <span>Bangkok - The City of Angels</span>
+                                    </div>
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-3 pt-3">
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 1</div>
+                                            <div>
+                                                <h4 class="font-semibold">Arrival & City Tour</h4>
+                                                <p class="text-sm opacity-80">Airport pickup, hotel check-in, visit Grand Palace and Wat Pho Temple</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 2</div>
+                                            <div>
+                                                <h4 class="font-semibold">Cultural Exploration</h4>
+                                                <p class="text-sm opacity-80">Floating market tour, Wat Arun temple, evening at Khao San Road</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day 3-5 Phuket -->
+                            <div class="collapse collapse-plus bg-base-200">
+                                <input type="radio" name="itinerary-accordion" />
+                                <div class="collapse-title text-xl font-medium">
+                                    <div class="flex items-center gap-3">
+                                        <div class="badge badge-secondary">Days 3-5</div>
+                                        <span>Phuket - Beach Paradise</span>
+                                    </div>
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-3 pt-3">
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 3</div>
+                                            <div>
+                                                <h4 class="font-semibold">Arrival & Beach Time</h4>
+                                                <p class="text-sm opacity-80">Flight to Phuket, hotel check-in, Patong Beach exploration</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 4</div>
+                                            <div>
+                                                <h4 class="font-semibold">Island Hopping</h4>
+                                                <p class="text-sm opacity-80">Phi Phi Island tour, Maya Bay, snorkeling and swimming</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 5</div>
+                                            <div>
+                                                <h4 class="font-semibold">Adventure Day</h4>
+                                                <p class="text-sm opacity-80">Big Buddha visit, Chalong Temple, optional water sports</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day 6-8 Krabi -->
+                            <div class="collapse collapse-plus bg-base-200">
+                                <input type="radio" name="itinerary-accordion" />
+                                <div class="collapse-title text-xl font-medium">
+                                    <div class="flex items-center gap-3">
+                                        <div class="badge badge-accent">Days 6-8</div>
+                                        <span>Krabi - Natural Wonders</span>
+                                    </div>
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-3 pt-3">
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 6</div>
+                                            <div>
+                                                <h4 class="font-semibold">Transfer & Railay Beach</h4>
+                                                <p class="text-sm opacity-80">Transfer to Krabi, Railay Beach exploration, rock climbing</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 7</div>
+                                            <div>
+                                                <h4 class="font-semibold">4 Island Tour (FREE)</h4>
+                                                <p class="text-sm opacity-80">Poda Island, Chicken Island, Tup Island, and Phra Nang Beach</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="badge badge-outline">Day 8</div>
+                                            <div>
+                                                <h4 class="font-semibold">Departure</h4>
+                                                <p class="text-sm opacity-80">Hot springs visit, Tiger Cave Temple, airport transfer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inclusions & Exclusions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card bg-green-50 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                Inclusions
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>7 nights accommodation</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>Daily breakfast</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>Airport transfers</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>FREE 4 Island Tour in Krabi</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>Sightseeing as per itinerary</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    <span>Professional tour guide</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-red-50 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-red-600">
+                                <i class="fas fa-times-circle"></i>
+                                Exclusions
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>International flights</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>Lunch & dinner</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>Personal expenses</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>Travel insurance</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>Optional activities</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-times text-red-500"></i>
+                                    <span>Tips and gratuities</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Reviews -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl mb-4">
+                            <i class="fas fa-star text-orange-500"></i>
+                            Customer Reviews
+                            <div class="badge badge-lg bg-orange-500 text-white">4.8/5</div>
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="card bg-base-200">
+                                <div class="card-body">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="avatar">
+                                            <div class="w-10 rounded-full bg-orange-500 text-white flex items-center justify-center">
+                                                <span class="font-bold">S</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold">Sarah Johnson</h4>
+                                            <div class="rating rating-sm">
+                                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm">"Amazing tour! The 4 Island tour in Krabi was absolutely breathtaking. Our guide was knowledgeable and the hotels were fantastic. Highly recommend!"</p>
+                                    <div class="text-xs opacity-60 mt-2">Verified Purchase • 2 weeks ago</div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-200">
+                                <div class="card-body">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="avatar">
+                                            <div class="w-10 rounded-full bg-blue-500 text-white flex items-center justify-center">
+                                                <span class="font-bold">M</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold">Mike Chen</h4>
+                                            <div class="rating rating-sm">
+                                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm">"Perfect blend of culture and relaxation. Bangkok was fascinating and the beaches in Phuket were pristine. Great value for money!"</p>
+                                    <div class="text-xs opacity-60 mt-2">Verified Purchase • 1 month ago</div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline w-full">
+                                <i class="fas fa-plus mr-2"></i>
+                                Load More Reviews (2100+)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Booking Widget -->
+            <div class="lg:col-span-1">
+                <div class="sticky-booking">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <div class="flex items-center justify-center gap-2 mb-2">
+                                    <span class="text-3xl font-bold price-highlight">$501</span>
+                                    <span class="text-lg line-through opacity-60">$912</span>
+                                </div>
+                                <div class="discount-badge">Save $411 (45% OFF)</div>
+                                <div class="text-sm opacity-70 mt-1">per person</div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-semibold">Travel Date</span>
+                                    </label>
+                                    <input type="date" class="input input-bordered" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-semibold">Travelers</span>
+                                    </label>
+                                    <div class="flex items-center gap-2">
+                                        <button class="btn btn-sm btn-circle btn-outline" onclick="decrementTravelers()">-</button>
+                                        <input type="number" id="travelers" value="2" min="1" class="input input-bordered flex-1 text-center" readonly />
+                                        <button class="btn btn-sm btn-circle btn-outline" onclick="incrementTravelers()">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span>Base Price (2 persons)</span>
+                                        <span id="base-price">$1,002</span>
+                                    </div>
+                                    <div class="flex justify-between text-green-600">
+                                        <span>Discount</span>
+                                        <span id="discount-amount">-$822</span>
+                                    </div>
+                                    <div class="divider my-2"></div>
+                                    <div class="flex justify-between font-bold text-lg">
+                                        <span>Total</span>
+                                        <span id="total-price" class="price-highlight">$1,002</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary w-full bg-orange-500 border-orange-500 hover:bg-orange-600">
+                                    <i class="fas fa-calendar-check mr-2"></i>
+                                    Book Now
+                                </button>
+
+                                <button class="btn btn-outline w-full">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Request Callback
+                                </button>
+
+                                <div class="text-center">
+                                    <div class="flex items-center justify-center gap-2 text-sm opacity-70">
+                                        <i class="fas fa-shield-alt text-green-500"></i>
+                                        <span>100% Safe & Secure</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Info -->
+                    <div class="card bg-base-100 shadow-xl mt-6">
+                        <div class="card-body">
+                            <h3 class="card-title text-lg">
+                                <i class="fas fa-info-circle text-blue-500"></i>
+                                Quick Info
+                            </h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-clock text-orange-500"></i>
+                                    <span>Duration: 8 Days & 7 Nights</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-map-marker-alt text-red-500"></i>
+                                    <span>Destinations: Bangkok, Phuket, Krabi</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-users text-blue-500"></i>
+                                    <span>Group Size: 2-15 people</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-language text-green-500"></i>
+                                    <span>Languages: English, Thai</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-gift text-purple-500"></i>
+                                    <span>FREE 4 Island Tour included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Tours Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                <i class="fas fa-compass text-orange-500"></i>
+                Related Thailand Tours
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tour Card 1 -->
+                <div class="card bg-base-100 shadow-xl card-hover">
+                    <figure class="relative">
+                        <img src="images/phuket-beach.webp" alt="Phuket Krabi Tour" class="h-48 w-full object-cover" />
+                        <div class="absolute top-2 right-2">
+                            <div class="badge badge-error text-white">Save $495</div>
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">Phuket Krabi | Flights Inclusive DEAL</h3>
+                        <p class="text-sm opacity-70">6 days & 5 nights</p>
+                        <div class="flex items-center gap-2 my-2">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                            <span class="text-sm">5.0 (1100 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xl font-bold text-orange-500">$739</span>
+                                <span class="text-sm line-through opacity-60 ml-2">$1,235</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary bg-orange-500 border-orange-500">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="card bg-base-100 shadow-xl card-hover">
+                    <figure class="relative">
+                        <img src="images/bangkok-temple.jpg" alt="Bangkok Pattaya Tour" class="h-48 w-full object-cover" />
+                        <div class="absolute top-2 right-2">
+                            <div class="badge badge-error text-white">Save $173</div>
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">Bangkok and Pattaya | Vibrant Duo</h3>
+                        <p class="text-sm opacity-70">5 days & 4 nights</p>
+                        <div class="flex items-center gap-2 my-2">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <span class="text-sm">4.5 (32 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xl font-bold text-orange-500">$520</span>
+                                <span class="text-sm line-through opacity-60 ml-2">$693</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary bg-orange-500 border-orange-500">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="card bg-base-100 shadow-xl card-hover">
+                    <figure class="relative">
+                        <img src="images/krabi-limestone-cliffs.jpg" alt="Romantic Thailand" class="h-48 w-full object-cover" />
+                        <div class="absolute top-2 right-2">
+                            <div class="badge badge-error text-white">Save $215</div>
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">Thailand Romantic Getaway</h3>
+                        <p class="text-sm opacity-70">9 days & 8 nights</p>
+                        <div class="flex items-center gap-2 my-2">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <span class="text-sm">4.5 (717 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xl font-bold text-orange-500">$654</span>
+                                <span class="text-sm line-through opacity-60 ml-2">$870</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary bg-orange-500 border-orange-500">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-16">
+        <div class="grid grid-flow-col gap-4">
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Tours</a>
+            <a class="link link-hover">Destinations</a>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a class="text-2xl hover:text-orange-500"><i class="fab fa-twitter"></i></a>
+                <a class="text-2xl hover:text-orange-500"><i class="fab fa-youtube"></i></a>
+                <a class="text-2xl hover:text-orange-500"><i class="fab fa-facebook"></i></a>
+                <a class="text-2xl hover:text-orange-500"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 - All rights reserved by Thrillophilia</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Booking Modal -->
+    <dialog id="booking_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-2xl">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="font-bold text-lg mb-4">Complete Your Booking</h3>
+            
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">First Name</span>
+                        </label>
+                        <input type="text" placeholder="Enter first name" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Last Name</span>
+                        </label>
+                        <input type="text" placeholder="Enter last name" class="input input-bordered" required />
+                    </div>
+                </div>
+                
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Email</span>
+                    </label>
+                    <input type="email" placeholder="Enter email address" class="input input-bordered" required />
+                </div>
+                
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Phone Number</span>
+                    </label>
+                    <input type="tel" placeholder="Enter phone number" class="input input-bordered" required />
+                </div>
+                
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Special Requests</span>
+                    </label>
+                    <textarea class="textarea textarea-bordered" placeholder="Any special requirements or requests..."></textarea>
+                </div>
+                
+                <div class="modal-action">
+                    <button type="submit" class="btn btn-primary bg-orange-500 border-orange-500">Confirm Booking</button>
+                    <form method="dialog">
+                        <button class="btn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/script.js"></script>
+    
+    <script>
+        // Traveler counter functions
+        function incrementTravelers() {
+            const input = document.getElementById('travelers');
+            const currentValue = parseInt(input.value);
+            input.value = currentValue + 1;
+            updatePricing();
+        }
+        
+        function decrementTravelers() {
+            const input = document.getElementById('travelers');
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+                updatePricing();
+            }
+        }
+        
+        function updatePricing() {
+            const travelers = parseInt(document.getElementById('travelers').value);
+            const basePrice = 501;
+            const originalPrice = 912;
+            
+            const totalBase = basePrice * travelers;
+            const totalOriginal = originalPrice * travelers;
+            const totalDiscount = totalOriginal - totalBase;
+            
+            document.getElementById('base-price').textContent = `$${totalOriginal.toLocaleString()}`;
+            document.getElementById('discount-amount').textContent = `-$${totalDiscount.toLocaleString()}`;
+            document.getElementById('total-price').textContent = `$${totalBase.toLocaleString()}`;
+        }
+        
+        // Initialize pricing
+        updatePricing();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Book Now button functionality
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            if (button.textContent.includes('Book Now')) {
+                button.addEventListener('click', function() {
+                    document.getElementById('booking_modal').showModal();
+                });
+            }
+        });
+        
+        // Image gallery lightbox effect
+        document.querySelectorAll('.image-gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                // Create lightbox overlay
+                const overlay = document.createElement('div');
+                overlay.className = 'fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4';
+                overlay.innerHTML = `
+                    <div class="relative max-w-4xl max-h-full">
+                        <img src="${this.src}" alt="${this.alt}" class="max-w-full max-h-full object-contain">
+                        <button class="absolute top-4 right-4 btn btn-circle btn-ghost text-white text-xl">✕</button>
+                    </div>
+                `;
+                
+                document.body.appendChild(overlay);
+                
+                // Close lightbox
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay || e.target.textContent === '✕') {
+                        document.body.removeChild(overlay);
+                    }
+                });
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe cards and sections
+        document.querySelectorAll('.card, .stat').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

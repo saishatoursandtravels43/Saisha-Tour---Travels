@@ -1,0 +1,1618 @@
+<!-- Flash Sale Banner -->
+<div class="bg-gradient-to-r from-primary to-red-600 text-white py-4 sticky top-16 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center space-x-4">
+<div class="bg-secondary text-black px-4 py-2 !rounded-button font-bold text-lg animate-pulse">
+40% OFF
+<h3 class="font-bold text-lg">July Flash Sale!</h3>
+<p class="text-sm opacity-90">Limited time offer on all packages</p>
+<div class="flex items-center space-x-6">
+    <div class="flex items-center space-x-2 text-sm">
+    <span>Ends in:</span>
+    <div class="flex space-x-1">
+    <div class="countdown-digit px-2 py-1 !rounded-button text-xs" id="days">05</div>
+    <span>:</span>
+    <div class="countdown-digit px-2 py-1 !rounded-button text-xs" id="hours">14</div>
+    <span>:</span>
+    <div class="countdown-digit px-2 py-1 !rounded-button text-xs" id="minutes">32</div>
+    <span>:</span>
+    <div class="countdown-digit px-2 py-1 !rounded-button text-xs" id="seconds">18</div>  
+    <button class="bg-white text-primary px-6 py-2 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+        Book Now
+        </button>  
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saisha Tours and Travel - Premium Travel Experiences</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF0000',
+secondary: '#FFD700'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.hero-slide {
+transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+transform: scale(1);
+}
+.hero-slide.active {
+transform: scale(1.05);
+}
+.parallax-bg {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.scroll-animation {
+animation: scroll 30s linear infinite;
+}
+.scroll-reverse {
+animation: scrollReverse 30s linear infinite;
+}
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); }
+}
+@keyframes scrollReverse {
+0% { transform: translateX(-100%); }
+100% { transform: translateX(0); }
+}
+.fade-in {
+animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.pulse-glow {
+animation: pulseGlow 2s infinite;
+}
+@keyframes pulseGlow {
+0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); }
+50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.6); }
+}
+/* Inter font for all headlines */
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+}
+.countdown-digit {
+background: linear-gradient(135deg, #FF0000, #FF4444);
+color: white;
+font-weight: bold;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Hero Section -->
+<section id="home" class="relative h-screen overflow-hidden">
+<div class="hero-slider relative w-full h-full">
+<!-- Slide 1: Thailand -->
+<div class="hero-slide absolute inset-0 opacity-100" style="background-image: url('https://readdy.ai/api/search-image?query=pristine%20tropical%20beach%20paradise%20in%20Thailand%20with%20crystal%20clear%20turquoise%20waters%2C%20white%20sand%20beaches%2C%20palm%20trees%20swaying%20in%20gentle%20breeze%2C%20Indian%20families%20enjoying%20beach%20activities%2C%20luxury%20resort%20in%20background%2C%20golden%20sunset%20lighting%2C%20cinematic%204K%20quality%2C%20travel%20photography%20style%2C%20vibrant%20colors%2C%20peaceful%20atmosphere&width=1920&height=1080&seq=thailand-beach&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+<div class="relative z-10 h-full flex items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<h2 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+Discover Thailand's Paradise
+</h2>
+<p class="text-xl text-white/90 mb-8 leading-relaxed">
+Experience pristine beaches, crystal waters, and tropical bliss with our exclusive Thailand packages starting from ₹45,999
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-600 transition-all pulse-glow whitespace-nowrap text-lg font-semibold">
+Explore Thailand
+</button>
+<button class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 !rounded-button hover:bg-white/30 transition-all whitespace-nowrap text-lg border border-white/30">
+View Packages
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2: Bali -->
+<div class="hero-slide absolute inset-0 opacity-0" style="background-image: url('https://readdy.ai/api/search-image?query=stunning%20Bali%20rice%20terraces%20and%20ancient%20temples%20with%20Indian%20families%20exploring%20cultural%20heritage%20sites%2C%20emerald%20green%20rice%20paddies%20in%20morning%20mist%2C%20traditional%20Balinese%20architecture%2C%20spiritual%20atmosphere%2C%20golden%20hour%20lighting%2C%20travel%20documentary%20style%2C%20lush%20tropical%20landscape%2C%20cultural%20tourism&width=1920&height=1080&seq=bali-culture&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+<div class="relative z-10 h-full flex items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<h2 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+Bali Cultural Journey
+</h2>
+<p class="text-xl text-white/90 mb-8 leading-relaxed">
+Immerse yourself in Bali's rich culture, stunning rice terraces, and ancient temples with our curated experiences from ₹52,999
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-600 transition-all pulse-glow whitespace-nowrap text-lg font-semibold">
+Discover Bali
+</button>
+<button class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 !rounded-button hover:bg-white/30 transition-all whitespace-nowrap text-lg border border-white/30">
+Cultural Tours
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3: International Destinations -->
+<div class="hero-slide absolute inset-0 opacity-0" style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20international%20travel%20collage%20with%20iconic%20landmarks%2C%20Santorini%20white%20buildings%2C%20Swiss%20Alps%20panorama%2C%20Venice%20canals%2C%20premium%20travel%20destinations%2C%20cinematic%20lighting%2C%20dramatic%20architecture%2C%20high%20end%20tourism%20photography%2C%20professional%20travel%20marketing%20style&width=1920&height=1080&seq=international-new&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+<div class="relative z-10 h-full flex items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<h2 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+World Awaits You
+</h2>
+<p class="text-xl text-white/90 mb-8 leading-relaxed">
+Explore Europe, America, and beyond with our premium international packages. Your dream destinations start from ₹89,999
+</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-white/10 backdrop-blur-sm p-4 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold mb-2">Europe Explorer</h4>
+<p class="text-white/80 text-sm">From ₹1,25,999</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-4 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold mb-2">USA Adventure</h4>
+<p class="text-white/80 text-sm">From ₹1,45,999</p>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-600 transition-all pulse-glow whitespace-nowrap text-lg font-semibold">
+Explore International
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4: Domestic India -->
+<div class="hero-slide absolute inset-0 opacity-0" style="background-image: url('https://readdy.ai/api/search-image?query=majestic%20Indian%20landscapes%20panorama%20featuring%20ancient%20temples%2C%20royal%20palaces%2C%20misty%20mountains%2C%20serene%20backwaters%2C%20luxury%20resorts%2C%20golden%20hour%20lighting%2C%20dramatic%20architecture%2C%20premium%20travel%20photography%2C%20cinematic%20composition%2C%20incredible%20India%20tourism%20campaign%20style&width=1920&height=1080&seq=india-new&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+<div class="relative z-10 h-full flex items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 backdrop-blur-sm p-3 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold text-sm mb-1">Kashmir Paradise</h4>
+<p class="text-white/80 text-xs">From ₹25,999</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-3 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold text-sm mb-1">Rajasthan Royal</h4>
+<p class="text-white/80 text-xs">From ₹22,999</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-3 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold text-sm mb-1">Kerala Backwaters</h4>
+<p class="text-white/80 text-xs">From ₹18,999</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-3 !rounded-button border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+<h4 class="text-white font-semibold text-sm mb-1">Goa Beaches</h4>
+<p class="text-white/80 text-xs">From ₹15,999</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Navigation -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+<button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="0"></button>
+<button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="1"></button>
+<button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="2"></button>
+<button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="3"></button>
+</div>
+<!-- Hero Arrows -->
+<button class="absolute left-8 top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all z-20" id="prevSlide">
+<i class="ri-arrow-left-line text-white text-xl"></i>
+</button>
+<button class="absolute right-8 top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all z-20" id="nextSlide">
+<i class="ri-arrow-right-line text-white text-xl"></i>
+</button>
+</div>
+</section>
+
+<!-- Wavy Info Section -->
+<section class="relative bg-white">
+    <!-- Top Wavy SVG Layers -->
+    <!-- Main wave moved down -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none" style="transform: translateY(-80%);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="relative block w-full h-40">
+            <path fill="#ffffff" d="M0,224L48,218.7C96,213,192,203,288,197.3C384,192,480,192,576,208C672,224,768,256,864,250.7C960,245,1056,203,1152,186.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+    <!-- Lighter wave layer 1 -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none" style="transform: translateY(-90%);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="relative block w-full h-32">
+            <path fill="#ffffff" fill-opacity="0.6" d="M0,160L48,170.7C96,181,192,203,288,213.3C384,224,480,224,576,208C672,192,768,160,864,165.3C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+    <!-- Lighter wave layer 2 -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none" style="transform: translateY(-95%);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="relative block w-full h-28">
+            <path fill="#ffffff" fill-opacity="0.3" d="M0,128L48,138.7C96,149,192,171,288,181.3C384,192,480,192,576,176C672,160,768,128,864,133.3C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+    
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Title Column -->
+            <div class="lg:col-span-4">
+                <div class="flex items-start">
+                    <div class="w-1 h-20 bg-primary mr-6 flex-shrink-0"></div>
+                    <div>
+                        <p class="text-primary font-semibold tracking-widest mb-3 text-sm">TRAVEL YOUR WAY</p>
+                        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Celebrating 40 Years of Adventure Travel</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Features Columns -->
+            <div class="lg:col-span-8 grid sm:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="flex justify-center items-center mb-6">
+                        <div class="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center">
+                           <i class="ri-shield-check-line text-primary text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Trusted</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">40 years of operating; fully bonded and your money 100% protected.</p>
+                </div>
+                <div class="text-center">
+                    <div class="flex justify-center items-center mb-6">
+                         <div class="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center">
+                           <i class="ri-global-line text-primary text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Worldwide</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">400 Guided Group and Self-Guided adventures in 100 countries.</p>
+                </div>
+                <div class="text-center">
+                    <div class="flex justify-center items-center mb-6">
+                         <div class="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center">
+                           <i class="ri-leaf-line text-primary text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainable</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">100% carbon absorption. Caring for the environment and local communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Wavy SVG -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="transform: translateY(99%);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="relative block w-full h-40">
+            <path fill="#1f2937" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+    </div>
+    
+    <!-- Explore Our Destinations - Moved from later in the page -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Explore Our Destinations</h2>
+            <p class="text-lg text-gray-600">Discover amazing places with our curated travel packages</p>
+        </div>
+        <!-- Filter Tabs -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-white rounded-full p-1 shadow-lg">
+                <button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all bg-primary text-white" data-filter="all">
+                    All Destinations
+                </button>
+                <button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all text-gray-600 hover:text-primary" data-filter="international">
+                    International
+                </button>
+                <button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all text-gray-600 hover:text-primary" data-filter="domestic">
+                    Domestic
+                </button>
+            </div>
+        </div>
+        <!-- Gallery Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="galleryGrid">
+            <!-- International Destinations -->
+            <div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Dubai%20luxury%20skyline%20with%20Burj%20Khalifa%20and%20modern%20architecture%2C%20golden%20hour%20lighting%2C%20premium%20travel%20destination%2C%20UAE%20tourism%2C%20city%20lights%2C%20urban%20landscape%20photography&width=300&height=200&seq=dubai-gallery&orientation=landscape" alt="Dubai" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Dubai Luxury</h3>
+                    <p class="text-sm text-gray-600 mb-2">5 Days from ₹65,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.8 (124 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Singapore%20Marina%20Bay%20Sands%20and%20Gardens%20by%20the%20Bay%2C%20futuristic%20architecture%2C%20modern%20city%20skyline%2C%20evening%20lights%2C%20travel%20destination%20photography%2C%20urban%20garden%20landscape&width=300&height=200&seq=singapore-gallery&orientation=landscape" alt="Singapore" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Singapore Delight</h3>
+                    <p class="text-sm text-gray-600 mb-2">4 Days from ₹42,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.7 (98 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Maldives%20overwater%20bungalows%20with%20crystal%20clear%20turquoise%20water%2C%20tropical%20paradise%2C%20luxury%20resort%2C%20romantic%20destination%2C%20pristine%20beaches%2C%20honeymoon%20destination%20photography&width=300&height=200&seq=maldives-gallery&orientation=landscape" alt="Maldives" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Maldives Paradise</h3>
+                    <p class="text-sm text-gray-600 mb-2">6 Days from ₹89,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.9 (156 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Switzerland%20Alps%20with%20snow-capped%20mountains%20and%20scenic%20railway%2C%20beautiful%20European%20landscapes%2C%20mountain%20tourism%2C%20pristine%20alpine%20nature%2C%20travel%20photography&width=300&height=200&seq=switzerland-gallery&orientation=landscape" alt="Switzerland" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Switzerland Alps</h3>
+                    <p class="text-sm text-gray-600 mb-2">7 Days from ₹1,25,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.8 (89 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Domestic Destinations -->
+            <div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Kerala%20backwaters%20with%20traditional%20houseboat%2C%20lush%20green%20coconut%20palms%2C%20serene%20water%20landscape%2C%20Indian%20tourism%2C%20tropical%20scenery%2C%20cultural%20travel%20photography&width=300&height=200&seq=kerala-gallery&orientation=landscape" alt="Kerala" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Kerala Backwaters</h3>
+                    <p class="text-sm text-gray-600 mb-2">5 Days from ₹18,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.7 (203 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Rajasthan%20palace%20architecture%20with%20intricate%20carvings%2C%20royal%20heritage%2C%20golden%20sandstone%2C%20Indian%20cultural%20tourism%2C%20historical%20monuments%2C%20desert%20landscape&width=300&height=200&seq=rajasthan-gallery&orientation=landscape" alt="Rajasthan" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Rajasthan Royal</h3>
+                    <p class="text-sm text-gray-600 mb-2">6 Days from ₹22,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.8 (167 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Kashmir%20snow-capped%20mountains%20with%20Dal%20Lake%2C%20Shikara%20boats%2C%20beautiful%20valley%20landscape%2C%20Indian%20hill%20station%2C%20pristine%20nature%2C%20mountain%20tourism&width=300&height=200&seq=kashmir-gallery&orientation=landscape" alt="Kashmir" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Kashmir Paradise</h3>
+                    <p class="text-sm text-gray-600 mb-2">7 Days from ₹25,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.9 (145 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Goa%20beaches%20with%20golden%20sand%20and%20palm%20trees%2C%20coastal%20paradise%2C%20beach%20tourism%2C%20tropical%20destination%2C%20Indian%20beach%20holiday%2C%20sunset%20photography&width=300&height=200&seq=goa-gallery&orientation=landscape" alt="Goa" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-gray-900 mb-1">Goa Beaches</h3>
+                    <p class="text-sm text-gray-600 mb-2">4 Days from ₹15,999</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="ri-star-fill text-sm"></i>
+                            <span class="text-sm text-gray-600 ml-1">4.6 (189 reviews)</span>
+                        </div>
+                        <button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trending International Tours -->
+<section class="pt-32 pb-16 relative" style="background-image: url('https://www.dropbox.com/scl/fi/al47zk1k0pajxmu38t65u/sheng-l-q2dUSl9S4Xg-unsplash.jpg?rlkey=m2mrs7iwxned1ez1b741s224t&st=j7z4xyoy&raw=1'); background-size: cover; background-position: center bottom; background-attachment: fixed;">
+<div class="absolute inset-0 bg-black bg-opacity-75"></div>
+<div class="mx-auto px-2 sm:px-4 lg:px-6 relative z-10">
+<div class="mb-12 ml-0 sm:ml-0">
+<h2 class="text-3xl font-bold text-white mb-4">Trending International Tours</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Tour Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=elephant%20sanctuary%20Thailand%20with%20tourists%20feeding%20elephants%2C%20jungle%20adventure%2C%20wildlife%20tourism%2C%20ethical%20animal%20experience%2C%20tropical%20forest%20setting%2C%20authentic%20cultural%20experience&width=350&height=220&seq=elephant-sanctuary&orientation=landscape" alt="Elephant Jungle Sanctuary" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+<div class="absolute bottom-3 left-3 bg-black/50 text-white px-2 py-1 rounded text-xs flex items-center">
+<i class="ri-star-fill text-yellow-400 mr-1"></i>
+<span>5 (1)</span>
+</div>
+</div>
+<div class="p-5">
+<div class="text-xs text-gray-500 mb-1">Phuket</div>
+<h3 class="font-bold text-gray-900 mb-3 text-base">Elephant Jungle Sanctuary Half-Day Visit with Meal</h3>
+<div class="flex items-center text-xs text-gray-500 mb-2">
+<i class="ri-time-line mr-1"></i>
+<span>0 - 3 hours</span>
+<i class="ri-group-line ml-3 mr-1"></i>
+<span>0 - 12</span>
+</div>
+<p class="text-sm text-gray-600 mb-4 line-clamp-2">Embark on a guided adventure to Elephant Jungle...</p>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs text-gray-500">from</span>
+<div class="font-bold text-gray-900">$50 <span class="text-xs font-normal text-gray-500">/person</span></div>
+</div>
+<button class="bg-red-500 text-white px-4 py-2 rounded text-xs font-medium hover:bg-red-600 transition-colors">
+View tour
+</button>
+</div>
+</div>
+</div>
+
+<!-- Tour Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Doi%20Inthanon%20National%20Park%20Thailand%20with%20pagoda%20temples%2C%20mountain%20scenery%2C%20eco%20tourism%2C%20nature%20adventure%2C%20Chiang%20Mai%20attractions%2C%20Buddhist%20temples%20in%20mountains&width=350&height=220&seq=doi-inthanon&orientation=landscape" alt="Doi Inthanon National Park" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+<div class="absolute bottom-3 left-3 bg-black/50 text-white px-2 py-1 rounded text-xs flex items-center">
+<i class="ri-star-fill text-yellow-400 mr-1"></i>
+<span>4.5 (1)</span>
+</div>
+</div>
+<div class="p-5">
+<div class="text-xs text-gray-500 mb-1">Chiang Mai</div>
+<h3 class="font-bold text-gray-900 mb-3 text-base">Doi Inthanon National Park Eco-Friendly Tour</h3>
+<div class="flex items-center text-xs text-gray-500 mb-2">
+<i class="ri-time-line mr-1"></i>
+<span>3 - 6 hours</span>
+<i class="ri-group-line ml-3 mr-1"></i>
+<span>0 - 15</span>
+</div>
+<p class="text-sm text-gray-600 mb-4 line-clamp-2">Go on this full-day tour of Doi Inthanon...</p>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs text-gray-500">from</span>
+<div class="font-bold text-gray-900">$35 <span class="text-xs font-normal text-gray-500">/person</span></div>
+</div>
+<button class="bg-red-500 text-white px-4 py-2 rounded text-xs font-medium hover:bg-red-600 transition-colors">
+View tour
+</button>
+</div>
+</div>
+</div>
+
+<!-- Tour Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Bangkok%20Grand%20Palace%20Wat%20Pho%20temple%20complex%2C%20golden%20Buddha%20statues%2C%20Thai%20architecture%2C%20cultural%20heritage%20tour%2C%20traditional%20temples%2C%20spiritual%20tourism%20Thailand&width=350&height=220&seq=bangkok-palace&orientation=landscape" alt="Bangkok Grand Palace" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+<div class="absolute bottom-3 left-3 bg-black/50 text-white px-2 py-1 rounded text-xs flex items-center">
+<i class="ri-star-fill text-yellow-400 mr-1"></i>
+<span>4.5 (1)</span>
+</div>
+</div>
+<div class="p-5">
+<div class="text-xs text-gray-500 mb-1">Bangkok</div>
+<h3 class="font-bold text-gray-900 mb-3 text-base">Grand Palace, Wat Pho, and Wat Arun Guided Tour</h3>
+<div class="flex items-center text-xs text-gray-500 mb-2">
+<i class="ri-time-line mr-1"></i>
+<span>3 - 6 hours</span>
+<i class="ri-group-line ml-3 mr-1"></i>
+<span>0 - 24</span>
+</div>
+<p class="text-sm text-gray-600 mb-4 line-clamp-2">Enjoy Bangkok's rich history and spiritual heritage with...</p>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs text-gray-500">from</span>
+<div class="font-bold text-gray-900">$18 <span class="text-xs font-normal text-gray-500">/person</span></div>
+</div>
+<button class="bg-red-500 text-white px-4 py-2 rounded text-xs font-medium hover:bg-red-600 transition-colors">
+View tour
+</button>
+</div>
+</div>
+</div>
+
+<!-- Tour Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Toulouse%20France%20walking%20tour%20with%20pink%20city%20architecture%2C%20historic%20buildings%2C%20European%20cultural%20tourism%2C%20French%20heritage%2C%20guided%20city%20exploration%2C%20local%20experience&width=350&height=220&seq=toulouse-walking&orientation=landscape" alt="Toulouse Walking Tour" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+<div class="absolute bottom-3 left-3 bg-black/50 text-white px-2 py-1 rounded text-xs flex items-center">
+<i class="ri-star-fill text-yellow-400 mr-1"></i>
+<span>0 (0)</span>
+</div>
+</div>
+<div class="p-5">
+<div class="text-xs text-gray-500 mb-1">France</div>
+<h3 class="font-bold text-gray-900 mb-3 text-base">Private Walking Tour with a Local</h3>
+<div class="flex items-center text-xs text-gray-500 mb-2">
+<i class="ri-time-line mr-1"></i>
+<span>3 - 6 hours</span>
+<i class="ri-group-line ml-3 mr-1"></i>
+<span>0 - 12</span>
+</div>
+<p class="text-sm text-gray-600 mb-4 line-clamp-2">Get a welcome to Toulouse from a friendly...</p>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs text-gray-500">from</span>
+<div class="font-bold text-gray-900">$220 <span class="text-xs font-normal text-gray-500">/person</span></div>
+</div>
+<button class="bg-red-500 text-white px-4 py-2 rounded text-xs font-medium hover:bg-red-600 transition-colors">
+View tour
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Infinite Scrolling Destinations -->
+<section class="py-16 overflow-hidden relative">
+<div class="absolute inset-0 w-full h-full" style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20abstract%20background%20with%20soft%20gradient%20waves%2C%20elegant%20minimal%20design%2C%20premium%20travel%20theme%2C%20subtle%20motion%20blur%20effect%2C%20sophisticated%20pattern%2C%20high%20end%20aesthetic%2C%20muted%20colors%20with%20hints%20of%20gold%20and%20white%2C%204k%20quality%2C%20ultra%20HD%20resolution&width=1920&height=1080&seq=bg-destinations&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.15; filter: blur(2px);"></div>
+<div class="relative">
+<div class="mb-12 text-center">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Popular Destinations</h2>
+<p class="text-lg text-gray-600">Discover amazing places around the world</p>
+</div>
+<!-- First Row - Left to Right -->
+<div class="mb-8">
+<div class="flex space-x-6 scroll-animation">
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Dubai%20skyline%20with%20Burj%20Khalifa%20and%20luxury%20hotels%2C%20modern%20architecture%2C%20golden%20hour%20lighting%2C%20premium%20travel%20destination%2C%20UAE%20tourism%2C%20luxury%20travel%20photography%2C%20city%20skyline%2C%20urban%20landscape&width=320&height=200&seq=dubai1&orientation=landscape" alt="Dubai" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Dubai Luxury</h3>
+<p class="text-gray-600 mb-4">5 Days / 4 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹65,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Singapore%20Marina%20Bay%20Sands%20and%20Gardens%20by%20the%20Bay%2C%20futuristic%20architecture%2C%20modern%20city%20skyline%2C%20travel%20destination%20photography%2C%20Singapore%20tourism%2C%20urban%20garden%20landscape%2C%20evening%20lights&width=320&height=200&seq=singapore1&orientation=landscape" alt="Singapore" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Singapore Delight</h3>
+<p class="text-gray-600 mb-4">4 Days / 3 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹42,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Maldives%20overwater%20bungalows%20with%20crystal%20clear%20blue%20water%2C%20tropical%20paradise%2C%20luxury%20resort%2C%20romantic%20destination%2C%20Indian%20Ocean%2C%20pristine%20beaches%2C%20honeymoon%20destination%20photography&width=320&height=200&seq=maldives1&orientation=landscape" alt="Maldives" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Maldives Paradise</h3>
+<p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹89,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Switzerland%20Alps%20with%20snow-capped%20mountains%2C%20scenic%20railway%2C%20beautiful%20landscapes%2C%20European%20travel%20destination%2C%20mountain%20tourism%2C%20pristine%20nature%2C%20alpine%20scenery%20photography&width=320&height=200&seq=switzerland1&orientation=landscape" alt="Switzerland" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Switzerland Alps</h3>
+<p class="text-gray-600 mb-4">7 Days / 6 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹1,25,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Paris%20Eiffel%20Tower%20and%20Seine%20River%2C%20romantic%20European%20city%2C%20French%20architecture%2C%20travel%20destination%20photography%2C%20evening%20lights%2C%20cultural%20tourism%2C%20iconic%20landmarks&width=320&height=200&seq=paris1&orientation=landscape" alt="Paris" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Paris Romance</h3>
+<p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹1,15,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Second Row - Right to Left -->
+<div>
+<div class="flex space-x-6 scroll-reverse">
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Kerala%20backwaters%20with%20traditional%20houseboat%2C%20lush%20green%20coconut%20palms%2C%20serene%20water%20landscape%2C%20Indian%20tourism%2C%20peaceful%20nature%2C%20tropical%20scenery%2C%20cultural%20travel%20photography&width=320&height=200&seq=kerala1&orientation=landscape" alt="Kerala" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Kerala Backwaters</h3>
+<p class="text-gray-600 mb-4">5 Days / 4 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹18,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Rajasthan%20palace%20architecture%20with%20intricate%20carvings%2C%20royal%20heritage%2C%20golden%20sandstone%2C%20Indian%20cultural%20tourism%2C%20historical%20monuments%2C%20architectural%20photography%2C%20desert%20landscape&width=320&height=200&seq=rajasthan1&orientation=landscape" alt="Rajasthan" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Rajasthan Royal</h3>
+<p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹22,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Kashmir%20snow-capped%20mountains%20with%20Dal%20Lake%2C%20Shikara%20boats%2C%20beautiful%20valley%20landscape%2C%20Indian%20hill%20station%2C%20pristine%20nature%2C%20mountain%20tourism%2C%20scenic%20beauty%20photography&width=320&height=200&seq=kashmir1&orientation=landscape" alt="Kashmir" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Kashmir Paradise</h3>
+<p class="text-gray-600 mb-4">7 Days / 6 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹25,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Goa%20beaches%20with%20golden%20sand%20and%20palm%20trees%2C%20coastal%20paradise%2C%20beach%20tourism%2C%20tropical%20destination%2C%20Indian%20beach%20holiday%2C%20sunset%20beach%20photography%2C%20relaxation%20destination&width=320&height=200&seq=goa1&orientation=landscape" alt="Goa" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Goa Beaches</h3>
+<p class="text-gray-600 mb-4">4 Days / 3 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹15,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<img src="https://readdy.ai/api/search-image?query=Himachal%20Pradesh%20mountain%20landscapes%20with%20snow%20peaks%2C%20adventure%20tourism%2C%20hill%20station%20beauty%2C%20Indian%20mountain%20destination%2C%20trekking%20and%20nature%2C%20scenic%20mountain%20photography&width=320&height=200&seq=himachal1&orientation=landscape" alt="Himachal" class="w-full h-48 object-cover">
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Himachal Adventure</h3>
+<p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-primary">₹20,999</span>
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-red-600 transition-colors whitespace-nowrap text-sm">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Trips -->
+<section class="relative py-20 bg-gray-50 overflow-hidden">
+<!-- Top Wavy SVG -->
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-none" style="transform: translateY(-99%);">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" class="relative block w-full h-20">
+        <path fill="#f9fafb" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,112C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+    </svg>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<!-- July Flash Sale Banner - Moved from top -->
+<div class="bg-gradient-to-r from-primary to-red-600 text-white rounded-3xl p-8 mb-16 shadow-lg relative overflow-hidden">
+<!-- Decorative elements -->
+<div class="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-white/10"></div>
+<div class="absolute -bottom-16 -left-16 w-32 h-32 rounded-full bg-white/10"></div>
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="flex items-center space-x-4 mb-4 md:mb-0">
+<div class="bg-secondary text-black px-6 py-3 !rounded-button font-bold text-xl animate-pulse">
+40% OFF
+</div>
+<div>
+<h3 class="font-bold text-xl md:text-2xl">July Flash Sale!</h3>
+<p class="text-sm md:text-base opacity-90">Limited time offer on all packages</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6">
+<div class="flex items-center space-x-2 text-sm md:text-base">
+<span>Ends in:</span>
+<div class="flex space-x-1">
+<div class="bg-black/20 px-3 py-1 !rounded-button font-mono" id="days">05</div>
+<span>:</span>
+<div class="bg-black/20 px-3 py-1 !rounded-button font-mono" id="hours">14</div>
+<span>:</span>
+<div class="bg-black/20 px-3 py-1 !rounded-button font-mono" id="minutes">32</div>
+<span>:</span>
+<div class="bg-black/20 px-3 py-1 !rounded-button font-mono" id="seconds">18</div>
+</div>
+</div>
+<button class="bg-white text-primary px-6 py-2 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Bottom Wavy SVG -->
+<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180" style="transform: translateY(99%);">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" class="relative block w-full h-20">
+        <path fill="#f9fafb" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,112C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+    </svg>
+</div>
+
+<div class="relative">
+<div class="text-center mb-12 pt-8">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Upcoming Trips</h2>
+<p class="text-lg text-gray-600">Book now with limited seats available</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Thailand%20beach%20resort%20with%20luxury%20amenities%2C%20tropical%20paradise%2C%20premium%20travel%20destination%2C%20beach%20vacation%2C%20crystal%20clear%20water%2C%20palm%20trees%2C%20luxury%20tourism%20photography&width=400&height=250&seq=thailand-upcoming&orientation=landscape" alt="Thailand" class="w-full h-48 object-cover">
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 !rounded-button text-sm font-semibold">
+Early Bird 30% OFF
+</div>
+<div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 !rounded-button text-sm font-semibold animate-pulse">
+Only 3 Seats Left
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Thailand Beach Paradise</h3>
+<div class="flex items-center text-gray-600 mb-2">
+<i class="ri-calendar-line mr-2"></i>
+<span>Departure: August 15, 2025</span>
+</div>
+<div class="flex items-center text-gray-600 mb-4">
+<i class="ri-time-line mr-2"></i>
+<span>6 Days / 5 Nights</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<div>
+<span class="text-gray-500 line-through text-sm">₹65,999</span>
+<span class="text-2xl font-bold text-primary ml-2">₹45,999</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-red-600 transition-colors font-semibold whitespace-nowrap">
+Book Now
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Europe%20tour%20featuring%20famous%20landmarks%2C%20cultural%20destinations%2C%20European%20architecture%2C%20travel%20group%20tour%2C%20historical%20sites%2C%20premium%20European%20travel%20photography&width=400&height=250&seq=europe-upcoming&orientation=landscape" alt="Europe" class="w-full h-48 object-cover">
+<div class="absolute top-4 left-4 bg-secondary text-black px-3 py-1 !rounded-button text-sm font-semibold">
+Best Seller
+</div>
+<div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 !rounded-button text-sm font-semibold">
+7 Seats Left
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Europe Grand Tour</h3>
+<div class="flex items-center text-gray-600 mb-2">
+<i class="ri-calendar-line mr-2"></i>
+<span>Departure: September 10, 2025</span>
+</div>
+<div class="flex items-center text-gray-600 mb-4">
+<i class="ri-time-line mr-2"></i>
+<span>12 Days / 11 Nights</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<div>
+<span class="text-gray-500 line-through text-sm">₹1,89,999</span>
+<span class="text-2xl font-bold text-primary ml-2">₹1,35,999</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-red-600 transition-colors font-semibold whitespace-nowrap">
+Book Now
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Kashmir%20valley%20with%20snow%20mountains%20and%20houseboats%2C%20Indian%20hill%20station%2C%20scenic%20beauty%2C%20mountain%20tourism%2C%20pristine%20nature%2C%20Kashmir%20tourism%20photography&width=400&height=250&seq=kashmir-upcoming&orientation=landscape" alt="Kashmir" class="w-full h-48 object-cover">
+<div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 !rounded-button text-sm font-semibold">
+New Launch
+</div>
+<div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 !rounded-button text-sm font-semibold">
+12 Seats Left
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Kashmir Valley Special</h3>
+<div class="flex items-center text-gray-600 mb-2">
+<i class="ri-calendar-line mr-2"></i>
+<span>Departure: August 25, 2025</span>
+</div>
+<div class="flex items-center text-gray-600 mb-4">
+<i class="ri-time-line mr-2"></i>
+<span>7 Days / 6 Nights</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<div>
+<span class="text-gray-500 line-through text-sm">₹35,999</span>
+<span class="text-2xl font-bold text-primary ml-2">₹25,999</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-red-600 transition-colors font-semibold whitespace-nowrap">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Perks -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Saisha Tours?</h2>
+<p class="text-lg text-gray-600">Premium services that make your journey extraordinary</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg">
+<i class="ri-customer-service-2-line text-3xl text-blue-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Support</h3>
+<p class="text-gray-600 leading-relaxed">Round-the-clock assistance for all your travel needs. Our dedicated team is always here to help.</p>
+</div>
+<div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg">
+<i class="ri-shield-check-line text-3xl text-green-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Best Price Guarantee</h3>
+<p class="text-gray-600 leading-relaxed">We guarantee the best prices in the market. Find a better deal? We'll match it instantly.</p>
+</div>
+<div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg">
+<i class="ri-award-line text-3xl text-purple-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Premium Amenities</h3>
+<p class="text-gray-600 leading-relaxed">Luxury accommodations, premium transportation, and exclusive experiences included in every package.</p>
+</div>
+<div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg">
+<i class="ri-map-pin-line text-3xl text-red-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Expert Guidance</h3>
+<p class="text-gray-600 leading-relaxed">Professional tour guides and local experts to make your journey informative and memorable.</p>
+</div>
+</div>
+<!-- Additional Perks Row -->
+<div class="grid md:grid-cols-3 gap-8 mt-12">
+<div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-flight-takeoff-line text-2xl text-yellow-600"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Free Airport Transfers</h4>
+<p class="text-gray-600 text-sm">Complimentary pickup and drop-off services for all international packages.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-wifi-line text-2xl text-indigo-600"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Free Wi-Fi & SIM</h4>
+<p class="text-gray-600 text-sm">Stay connected with complimentary international SIM cards and Wi-Fi access.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-camera-line text-2xl text-teal-600"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Professional Photography</h4>
+<p class="text-gray-600 text-sm">Capture memories with our professional photography services at key destinations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tour Galleries -->
+<section id="destinations" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Explore Our Destinations</h2>
+<p class="text-lg text-gray-600">Discover amazing places with our curated travel packages</p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex justify-center mb-12">
+<div class="bg-white rounded-full p-1 shadow-lg">
+<button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all bg-primary text-white" data-filter="all">
+All Destinations
+</button>
+<button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all text-gray-600 hover:text-primary" data-filter="international">
+International
+</button>
+<button class="gallery-filter px-6 py-3 rounded-full font-semibold transition-all text-gray-600 hover:text-primary" data-filter="domestic">
+Domestic
+</button>
+</div>
+</div>
+<!-- Gallery Grid -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="galleryGrid">
+<!-- International Destinations -->
+<div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Dubai%20luxury%20skyline%20with%20Burj%20Khalifa%20and%20modern%20architecture%2C%20golden%20hour%20lighting%2C%20premium%20travel%20destination%2C%20UAE%20tourism%2C%20city%20lights%2C%20urban%20landscape%20photography&width=300&height=200&seq=dubai-gallery&orientation=landscape" alt="Dubai" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Dubai Luxury</h3>
+<p class="text-sm text-gray-600 mb-2">5 Days from ₹65,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.8 (124 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Singapore%20Marina%20Bay%20Sands%20and%20Gardens%20by%20the%20Bay%2C%20futuristic%20architecture%2C%20modern%20city%20skyline%2C%20evening%20lights%2C%20travel%20destination%20photography%2C%20urban%20garden%20landscape&width=300&height=200&seq=singapore-gallery&orientation=landscape" alt="Singapore" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Singapore Delight</h3>
+<p class="text-sm text-gray-600 mb-2">4 Days from ₹42,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.7 (98 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Maldives%20overwater%20bungalows%20with%20crystal%20clear%20turquoise%20water%2C%20tropical%20paradise%2C%20luxury%20resort%2C%20romantic%20destination%2C%20pristine%20beaches%2C%20honeymoon%20destination%20photography&width=300&height=200&seq=maldives-gallery&orientation=landscape" alt="Maldives" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Maldives Paradise</h3>
+<p class="text-sm text-gray-600 mb-2">6 Days from ₹89,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.9 (156 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item international bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Switzerland%20Alps%20with%20snow-capped%20mountains%20and%20scenic%20railway%2C%20beautiful%20European%20landscapes%2C%20mountain%20tourism%2C%20pristine%20alpine%20nature%2C%20travel%20photography&width=300&height=200&seq=switzerland-gallery&orientation=landscape" alt="Switzerland" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 text-xs !rounded-button">International</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Switzerland Alps</h3>
+<p class="text-sm text-gray-600 mb-2">7 Days from ₹1,25,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.8 (89 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Domestic Destinations -->
+<div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Kerala%20backwaters%20with%20traditional%20houseboat%2C%20lush%20green%20coconut%20palms%2C%20serene%20water%20landscape%2C%20Indian%20tourism%2C%20tropical%20scenery%2C%20cultural%20travel%20photography&width=300&height=200&seq=kerala-gallery&orientation=landscape" alt="Kerala" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Kerala Backwaters</h3>
+<p class="text-sm text-gray-600 mb-2">5 Days from ₹18,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.7 (203 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Rajasthan%20palace%20architecture%20with%20intricate%20carvings%2C%20royal%20heritage%2C%20golden%20sandstone%2C%20Indian%20cultural%20tourism%2C%20historical%20monuments%2C%20desert%20landscape&width=300&height=200&seq=rajasthan-gallery&orientation=landscape" alt="Rajasthan" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Rajasthan Royal</h3>
+<p class="text-sm text-gray-600 mb-2">6 Days from ₹22,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.8 (167 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Kashmir%20snow-capped%20mountains%20with%20Dal%20Lake%2C%20Shikara%20boats%2C%20beautiful%20valley%20landscape%2C%20Indian%20hill%20station%2C%20pristine%20nature%2C%20mountain%20tourism&width=300&height=200&seq=kashmir-gallery&orientation=landscape" alt="Kashmir" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Kashmir Paradise</h3>
+<p class="text-sm text-gray-600 mb-2">7 Days from ₹25,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.9 (145 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+<div class="gallery-item domestic bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Goa%20beaches%20with%20golden%20sand%20and%20palm%20trees%2C%20coastal%20paradise%2C%20beach%20tourism%2C%20tropical%20destination%2C%20Indian%20beach%20holiday%2C%20sunset%20photography&width=300&height=200&seq=goa-gallery&orientation=landscape" alt="Goa" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-gray-900 px-4 py-2 !rounded-button font-semibold">View Details</button>
+</div>
+<div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 text-xs !rounded-button">Domestic</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-gray-900 mb-1">Goa Beaches</h3>
+<p class="text-sm text-gray-600 mb-2">4 Days from ₹15,999</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<span class="text-sm text-gray-600 ml-1">4.6 (189 reviews)</span>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+<p class="text-lg text-gray-600">Get answers to common questions about our travel services</p>
+</div>
+<div class="space-y-4">
+<div class="faq-item bg-gray-50 rounded-xl">
+<button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+<span class="text-lg font-semibold text-gray-900">What is included in your tour packages?</span>
+<i class="ri-add-line text-xl text-gray-600 transition-transform"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-6">
+<p class="text-gray-600 leading-relaxed">Our tour packages include accommodation, transportation, meals as specified, professional tour guides, entrance fees to attractions, and 24/7 customer support. International packages also include visa assistance and travel insurance.</p>
+</div>
+</div>
+<div class="faq-item bg-gray-50 rounded-xl">
+<button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+<span class="text-lg font-semibold text-gray-900">How can I book a tour with Saisha Tours?</span>
+<i class="ri-add-line text-xl text-gray-600 transition-transform"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-6">
+<p class="text-gray-600 leading-relaxed">You can book through our website, call our booking hotline, or visit our office. We accept online payments, bank transfers, and installment plans. A small advance booking amount secures your reservation.</p>
+</div>
+</div>
+<div class="faq-item bg-gray-50 rounded-xl">
+<button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+<span class="text-lg font-semibold text-gray-900">What is your cancellation policy?</span>
+<i class="ri-add-line text-xl text-gray-600 transition-transform"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-6">
+<p class="text-gray-600 leading-relaxed">Cancellation charges vary based on the time of cancellation and destination. Generally, cancellations made 45+ days before departure incur minimal charges, while last-minute cancellations may have higher fees. Travel insurance is recommended for maximum protection.</p>
+</div>
+</div>
+<div class="faq-item bg-gray-50 rounded-xl">
+<button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+<span class="text-lg font-semibold text-gray-900">Do you provide customized tour packages?</span>
+<i class="ri-add-line text-xl text-gray-600 transition-transform"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-6">
+<p class="text-gray-600 leading-relaxed">Yes, we specialize in creating customized itineraries based on your preferences, budget, and travel dates. Our travel experts work closely with you to design the perfect trip that matches your interests and requirements.</p>
+</div>
+</div>
+<div class="faq-item bg-gray-50 rounded-xl">
+<button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+<span class="text-lg font-semibold text-gray-900">What safety measures do you have in place?</span>
+<i class="ri-add-line text-xl text-gray-600 transition-transform"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-6">
+<p class="text-gray-600 leading-relaxed">We prioritize traveler safety with comprehensive travel insurance, verified accommodations, licensed transportation, experienced guides, 24/7 emergency support, and regular health and safety protocol updates. All our partners meet strict safety standards.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Testimonials -->
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+<p class="text-lg text-gray-600">Real experiences from our happy travelers</p>
+</div>
+<div class="relative">
+<div class="testimonial-carousel overflow-hidden">
+<div class="flex transition-transform duration-500" id="testimonialCarousel">
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+<div class="bg-white rounded-xl shadow-lg p-8 h-full">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=professional%20Indian%20woman%20smiling%2C%20business%20portrait%2C%20confident%20expression%2C%20modern%20professional%20headshot%2C%20corporate%20photography%20style%2C%20friendly%20appearance&width=80&height=80&seq=testimonial1&orientation=squarish" alt="Priya Sharma" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-bold text-gray-900">Priya Sharma</h4>
+<p class="text-sm text-gray-600">Mumbai</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Our Thailand trip with Saisha Tours was absolutely amazing! The attention to detail, beautiful accommodations, and seamless planning made it a perfect family vacation. Highly recommended!"</p>
+<div class="text-sm text-gray-500">Thailand Package - March 2025</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+<div class="bg-white rounded-xl shadow-lg p-8 h-full">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=Indian%20businessman%20smiling%2C%20professional%20male%20portrait%2C%20confident%20business%20executive%2C%20corporate%20headshot%20photography%2C%20friendly%20professional%20appearance&width=80&height=80&seq=testimonial2&orientation=squarish" alt="Rajesh Kumar" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-bold text-gray-900">Rajesh Kumar</h4>
+<p class="text-sm text-gray-600">Delhi</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 leading-relaxed mb-4">"The Europe tour exceeded all expectations! Professional guides, luxury hotels, and perfect itinerary. Saisha Tours made our dream European vacation come true. Worth every penny!"</p>
+<div class="text-sm text-gray-500">Europe Grand Tour - February 2025</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+<div class="bg-white rounded-xl shadow-lg p-8 h-full">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=Indian%20couple%20smiling%20together%2C%20happy%20married%20couple%20portrait%2C%20travel%20couple%20photography%2C%20joyful%20expressions%2C%20romantic%20couple%20headshot&width=80&height=80&seq=testimonial3&orientation=squarish" alt="Anita & Suresh" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-bold text-gray-900">Anita & Suresh</h4>
+<p class="text-sm text-gray-600">Bangalore</p>
+<div class="flex text-yellow-400 mt-1">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Our Kashmir honeymoon was magical! Beautiful houseboats, stunning valleys, and romantic experiences. Saisha Tours planned everything perfectly for our special trip."</p>
+<div class="text-sm text-gray-500">Kashmir Paradise - January 2025</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial Navigation -->
+<button class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors" id="prevTestimonial">
+<i class="ri-arrow-left-line text-xl text-gray-600"></i>
+</button>
+<button class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors" id="nextTestimonial">
+<i class="ri-arrow-right-line text-xl text-gray-600"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Welcome to Saisha Tours & Travel -->
+<section id="welcome" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+            <div class="grid grid-cols-2 grid-rows-2 gap-4">
+                    <div class="col-span-2 row-span-1">
+                        <img src="https://readdy.ai/api/search-image?query=family%20enjoying%20a%20scenic%20mountain%20view%20in%20the%20Swiss%20Alps%2C%20happy%20and%20adventurous%2C%20luxury%20travel%20experience&width=600&height=300&seq=welcome-swiss&orientation=landscape" alt="Family in Swiss Alps" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="col-span-1 row-span-1">
+                        <img src="https://readdy.ai/api/search-image?query=couple%20on%20a%20romantic%20gondola%20ride%20in%20Venice%2C%20Italy%2C%20serene%20and%20picturesque%2C%20European%20travel&width=300&height=300&seq=welcome-venice&orientation=landscape" alt="Couple in Venice" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="col-span-1 row-span-1">
+                        <img src="https://readdy.ai/api/search-image?query=children%20playing%20on%20a%20sandy%20beach%20in%20the%20Maldives%2C%20crystal%20clear%20water%2C%20family%20vacation&width=300&height=300&seq=welcome-maldives&orientation=landscape" alt="Kids on beach" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            <div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    Welcome to Saisha Tours & Travel
+                </h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Your gateway to unforgettable journeys. At Saisha, we believe that travel is more than just visiting new places; it’s about creating lasting memories. Our expertly curated tours are designed to provide you with the most immersive and seamless travel experiences, whether you're exploring the serene backwaters of Kerala or the vibrant streets of Paris.
+                </p>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    With a commitment to excellence and a passion for discovery, we handle every detail of your trip, ensuring a hassle-free adventure from start to finish. Join us and embark on a journey of a lifetime.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-600 transition-all font-semibold text-lg">
+                        Explore Packages
+                    </button>
+                    <button class="bg-gray-100 text-gray-800 px-8 py-4 !rounded-button hover:bg-gray-200 transition-all font-semibold text-lg">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+<a href="https://wa.me/919221103609" target="_blank" class="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 flex items-center justify-center">
+<i class="ri-whatsapp-line text-xl"></i>
+</a>
+<a href="tel:+919221103609" class="w-14 h-14 bg-primary text-white rounded-full shadow-lg hover:bg-red-600 transition-all hover:scale-110 flex items-center justify-center">
+<i class="ri-phone-line text-xl"></i>
+</a>
+</div>
+<!-- Scripts -->
+<script id="hero-slider">
+document.addEventListener('DOMContentLoaded', function() {
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+const prevBtn = document.getElementById('prevSlide');
+const nextBtn = document.getElementById('nextSlide');
+let currentSlide = 0;
+let slideInterval;
+function showSlide(index) {
+slides.forEach((slide, i) => {
+slide.style.opacity = i === index ? '1' : '0';
+slide.classList.toggle('active', i === index);
+});
+dots.forEach((dot, i) => {
+dot.style.backgroundColor = i === index ? 'white' : 'rgba(255,255,255,0.5)';
+});
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % slides.length;
+showSlide(currentSlide);
+}
+function prevSlide() {
+currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+showSlide(currentSlide);
+}
+function startAutoSlide() {
+slideInterval = setInterval(nextSlide, 5000);
+}
+function stopAutoSlide() {
+clearInterval(slideInterval);
+}
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentSlide = index;
+showSlide(currentSlide);
+stopAutoSlide();
+startAutoSlide();
+});
+});
+nextBtn.addEventListener('click', () => {
+nextSlide();
+stopAutoSlide();
+startAutoSlide();
+});
+prevBtn.addEventListener('click', () => {
+prevSlide();
+stopAutoSlide();
+startAutoSlide();
+});
+showSlide(0);
+startAutoSlide();
+});
+</script>
+<script id="countdown-timer">
+document.addEventListener('DOMContentLoaded', function() {
+function updateCountdown() {
+const now = new Date().getTime();
+const endDate = new Date('2025-07-31T23:59:59').getTime();
+const timeLeft = endDate - now;
+const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+document.getElementById('days').textContent = days.toString().padStart(2, '0');
+document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+});
+</script>
+<script id="customer-carousel">
+document.addEventListener('DOMContentLoaded', function() {
+const carousel = document.getElementById('customerCarousel');
+const dots = document.querySelectorAll('.customer-dot');
+let currentSlide = 0;
+function showCustomerSlide(index) {
+carousel.style.transform = `translateX(-${index * 100}%)`;
+dots.forEach((dot, i) => {
+dot.style.backgroundColor = i === index ? 'white' : 'rgba(255,255,255,0.7)';
+});
+}
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentSlide = index;
+showCustomerSlide(currentSlide);
+});
+});
+setInterval(() => {
+currentSlide = (currentSlide + 1) % 3;
+showCustomerSlide(currentSlide);
+}, 4000);
+});
+</script>
+<script id="counter-animation">
+document.addEventListener('DOMContentLoaded', function() {
+const counters = document.querySelectorAll('[data-counter]');
+function animateCounter(counter) {
+const target = parseInt(counter.getAttribute('data-counter'));
+const increment = target / 100;
+let current = 0;
+const timer = setInterval(() => {
+current += increment;
+if (current >= target) {
+counter.textContent = target.toLocaleString();
+clearInterval(timer);
+} else {
+counter.textContent = Math.floor(current).toLocaleString();
+}
+}, 20);
+}
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+animateCounter(entry.target);
+observer.unobserve(entry.target);
+}
+});
+});
+counters.forEach(counter => observer.observe(counter));
+});
+</script>
+<script id="gallery-filter">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.gallery-filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+const filter = button.getAttribute('data-filter');
+filterButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('text-gray-600', 'hover:text-primary');
+});
+button.classList.add('bg-primary', 'text-white');
+button.classList.remove('text-gray-600', 'hover:text-primary');
+galleryItems.forEach(item => {
+if (filter === 'all' || item.classList.contains(filter)) {
+item.style.display = 'block';
+item.classList.add('fade-in');
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<script id="faq-accordion">
+document.addEventListener('DOMContentLoaded', function() {
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+question.addEventListener('click', () => {
+const faqItem = question.parentElement;
+const answer = faqItem.querySelector('.faq-answer');
+const icon = question.querySelector('i');
+const isOpen = !answer.classList.contains('hidden');
+document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+document.querySelectorAll('.faq-question i').forEach(ic => {
+ic.classList.remove('ri-subtract-line', 'rotate-180');
+ic.classList.add('ri-add-line');
+});
+if (!isOpen) {
+answer.classList.remove('hidden');
+icon.classList.remove('ri-add-line');
+icon.classList.add('ri-subtract-line', 'rotate-180');
+}
+});
+});
+});
+</script>
+<script id="testimonial-carousel">
+document.addEventListener('DOMContentLoaded', function() {
+const carousel = document.getElementById('testimonialCarousel');
+const prevBtn = document.getElementById('prevTestimonial');
+const nextBtn = document.getElementById('nextTestimonial');
+let currentSlide = 0;
+const totalSlides = 3;
+function showTestimonialSlide(index) {
+const slideWidth = carousel.children[0].offsetWidth;
+carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+nextBtn.addEventListener('click', () => {
+currentSlide = (currentSlide + 1) % totalSlides;
+showTestimonialSlide(currentSlide);
+});
+prevBtn.addEventListener('click', () => {
+currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+showTestimonialSlide(currentSlide);
+});
+setInterval(() => {
+currentSlide = (currentSlide + 1) % totalSlides;
+showTestimonialSlide(currentSlide);
+}, 6000);
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>

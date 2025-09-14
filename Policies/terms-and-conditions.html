@@ -1,0 +1,3187 @@
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!-- Start of Header Section -->
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saisha Tour & Travels</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17215776769"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17215776769');
+</script>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF0000',secondary:'#3A3F78',orange:'#FF0000',charcoal:'#1F2B38',glacier:'#F1F7FA'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+
+
+/* Navigation link styles */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem; /* text-sm */
+}
+
+/* Ensure dropdown links have proper spacing for the underline */
+.dropdown .nav-link {
+  padding-bottom: 4px;
+}
+@keyframes pulse {
+0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+50% { box-shadow: 0 0 20px 5px rgba(255, 107, 53, 0.3); }
+}
+.dropdown-container .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-5px); }
+}
+.nav-link {
+position: relative;
+overflow: hidden;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #FF0000;
+transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.dropdown {
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease-in-out;
+}
+.dropdown-container:hover .dropdown {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+.call-now-btn {
+  background-color: #FF0000 !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+  z-index: 1;
+  animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  outline: none !important;
+  border: none !important;
+}
+
+.call-now-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7) !important;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7), 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+.call-now-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.7);
+  background-color: #E60000 !important;
+}
+
+.call-now-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.4);
+}
+
+.call-now-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #CC0000;
+  border: none !important;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.call-now-btn:hover::before {
+  opacity: 1;
+  animation: ripple 1.5s ease-out infinite;
+}
+
+.call-now-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.call-now-btn:focus:not(:active)::after {
+  animation: ripple-click 1s ease-out;
+}
+
+@keyframes ripple-click {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(40, 40);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.call-now-btn .ri-phone-fill {
+  transition: transform 0.3s ease;
+}
+
+.call-now-btn:hover .ri-phone-fill {
+  animation: icon-wiggle 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy wiggle for the icon */
+}
+
+@keyframes icon-wiggle {
+  0%   { transform: rotate(0deg) translateY(0px) scale(1); }
+  15%  { transform: rotate(-10deg) translateY(-3px) scale(1.15); }
+  30%  { transform: rotate(8deg) translateY(-1px) scale(1.05); }
+  45%  { transform: rotate(-6deg) translateY(-2px) scale(1.1); }
+  60%  { transform: rotate(4deg) translateY(-0.5px) scale(1.05); }
+  75%  { transform: rotate(-2deg) translateY(-1px) scale(1.1); }
+  100% { transform: rotate(0deg) translateY(0px) scale(1); }
+}
+
+/* Original transform properties */
+.call-now-btn::before {
+  transform: rotate(45deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+.call-now-btn:hover::before {
+opacity: 1;
+transform: rotate(45deg) translate(10%, 10%);
+}
+.hamburger-line {
+transition: all 0.3s ease;
+}
+.mobile-menu-open .line-1 {
+transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-open .line-2 {
+opacity: 0;
+}
+.mobile-menu-open .line-3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* Change hamburger bars to red when menu is open */
+.mobile-menu-open .hamburger-line {
+  background-color: #FF0000 !important;
+}
+.mobile-menu {
+transform: translateX(100%);
+transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+.mobile-menu.open {
+transform: translateX(0);
+}
+.mobile-menu-item {
+transform: translateX(20px);
+opacity: 0;
+transition: all 0.3s ease;
+}
+.mobile-menu.open .mobile-menu-item {
+transform: translateX(0);
+opacity: 1;
+}
+.mobile-menu.open .mobile-menu-item:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.open .mobile-menu-item:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu.open .mobile-menu-item:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu.open .mobile-menu-item:nth-child(4) { transition-delay: 0.4s; }
+.mobile-menu.open .mobile-menu-item:nth-child(5) { transition-delay: 0.5s; }
+.mobile-menu.open .mobile-menu-item:nth-child(6) { transition-delay: 0.6s; }
+.mobile-submenu {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+.mobile-submenu.open {
+max-height: 200px;
+}
+.phone-pulse {
+animation: float 3s infinite ease-in-out;
+}
+@media (max-width: 768px) {
+.desktop-nav {
+display: none !important;
+}
+.mobile-nav {
+display: flex !important;
+}
+}
+@media (min-width: 769px) {
+.desktop-nav {
+display: flex;
+}
+.mobile-nav {
+display: none !important;
+}
+}
+.header-logo-zoom {
+  transform: scale(1.9);
+  margin-left: -26px;
+  margin-right: -26px;
+  /* Adjust margins as needed to keep the logo centered */
+  transition: transform 0.2s;
+  /* Optional: ensures overflow is visible */
+}
+
+@media (min-width: 1024px) {
+  .header-logo-zoom {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-logo-zoom {
+    transform: scale(1.6);
+    margin-left: -10px;
+    margin-right: -10px;
+    transition: transform 0.2s;
+    /* Ensures logo stays centered and does not increase header height */
+  }
+}
+
+/* Typing animation for search bar */
+.search-input {
+  position: relative;
+}
+
+/* Remove blue focus ring on search input */
+.search-input:focus,
+.search-input input:focus,
+input[type="search"]:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+}
+
+.search-input::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FF0000;
+  transform: translateY(-50%);
+  animation: typing 2s infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.search-input::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0076D6;
+  transform: translateY(-50%);
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
+<!-- Scrollable search results -->
+<style>
+  /* Constrain results area to keep overlay compact and scrollable */
+  #searchResults #resultsList,
+  #searchResultsMobile #resultsListMobile { max-height: 360px; overflow-y: auto; padding-right: 4px; }
+  /* Smooth scrolling */
+  #searchResults #resultsList,
+  #searchResultsMobile #resultsListMobile { scroll-behavior: smooth; }
+  /* Subtle scrollbar styling */
+  #searchResults #resultsList::-webkit-scrollbar,
+  #searchResultsMobile #resultsListMobile::-webkit-scrollbar { width: 8px; }
+  #searchResults #resultsList::-webkit-scrollbar-track,
+  #searchResultsMobile #resultsListMobile::-webkit-scrollbar-track { background: #f3f4f6; border-radius: 8px; }
+  #searchResults #resultsList::-webkit-scrollbar-thumb,
+  #searchResultsMobile #resultsListMobile::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 8px; }
+  #searchResults #resultsList::-webkit-scrollbar-thumb:hover,
+  #searchResultsMobile #resultsListMobile::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+  /* Firefox */
+  #searchResults #resultsList,
+  #searchResultsMobile #resultsListMobile { scrollbar-width: thin; scrollbar-color: #e5e7eb #f3f4f6; }
+</style>
+<style>
+/* override previous mistaken line animations */
+.search-input::after, .search-input::before{display:none;}
+/* blinking cursor on animated word */
+#type-span::after, #type-span-mobile::after{content:'';display:inline-block;width:2px;height:1em;background:#000;margin-left:2px;animation:blink 0.8s steps(1) infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* Image zoom effect on hover for destination and special cards */
+.destination-card img,
+.special-card img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.destination-card:hover img,
+.special-card:hover img {
+  transform: scale(1.1);
+}
+</style>
+<style>
+/* Keep header identical across desktop widths up to 32-inch screens */
+@media (min-width: 1024px) {
+  /* Prevent any wrapping in the header */
+  .desktop-nav,
+  .desktop-nav nav,
+  .desktop-nav ul { flex-wrap: nowrap; white-space: nowrap; }
+  .desktop-nav li,
+  .desktop-nav a { white-space: nowrap; }
+  
+  /* Fixed layout for consistent appearance across all desktop sizes */
+  .desktop-nav {
+    max-width: 2560px; /* 32-inch screen max width */
+    margin: 0 auto;
+  }
+  
+  /* Ensure search bar and navigation start from center point */
+  .desktop-nav > div:last-of-type {
+    transform: translateX(-50%);
+    margin-left: 50%;
+  }
+}
+</style>
+<!-- Red styling for price range slider -->
+<style>
+ /* Pure red thumb, light red track */
+ #priceRange { accent-color: #ef4444; }
+ #priceRange::-webkit-slider-runnable-track { height: 8px; background: #fee2e2; border-radius: 9999px; }
+ #priceRange::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; background: #ef4444; border-radius: 9999px; border: 2px solid #ffffff; margin-top: -5px; box-shadow: 0 1px 2px rgba(0,0,0,0.15); }
+ #priceRange::-moz-range-track { height: 8px; background: #fee2e2; border-radius: 9999px; }
+ #priceRange::-moz-range-thumb { width: 18px; height: 18px; background: #ef4444; border: 2px solid #ffffff; border-radius: 9999px; box-shadow: 0 1px 2px rgba(0,0,0,0.15); }
+</style>
+</head>
+<body class="font-sans antialiased bg-white text-charcoal">
+<header class="bg-white shadow-sm fixed w-full top-0 z-50">
+<!-- Desktop Navigation -->
+<div class="desktop-nav w-full px-6 lg:px-10 xl:px-16 py-3 flex items-center">
+<!-- Logo -->
+<div class="flex items-center flex-shrink-0">
+<a href="https://saishatoursandtravels.in" class="flex items-center" aria-label="Concierge Global Services Home">
+<img src="Untitled%20design.png" alt="Saisha Tours & Travels" class="h-20 w-auto -mt-4 -mb-4 header-logo-zoom">
+
+</a>
+</div>
+<!-- Spacer to push content to center -->
+<div class="flex-1"></div>
+<!-- Centered Content: Search Bar + Navigation Links -->
+<div class="flex items-center space-x-6 flex-shrink-0">
+  <!-- Original Search Bar with Expandable Overlay -->
+  <div class="relative">
+    <form action="/search" method="GET" class="relative">
+      <input id="search-input" type="text" name="q" placeholder="Search for" class="w-64 pl-10 pr-3 py-1.5 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-sm search-input bg-white/90 shadow-sm" autocomplete="off">
+      <span id="type-span" class="absolute left-[6.7rem] top-1/2 -translate-y-1/2 text-sm text-black pointer-events-none">Dubai</span>
+      <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-black"></i>
+    </form>
+    
+    <!-- Search Overlay Panel -->
+    <div id="searchOverlay" class="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-2xl shadow-2xl w-[600px] p-6 hidden z-50">
+      <!-- Search Results / Suggestions -->
+      <div id="searchResults" class="mb-6 hidden">
+        <h3 class="text-gray-800 font-medium mb-3">Available Packages</h3>
+        <div id="resultsList" class="space-y-2">
+          <!-- Dynamic search results will appear here -->
+        </div>
+      </div>
+      
+      <!-- Product Type -->
+      <div class="mb-6">
+        <h3 class="text-gray-800 font-medium mb-3">Product Type</h3>
+        <div class="flex gap-3">
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-filter="tour">Tour</button>
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-filter="activity">Activity</button>
+        </div>
+      </div>
+      
+      <!-- Trip Duration -->
+      <div class="mb-6">
+        <h3 class="text-gray-800 font-medium mb-3">Trip Duration</h3>
+        <div class="flex gap-3 flex-wrap">
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="1">Upto 1 Day</button>
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="2-3">2 to 3 days</button>
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="3-5">3 to 5 days</button>
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="5-7">5 to 7 days</button>
+          <button type="button" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="7+">7+ Days</button>
+        </div>
+      </div>
+      
+      <!-- Search Button -->
+      <button type="button" class="w-full bg-orange-400 hover:bg-orange-500 text-white font-medium py-3 rounded-lg transition-colors">
+        Search For Products
+      </button>
+    </div>
+  </div>
+<!-- Navigation Links -->
+<nav class="flex items-center">
+<ul class="flex space-x-6 items-center whitespace-nowrap">
+<li class="hidden">
+<a href="https://saishatoursandtravels.in" class="nav-link py-2 text-charcoal">Home</a>
+</li>
+<li class="dropdown-container relative group">
+<a href="#!" onclick="return false;" class="nav-link py-2 text-charcoal flex items-center">
+Destinations
+<span class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</a>
+<div class="dropdown fixed top-20 left-0 right-0 mx-auto mt-2 w-full sm:w-[900px] max-w-[95vw] bg-white rounded-lg shadow-2xl z-50 p-6 border border-gray-200">
+  <!-- International Destinations -->
+  <div class="mb-6">
+  <h3 class="text-lg font-bold text-primary mb-4 flex items-center">
+    <i class="ri-earth-line mr-2 header-icon-live" aria-hidden="true"></i>
+    INTERNATIONAL DESTINATIONS
+  </h3>
+  <div class="grid grid-cols-4 gap-4">
+<a href="https://saishatoursandtravels.in/destinations/international/thailand" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&h=400&q=80" alt="Thailand – scenic temples and landscapes" class="block w-full h-28 object-cover rounded-lg">
+<div class="p-1 absolute bottom-2 left-2">
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Thailand</span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/international/bali" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&h=400&q=80" alt="Bali – tropical beaches and rice terraces" class="block w-full h-28 object-cover rounded-lg">
+<div class="p-1 absolute bottom-2 left-2">
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Bali</span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/international/singapore" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&h=400&q=80" alt="Singapore – Marina Bay skyline" class="block w-full h-28 object-cover rounded-lg">
+<div class="p-1 absolute bottom-2 left-2">
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Singapore</span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/international/dubai" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&h=400&q=80" alt="Dubai – modern skyline and architecture" class="block w-full h-28 object-cover rounded-lg">
+<div class="p-1 absolute bottom-2 left-2">
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Dubai</span>
+</div>
+</a>
+</div>
+</div>
+
+<!-- Domestic Destinations -->
+<div class="mb-6">
+<h3 class="text-lg font-bold text-primary mb-4 flex items-center"><span class="mr-2" aria-hidden="true">🇮🇳</span>DOMESTIC DESTINATIONS</h3>
+<div class="grid grid-cols-4 gap-4">
+<a href="https://saishatoursandtravels.in/destinations/domestic/himachal-pradesh" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&h=400&q=80" alt="Himachal Pradesh – mountain landscapes and valleys" class="w-full h-28 object-cover">
+<div class="p-1 absolute bottom-2 left-2">
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Himachal Pradesh</span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/domestic/goa" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&h=400&q=80" alt="Goa – beautiful beaches and coastline" class="w-full h-28 object-cover">
+<div class="p-1 absolute bottom-2 left-2">
+<!-- title removed per request -->
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Goa</span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/domestic/jammu-kashmir" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&h=400&q=80" alt="Jammu & Kashmir – Dal Lake and houseboats" class="w-full h-28 object-cover">
+<div class="p-1 absolute bottom-2 left-2">
+<!-- title removed per request -->
+<span class="inline-block text-white drop-shadow font-semibold text-xs">jammu & Kashmir </span>
+</div>
+</a>
+<a href="https://saishatoursandtravels.in/destinations/domestic/kerala" target="_blank" rel="noopener noreferrer" class="destination-card block bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl relative no-underline">
+<img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&h=400&q=80" alt="Kerala – serene backwaters and palm trees" class="w-full h-28 object-cover">
+<div class="p-1 absolute bottom-2 left-2">
+<!-- title removed per request -->
+<span class="inline-block text-white drop-shadow font-semibold text-xs">Kerala</span>
+</div>
+</a>
+</div>
+</div>
+
+<!-- Customized Plans -->
+<div>
+<h3 class="text-lg font-bold text-primary mb-4">CUSTOMIZED PLANS</h3>
+<div class="bg-gradient-to-r from-blue-50 to-glacier rounded-lg p-4 border border-blue-100">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+<i class="ri-tools-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-sm text-charcoal">Tailor-Made Itineraries</h4>
+<p class="text-xs text-gray-500">Create your dream vacation</p>
+</div>
+</div>
+<a href="#!" id="open-quote-modal" class="mt-3 inline-block text-xs font-medium text-primary hover:underline">Get a Custom Quote →</a>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown-container relative group">
+<a href="#!" onclick="return false;" class="nav-link py-2 text-charcoal flex items-center">
+Saisha Special
+<span class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</a>
+<div class="dropdown fixed top-20 left-0 right-0 mx-auto mt-2 w-full sm:w-[900px] max-w-[95vw] bg-white rounded-xl shadow-2xl z-50 p-8 border border-gray-200">
+<!-- Bestselling Tours Section -->
+<div class="mb-6">
+<h3 class="text-lg font-bold text-primary mb-4 flex items-center">
+  <i class="ri-fire-line mr-2 header-icon-live" aria-hidden="true"></i>
+  BESTSELLING TOURS
+</h3>
+<div class="grid grid-cols-4 gap-4">
+<div class="special-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
+<img src="./openart-image_NAeI9MDj_1754666214145_raw.jpg" alt="Women's Special – Group of young Indian women at a hill station" class="w-full h-32 object-cover">
+<div class="p-3">
+<div class="mb-1">
+<h4 class="font-semibold text-sm text-charcoal">Women's Special</h4>
+
+</div>
+<a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-2 py-0.5 rounded">Explore</a>
+</div>
+</div>
+<div class="special-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
+<img src="./Header old people.jpg" alt="Seniors' Special – Happy senior travelers" class="w-full h-32 object-cover">
+<div class="p-3">
+<div class="mb-1">
+<h4 class="font-semibold text-sm text-charcoal">Seniors' Special</h4>
+
+</div>
+<a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-2 py-0.5 rounded">Explore</a>
+</div>
+</div>
+<div class="special-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
+<img src="./Header image - Family.jpg" alt="Family Tour Packages – Happy family on vacation" class="w-full h-32 object-cover">
+<div class="p-3">
+<div class="mb-1">
+<h4 class="font-semibold text-sm text-charcoal">Family Tour Packages</h4>
+
+</div>
+<a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-2 py-0.5 rounded">Explore</a>
+</div>
+</div>
+<div class="special-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
+<img src="https://images.pexels.com/photos/20219120/pexels-photo-20219120.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" alt="Honeymoon Special – Couple at a luxury resort pool" class="w-full h-32 object-cover">
+<div class="p-3">
+<div class="mb-1">
+<h4 class="font-semibold text-sm text-charcoal">Honeymoon Special</h4>
+
+</div>
+<a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-2 py-0.5 rounded">Explore</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Something New to Try Section -->
+<div class="mb-6">
+<h3 class="text-lg font-bold text-primary mb-4 flex items-center">
+  <i class="ri-compass-3-line mr-2 header-icon-live" aria-hidden="true"></i>
+  SOMETHING NEW TO TRY
+</h3>
+<div class="grid grid-cols-5 gap-4">
+<div class="text-center">
+<div class="w-12 h-12 bg-glacier rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-heart-line text-primary text-xl feature-icon-live"></i>
+</div>
+<h4 class="font-semibold text-xs text-charcoal mb-1">Couples Only</h4>
+<p class="text-xs text-gray-500">(4 Trips)</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-glacier rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-group-line text-primary text-xl feature-icon-live"></i>
+</div>
+<h4 class="font-semibold text-xs text-charcoal mb-1">Luxury Group Tours</h4>
+<p class="text-xs text-gray-500">(4 Trips)</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-glacier rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-calendar-line text-primary text-xl feature-icon-live"></i>
+</div>
+<h4 class="font-semibold text-xs text-charcoal mb-1">Corporate Tours</h4>
+<p class="text-xs text-gray-500">(8 Trips)</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-glacier rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-roadster-line text-primary text-xl feature-icon-live"></i>
+</div>
+<h4 class="font-semibold text-xs text-charcoal mb-1">Road Trips</h4>
+<p class="text-xs text-gray-500">(8 Trips)</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-glacier rounded-full flex items-center justify-center mx-auto mb-2">
+<i class="ri-time-line text-primary text-xl feature-icon-live"></i>
+</div>
+<h4 class="font-semibold text-xs text-charcoal mb-1">Short Trips</h4>
+<p class="text-xs text-gray-500">(109 Trips)</p>
+</div>
+</div>
+</div>
+<!-- Newly Launched Section -->
+<div>
+<div class="flex items-center mb-4">
+<span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded mr-3">NEWLY LAUNCHED</span>
+<h3 class="text-lg font-bold text-primary">Special Tours</h3>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="text-center">
+<h4 class="font-semibold text-sm text-charcoal mb-1">
+<a href="https://saishatoursandtravels.in/destinations/international/thailand" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">Exotic Thailand</a>
+</h4>
+<p class="text-xs text-gray-500">(6 Trips)</p>
+</div>
+<div class="text-center">
+<h4 class="font-semibold text-sm text-charcoal mb-1">
+<a href="https://saishatoursandtravels.in/destinations/international/dubai" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">Luxurios Dubai</a>
+</h4>
+<p class="text-xs text-gray-500">(1 Departure)</p>
+</div>
+<div class="text-center">
+<h4 class="font-semibold text-sm text-charcoal mb-1">
+<a href="https://saishatoursandtravels.in/destinations/international/bali" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">Adorable Bali</a>
+</h4>
+<p class="text-xs text-gray-500">(3 Trips)</p>
+</div>
+<div class="text-center">
+<h4 class="font-semibold text-sm text-charcoal mb-1">
+<a href="https://saishatoursandtravels.in/destinations/domestic/goa" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">Wonders of Goa</a>
+</h4>
+<p class="text-xs text-gray-500">(8 Trips)</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown-container relative group">
+<a href="#!" onclick="return false;" class="nav-link py-2 text-charcoal flex items-center">
+Quick Links
+<span class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</a>
+<div class="dropdown absolute top-full left-0 mt-10 w-72 bg-white rounded-xl shadow-2xl z-10 py-4 border border-gray-200 overflow-hidden">
+  <!-- Main Navigation Links -->
+  <div class="px-2 space-y-1">
+    <a href="https://saishatoursandtravels.in" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-home-4-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Home</span>
+    </a>
+    <a href="https://saishatoursandtravels.in/about" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-information-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">About Us</span>
+    </a>
+    <a href="https://saishatoursandtravels.in/contact" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-mail-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Contact Us</span>
+    </a>
+    <a href="https://saishatoursandtravels.in/policies" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-file-text-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Policies</span>
+    </a>
+  </div>
+  
+  <!-- Separator -->
+  <div class="border-t border-gray-200 my-3 mx-4"></div>
+  
+  <!-- Tour Categories -->
+  <div class="px-2 space-y-1">
+    <a href="https://saishatoursandtravels.in/destinations/domestic" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-map-pin-2-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Domestic Tours</span>
+    </a>
+    <a href="https://saishatoursandtravels.in/destinations/international" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-earth-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">International Tours</span>
+    </a>
+    <a href="https://saishatoursandtravels.in/destinations/spiritual" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-ancient-gate-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Spiritual Tours</span>
+    </a>
+  </div>
+  
+  <!-- Separator -->
+  <div class="border-t border-gray-200 my-3 mx-4"></div>
+  
+  <!-- Custom Services -->
+  <div class="px-2 space-y-1">
+    <a href="#!" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-pencil-ruler-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Design Your Own Trip</span>
+    </a>
+    <a href="#!" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-calendar-event-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Special Occasion Trips</span>
+    </a>
+    <a href="#!" class="nav-link flex items-center py-3 px-4 text-charcoal rounded-lg hover:bg-red-50 hover:text-red-600 transition-all duration-200 group">
+      <i class="ri-group-line mr-3 text-red-500 group-hover:text-red-600"></i>
+      <span class="font-medium">Group Travel Planning</span>
+    </a>
+  </div>
+</div>
+</li>
+<li>
+<a href="tel:8883102623" class="call-now-btn flex items-center px-4 py-1.5 text-white font-medium rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623"><span class="w-4 h-4 flex items-center justify-center mr-1"><i class="ri-phone-fill"></i></span>Call&nbsp;Now</a
+</li>
+<li class="hidden">
+<a href="https://saishatoursandtravels.in/contact" class="nav-link py-2 text-charcoal">Contact</a>
+</li>
+</ul>
+</nav>
+</div>
+<!-- Call Now Button (deprecated) -->
+<div class="hidden">
+<form action="/search" method="GET" class="relative">
+  <input type="text" name="q" placeholder="Search tours, destinations..." class="w-64 lg:w-72 pl-10 pr-4 py-1.5 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+  <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-black"></i>
+</form>
+
+</div>
+</div>
+<!-- Mobile/Tablet Navigation (hidden on desktop) -->
+<div class="mobile-nav hidden lg:hidden container mx-auto px-3 py-2 flex items-center justify-between">
+  <!-- Fixed-width spacer to balance hamburger width and center the searchbar -->
+  <div class="w-8 h-8 order-1 flex-shrink-0"></div>
+  <!-- Hamburger Menu -->
+  <button id="mobile-menu-toggle" class="order-3 flex-shrink-0 w-8 h-8 flex flex-col items-center justify-center focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span class="hamburger-line w-4 h-0.5 bg-[#FF0000] mb-1 line-1"></span>
+    <span class="hamburger-line w-4 h-0.5 bg-[#FF0000] mb-1 line-2"></span>
+    <span class="hamburger-line w-4 h-0.5 bg-[#FF0000] line-3"></span>
+  </button>
+  <!-- Mobile/Tablet Search Bar (centered, compact) -->
+  <div class="lg:hidden flex-1 flex justify-center pb-2 order-2">
+    <div class="relative w-[72vw] max-w-[220px] sm:w-[90vw] sm:max-w-[360px]">
+      <form action="/search" method="GET" class="relative">
+        <input id="search-input-mobile" type="text" name="q" placeholder="Search for" class="w-full pl-7 pr-3 py-[6px] sm:pl-10 sm:py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-[11px] sm:text-sm search-input bg-white/90 shadow-sm" autocomplete="off">
+        <span id="type-span-mobile" class="absolute left-[5.1rem] sm:left-[6.7rem] top-1/2 -translate-y-1/2 text-[11px] sm:text-sm text-black pointer-events-none">Dubai</span>
+        <i class="ri-search-line absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 text-black"></i>
+      </form>
+      <!-- Mobile Search Overlay Panel -->
+      <div id="searchOverlayMobile" class="absolute top-9 sm:top-12 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-2xl shadow-2xl w-screen max-w-none p-4 hidden z-50">
+        <!-- Search Results / Suggestions -->
+        <div id="searchResultsMobile" class="mb-4 hidden">
+          <h3 class="text-gray-800 font-medium mb-3">Available Packages</h3>
+          <div id="resultsListMobile" class="space-y-2"></div>
+        </div>
+        <!-- Product Type (same as desktop) -->
+        <div class="mb-4">
+          <h3 class="text-gray-800 font-medium mb-3">Product Type</h3>
+          <div class="flex gap-2">
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-filter="tour">Tour</button>
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-filter="activity">Activity</button>
+          </div>
+        </div>
+        <!-- Trip Duration (same as desktop) -->
+        <div class="mb-4">
+          <h3 class="text-gray-800 font-medium mb-3">Trip Duration</h3>
+          <div class="flex gap-2 flex-wrap">
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="1">Upto 1 Day</button>
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="2-3">2 to 3 days</button>
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="3-5">3 to 5 days</button>
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="5-7">5 to 7 days</button>
+            <button type="button" class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors" data-duration="7+">7+ Days</button>
+          </div>
+        </div>
+        <!-- Search Button -->
+        <button type="button" class="w-full bg-orange-400 hover:bg-orange-500 text-white font-medium py-2.5 rounded-lg transition-colors">Search For Products</button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 bottom-0 w-full bg-white/95 backdrop-blur-sm z-50 flex flex-col">
+<div class="flex justify-center items-center p-2 border-b border-glacier w-full">
+  <img src="Untitled%20design.png" alt="Saisha Tours & Travels" class="h-28 w-auto -mt-6 -mb-6 object-contain">
+  <button id="mobile-menu-close" class="absolute right-4 top-4 w-10 h-10 flex items-center justify-center focus:outline-none" aria-label="Close navigation menu">
+<span class="w-6 h-6 flex items-center justify-center text-orange">
+<i class="ri-close-line text-2xl"></i>
+</span>
+</button>
+</div>
+<nav class="flex-1 overflow-y-auto p-6">
+<ul class="space-y-1">
+<li class="mobile-menu-item">
+<a href="https://saishatoursandtravels.in" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link"><span class="emoticon mr-2"><i class="ri-home-4-line"></i></span>Home</a>
+</li>
+<li class="mobile-menu-item">
+  <a href="https://saishatoursandtravels.in/destinations" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link">
+    <span class="emoticon mr-2"><i class="ri-map-pin-line"></i></span>Destinations
+  </a>
+</li>
+<li class="mobile-menu-item">
+  <a href="https://saishatoursandtravels.in/saisha-special" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link">
+    <span class="emoticon mr-2"><i class="ri-star-line"></i></span>Saisha Special
+  </a>
+</li>
+<li class="mobile-menu-item">
+  <a href="https://saishatoursandtravels.in/company" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link">
+    <span class="emoticon mr-2"><i class="ri-pencil-ruler-line"></i></span>Company
+  </a>
+</li>
+<li class="mobile-menu-item">
+<a href="https://saishatoursandtravels.in/about" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link"><span class="emoticon mr-2"><i class="ri-user-3-line"></i></span>About</a>
+</li>
+<li class="mobile-menu-item">
+<a href="https://saishatoursandtravels.in/contact" class="block py-3 px-4 text-lg font-medium text-charcoal hover:text-primary transition-colors duration-300 border-b border-glacier mobile-nav-link"><span class="emoticon mr-2"><i class="ri-phone-line"></i></span>Contact</a>
+</li>
+
+</ul>
+</nav>
+<div class="p-6 border-t border-glacier mobile-menu-item">
+<a href="tel:8883102623" class="call-now-btn flex items-center justify-center w-full px-6 py-4 text-white font-medium !rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-fill"></i>
+</span>
+Call Now: 888-310-2623
+</a>
+</div>
+</div>
+</header>
+<!-- Spacer to prevent content from being hidden under fixed header -->
+<div class="h-20"></div>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+function openMobileMenu() {
+mobileMenu.classList.add('open');
+mobileMenuToggle.classList.add('mobile-menu-open');
+mobileMenuToggle.setAttribute('aria-expanded', 'true');
+document.body.style.overflow = 'hidden';
+}
+function closeMobileMenu() {
+mobileMenu.classList.remove('open');
+mobileMenuToggle.classList.remove('mobile-menu-open');
+mobileMenuToggle.setAttribute('aria-expanded', 'false');
+document.body.style.overflow = '';
+}
+// Toggle mobile menu open/close and animate hamburger icon
+mobileMenuToggle.addEventListener('click', function() {
+  if (mobileMenu.classList.contains('open')) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+mobileMenuClose.addEventListener('click', closeMobileMenu);
+// Services submenu toggle in mobile view
+const servicesToggle = document.getElementById('services-toggle');
+const servicesSubmenu = document.getElementById('services-submenu');
+const servicesIcon = document.getElementById('services-icon');
+let isSubmenuOpen = false;
+
+servicesToggle.addEventListener('click', function(e) {
+  e.stopPropagation();
+  isSubmenuOpen = !isSubmenuOpen;
+  servicesSubmenu.classList.toggle('open', isSubmenuOpen);
+  servicesIcon.style.transform = isSubmenuOpen ? 'rotate(180deg)' : '';
+  
+  // Close other open submenus if any
+  document.querySelectorAll('.mobile-submenu').forEach(menu => {
+    if (menu !== servicesSubmenu && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      const otherIcon = menu.closest('.mobile-menu-item').querySelector('i.ri-arrow-down-s-line');
+      if (otherIcon) otherIcon.style.transform = '';
+    }
+    // Mobile input listeners
+    if (searchInputMobile) {
+      searchInputMobile.addEventListener('input', (e) => {
+        const value = e.target.value;
+        if (value.length > 0) {
+          if (window.searchAnimation) window.searchAnimation.stop();
+          if (typeSpanMobile) typeSpanMobile.style.display = 'none';
+          if (typeSpan) typeSpan.style.display = 'none';
+        } else {
+          if (typeSpanMobile) typeSpanMobile.style.display = 'block';
+          if (typeSpan) typeSpan.style.display = 'block';
+          if (window.searchAnimation) window.searchAnimation.start();
+        }
+        if (searchOverlayMobile && searchOverlayMobile.classList.contains('hidden')) {
+          showSearchOverlayMobile();
+        }
+        if (value.length > 0) {
+          showSearchSuggestions(value);
+        } else {
+          if (searchResultsMobile) searchResultsMobile.classList.add('hidden');
+          if (searchResults) searchResults.classList.add('hidden');
+        }
+      });
+      searchInputMobile.addEventListener('focus', () => {
+        if (searchInputMobile.value.length > 0 && window.searchAnimation) {
+          window.searchAnimation.stop();
+        }
+      });
+      searchInputMobile.addEventListener('blur', () => {
+        if (searchInputMobile.value.length === 0 && window.searchAnimation) {
+          window.searchAnimation.start();
+        }
+      });
+    }
+  });
+});
+
+// Saisha Special submenu toggle in mobile view (guarded; the section is removed in mobile)
+const saishaSpecialToggle = document.getElementById('saisha-special-toggle');
+const saishaSpecialSubmenu = document.getElementById('saisha-special-submenu');
+const saishaSpecialIcon = document.getElementById('saisha-special-icon');
+let isSaishaSubmenuOpen = false;
+
+if (saishaSpecialToggle && saishaSpecialSubmenu && saishaSpecialIcon) {
+  saishaSpecialToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isSaishaSubmenuOpen = !isSaishaSubmenuOpen;
+    saishaSpecialSubmenu.classList.toggle('open', isSaishaSubmenuOpen);
+    saishaSpecialIcon.style.transform = isSaishaSubmenuOpen ? 'rotate(180deg)' : '';
+    
+    // Close other open submenus if any
+    document.querySelectorAll('.mobile-submenu').forEach(menu => {
+      if (menu !== saishaSpecialSubmenu && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        const otherIcon = menu.closest('.mobile-menu-item').querySelector('i.ri-arrow-down-s-line');
+        if (otherIcon) otherIcon.style.transform = '';
+      }
+    });
+  });
+}
+
+// Close submenu when clicking outside
+document.addEventListener('click', function(e) {
+  if (servicesSubmenu && servicesToggle && servicesIcon) {
+    if (!servicesSubmenu.contains(e.target) && !servicesToggle.contains(e.target)) {
+      servicesSubmenu.classList.remove('open');
+      servicesIcon.style.transform = '';
+      isSubmenuOpen = false;
+    }
+  }
+  
+  if (saishaSpecialSubmenu && saishaSpecialToggle && saishaSpecialIcon) {
+    if (!saishaSpecialSubmenu.contains(e.target) && !saishaSpecialToggle.contains(e.target)) {
+      saishaSpecialSubmenu.classList.remove('open');
+      saishaSpecialIcon.style.transform = '';
+      isSaishaSubmenuOpen = false;
+    }
+  }
+});
+// Close mobile menu on window resize if screen becomes desktop size
+window.addEventListener('resize', function() {
+if (window.innerWidth >= 769 && mobileMenu.classList.contains('open')) {
+closeMobileMenu();
+}
+});
+
+// Back arrow click handler for Saisha Special submenu (guarded)
+const saishaSpecialBack = document.getElementById('saisha-special-back');
+if (saishaSpecialBack && saishaSpecialSubmenu && saishaSpecialIcon) {
+  saishaSpecialBack.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    // Close the Saisha Special submenu
+    saishaSpecialSubmenu.classList.remove('open');
+    saishaSpecialIcon.style.transform = '';
+    isSaishaSubmenuOpen = false;
+  });
+}
+
+// Close mobile menu when clicking on navigation links
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    // Only close if it's an actual navigation link (has href)
+    if (this.href && !this.href.includes('#')) {
+      setTimeout(() => {
+        closeMobileMenu();
+      }, 100);
+    }
+  });
+});
+});
+// Enhanced click effects for menu items
+function createRipple(event) {
+  const button = event.currentTarget;
+  const rect = button.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  
+  const ripple = document.createElement('span');
+  ripple.className = 'ripple';
+  ripple.style.width = ripple.style.height = `${size}px`;
+  ripple.style.left = `${event.clientX - rect.left - size/2}px`;
+  ripple.style.top = `${event.clientY - rect.top - size/2}px`;
+  
+  const existingRipple = button.querySelector('.ripple');
+  if (existingRipple) {
+    existingRipple.remove();
+  }
+  
+  button.appendChild(ripple);
+  
+  // Remove ripple after animation completes
+  setTimeout(() => {
+    if (ripple) ripple.remove();
+  }, 600);
+}
+
+// Enhanced emoticon animation
+function animateEmoticon(emoticon) {
+  emoticon.classList.remove('emoticon-animate');
+  void emoticon.offsetWidth; // trigger reflow
+  emoticon.classList.add('emoticon-animate');
+}
+
+// Attach click and hover effects to nav links
+const navLinks = document.querySelectorAll('.mobile-nav-link, #services-toggle');
+navLinks.forEach(link => {
+  // Ripple effect
+  link.addEventListener('click', function(e) {
+    createRipple(e);
+    
+    // Animate icon
+    const emoticon = this.querySelector('.emoticon');
+    if (emoticon) {
+      animateEmoticon(emoticon);
+    }
+    
+    // If it's a link (not the services toggle), navigate after animation
+    if (this.href && this.getAttribute('id') !== 'services-toggle') {
+      e.preventDefault();
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 300);
+    }
+  });
+  
+  // Hover effect for touch devices
+  link.addEventListener('touchstart', function() {
+    this.classList.add('active');
+  });
+  
+  link.addEventListener('touchend', function() {
+    this.classList.remove('active');
+  });
+});
+
+// Enhanced services dropdown toggle
+const servicesToggle = document.getElementById('services-toggle');
+if (servicesToggle) {
+  servicesToggle.addEventListener('click', function(e) {
+    const submenu = document.getElementById('services-submenu');
+    const icon = document.getElementById('services-icon');
+    
+    if (submenu && icon) {
+      const isOpen = submenu.classList.toggle('open');
+      icon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+      
+      // Animate submenu
+      if (isOpen) {
+        submenu.style.maxHeight = submenu.scrollHeight + 'px';
+      } else {
+        submenu.style.maxHeight = '0';
+      }
+    }
+  });
+}
+</script>
+<style>
+/* Enhanced Animations */
+@keyframes emoticon-bounce {
+  0%   { transform: scale(1) rotate(0deg); }
+  20%  { transform: scale(1.3) rotate(-15deg); }
+  40%  { transform: scale(1.1) rotate(10deg); }
+  60%  { transform: scale(1.4) rotate(-10deg); }
+  80%  { transform: scale(1.2) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes navItemPulse {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Menu Item Styles */
+.mobile-nav-link {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  margin: 2px 0;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 0, 0, 0.05);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-link:active {
+  transform: translateY(1px);
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.2);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* Emoticon Animation */
+.emoticon {
+  display: inline-flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav-link:hover .emoticon {
+  transform: translateY(-2px);
+}
+
+.mobile-nav-link:active .emoticon {
+  transform: translateY(1px);
+}
+
+.emoticon-animate {
+  animation: emoticon-bounce 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+/* Services Dropdown Enhancements */
+#services-toggle {
+  transition: all 0.3s ease;
+}
+
+#services-toggle:hover {
+  color: #0076D6;
+}
+
+#services-toggle:hover .emoticon {
+  transform: translateY(-2px);
+}
+
+#services-icon {
+  transition: transform 0.3s ease;
+}
+
+#services-toggle:hover #services-icon {
+  transform: translateY(2px);
+}
+
+/* Menu Item Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-item {
+  animation: slideIn 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.mobile-menu-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-item:nth-child(2) { animation-delay: 0.15s; }
+.mobile-menu-item:nth-child(3) { animation-delay: 0.2s; }
+.mobile-menu-item:nth-child(4) { animation-delay: 0.25s; }
+.mobile-menu-item:nth-child(5) { animation-delay: 0.3s; }
+.mobile-menu-item:nth-child(6) { animation-delay: 0.35s; }
+
+/* Live icon animations */
+@keyframes icon-pulse-scale {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,0,0,0)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 2px 6px rgba(255,0,0,0.25)); }
+}
+
+@keyframes icon-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes icon-rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.header-icon-live {
+  display: inline-block;
+  animation: icon-bounce-soft 1.8s ease-in-out infinite;
+}
+
+/* Make the compass gently rotate */
+.header-icon-live.ri-compass-3-line {
+  animation: icon-rotate-slow 6s linear infinite;
+}
+
+.feature-icon-live {
+  display: inline-block;
+  animation: icon-pulse-scale 2.2s ease-in-out infinite;
+  will-change: transform;
+}
+.feature-icon-live:hover {
+  transform: scale(1.2);
+}
+
+/* Respect user reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .header-icon-live,
+  .feature-icon-live { animation: none !important; }
+}
+</style>
+<script>
+(function() {
+  const words = ["Destinations","Bali","Thailand","Dubai","Singapore","Maldives","Malaysia"];
+  const spans = ['type-span','type-span-mobile']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  let typingTimeout;
+  let isUserTyping = false;
+  const typeSpeed = 90;    // ms between each character
+  const eraseSpeed = 90;    // match typing speed to keep animation constant
+  const delayBetween = 1200; // pause before deleting / typing next word
+
+  function type() {
+    if (isUserTyping) return; // Stop animation if user is typing
+    
+    const current = words[wordIndex];
+    if (!deleting) {
+      spans.forEach(s => s.innerText = current.substring(0, charIndex++));
+      if (charIndex > current.length) {
+        deleting = true;
+        typingTimeout = setTimeout(type, delayBetween);
+        return;
+      }
+    } else {
+      spans.forEach(s => s.innerText = current.substring(0, charIndex--));
+      if (charIndex < 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        charIndex = 0;
+      }
+    }
+    typingTimeout = setTimeout(type, deleting ? eraseSpeed : typeSpeed);
+  }
+
+  function stopAnimation() {
+    isUserTyping = true;
+    if (typingTimeout) {
+      clearTimeout(typingTimeout);
+    }
+  }
+
+  function startAnimation() {
+    isUserTyping = false;
+    // Reset to first word
+    wordIndex = 0;
+    charIndex = 0;
+    deleting = false;
+    spans.forEach(s => s.innerText = "");
+    type();
+  }
+
+  // Expose functions globally for search input to use
+  window.searchAnimation = {
+    stop: stopAnimation,
+    start: startAnimation
+  };
+
+  if (spans.length) {
+    spans.forEach(s => s.innerText = "");
+    type();
+  }
+})();
+</script>
+<!-- Quote Modal -->
+<div id="quote-modal" class="fixed inset-0 z-[9998] hidden">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close-quote></div>
+  <div class="relative mx-auto mt-8 md:mt-20 w-[85vw] max-w-lg bg-white rounded-2xl shadow-2xl border border-gray-200">
+    <button class="absolute -right-3 -top-3 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center text-charcoal hover:text-red-600 transition-all duration-200 ease-out hover:scale-105 active:scale-95 group" aria-label="Close" title="Close" data-close-quote>
+      <i class="ri-close-line text-2xl transition-transform duration-300 ease-out group-hover:rotate-90"></i>
+    </button>
+    <div class="p-6 md:p-8">
+      <div class="flex items-start gap-3 md:gap-4 mb-5">
+        <img src="Untitled design.png" alt="Saisha Tours & Travels Logo" class="w-12 h-12 md:w-14 md:h-14 object-contain">
+        <div>
+          <h3 class="text-base md:text-lg font-semibold text-charcoal">Custom Travel Plan • Group/Family/Couple</h3>
+          <div class="text-sm text-gray-500">Connect with our expert for the best quote</div>
+        </div>
+      </div>
+
+      <form id="quoteForm" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="col-span-1 md:col-span-2">
+            <input type="text" name="fullName" placeholder="Full Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div class="md:col-span-2">
+            <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div class="md:col-span-2 grid grid-cols-[110px_1fr] gap-3">
+            <select name="countryCode" aria-label="Country code" class="px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+              <option value="+1">+1 (United States/Canada)</option>
+              <option value="+7">+7 (Russia/Kazakhstan)</option>
+              <option value="+20">+20 (Egypt)</option>
+              <option value="+27">+27 (South Africa)</option>
+              <option value="+30">+30 (Greece)</option>
+              <option value="+31">+31 (Netherlands)</option>
+              <option value="+32">+32 (Belgium)</option>
+              <option value="+33">+33 (France)</option>
+              <option value="+34">+34 (Spain)</option>
+              <option value="+36">+36 (Hungary)</option>
+              <option value="+39">+39 (Italy)</option>
+              <option value="+40">+40 (Romania)</option>
+              <option value="+41">+41 (Switzerland)</option>
+              <option value="+43">+43 (Austria)</option>
+              <option value="+44">+44 (United Kingdom)</option>
+              <option value="+45">+45 (Denmark)</option>
+              <option value="+46">+46 (Sweden)</option>
+              <option value="+47">+47 (Norway)</option>
+              <option value="+48">+48 (Poland)</option>
+              <option value="+49">+49 (Germany)</option>
+              <option value="+51">+51 (Peru)</option>
+              <option value="+52">+52 (Mexico)</option>
+              <option value="+53">+53 (Cuba)</option>
+              <option value="+54">+54 (Argentina)</option>
+              <option value="+55">+55 (Brazil)</option>
+              <option value="+56">+56 (Chile)</option>
+              <option value="+57">+57 (Colombia)</option>
+              <option value="+58">+58 (Venezuela)</option>
+              <option value="+60">+60 (Malaysia)</option>
+              <option value="+61">+61 (Australia)</option>
+              <option value="+62">+62 (Indonesia)</option>
+              <option value="+63">+63 (Philippines)</option>
+              <option value="+64">+64 (New Zealand)</option>
+              <option value="+65">+65 (Singapore)</option>
+              <option value="+66">+66 (Thailand)</option>
+              <option value="+81">+81 (Japan)</option>
+              <option value="+82">+82 (South Korea)</option>
+              <option value="+84">+84 (Vietnam)</option>
+              <option value="+86">+86 (China)</option>
+              <option value="+90">+90 (Turkey)</option>
+              <option value="+91" selected>+91 (India)</option>
+              <option value="+92">+92 (Pakistan)</option>
+              <option value="+93">+93 (Afghanistan)</option>
+              <option value="+94">+94 (Sri Lanka)</option>
+              <option value="+95">+95 (Myanmar)</option>
+              <option value="+98">+98 (Iran)</option>
+              <option value="+211">+211 (South Sudan)</option>
+              <option value="+212">+212 (Morocco)</option>
+              <option value="+213">+213 (Algeria)</option>
+              <option value="+216">+216 (Tunisia)</option>
+              <option value="+218">+218 (Libya)</option>
+              <option value="+220">+220 (Gambia)</option>
+              <option value="+221">+221 (Senegal)</option>
+              <option value="+222">+222 (Mauritania)</option>
+              <option value="+223">+223 (Mali)</option>
+              <option value="+224">+224 (Guinea)</option>
+              <option value="+225">+225 (Côte d’Ivoire)</option>
+              <option value="+226">+226 (Burkina Faso)</option>
+              <option value="+227">+227 (Niger)</option>
+              <option value="+228">+228 (Togo)</option>
+              <option value="+229">+229 (Benin)</option>
+              <option value="+230">+230 (Mauritius)</option>
+              <option value="+231">+231 (Liberia)</option>
+              <option value="+232">+232 (Sierra Leone)</option>
+              <option value="+233">+233 (Ghana)</option>
+              <option value="+234">+234 (Nigeria)</option>
+              <option value="+235">+235 (Chad)</option>
+              <option value="+236">+236 (Central African Republic)</option>
+              <option value="+237">+237 (Cameroon)</option>
+              <option value="+238">+238 (Cape Verde)</option>
+              <option value="+239">+239 (São Tomé & Príncipe)</option>
+              <option value="+240">+240 (Equatorial Guinea)</option>
+              <option value="+241">+241 (Gabon)</option>
+              <option value="+242">+242 (Congo)</option>
+              <option value="+243">+243 (DR Congo)</option>
+              <option value="+244">+244 (Angola)</option>
+              <option value="+245">+245 (Guinea-Bissau)</option>
+              <option value="+246">+246 (British Indian Ocean Territory)</option>
+              <option value="+247">+247 (Ascension Island)</option>
+              <option value="+248">+248 (Seychelles)</option>
+              <option value="+249">+249 (Sudan)</option>
+              <option value="+250">+250 (Rwanda)</option>
+              <option value="+251">+251 (Ethiopia)</option>
+              <option value="+252">+252 (Somalia)</option>
+              <option value="+253">+253 (Djibouti)</option>
+              <option value="+254">+254 (Kenya)</option>
+              <option value="+255">+255 (Tanzania)</option>
+              <option value="+256">+256 (Uganda)</option>
+              <option value="+257">+257 (Burundi)</option>
+              <option value="+258">+258 (Mozambique)</option>
+              <option value="+260">+260 (Zambia)</option>
+              <option value="+261">+261 (Madagascar)</option>
+              <option value="+262">+262 (Réunion/Mayotte)</option>
+              <option value="+263">+263 (Zimbabwe)</option>
+              <option value="+264">+264 (Namibia)</option>
+              <option value="+265">+265 (Malawi)</option>
+              <option value="+266">+266 (Lesotho)</option>
+              <option value="+267">+267 (Botswana)</option>
+              <option value="+268">+268 (Eswatini)</option>
+              <option value="+269">+269 (Comoros)</option>
+              <option value="+290">+290 (Saint Helena)</option>
+              <option value="+297">+297 (Aruba)</option>
+              <option value="+298">+298 (Faroe Islands)</option>
+              <option value="+299">+299 (Greenland)</option>
+              <option value="+350">+350 (Gibraltar)</option>
+              <option value="+351">+351 (Portugal)</option>
+              <option value="+352">+352 (Luxembourg)</option>
+              <option value="+353">+353 (Ireland)</option>
+              <option value="+354">+354 (Iceland)</option>
+              <option value="+355">+355 (Albania)</option>
+              <option value="+356">+356 (Malta)</option>
+              <option value="+357">+357 (Cyprus)</option>
+              <option value="+358">+358 (Finland)</option>
+              <option value="+359">+359 (Bulgaria)</option>
+              <option value="+370">+370 (Lithuania)</option>
+              <option value="+371">+371 (Latvia)</option>
+              <option value="+372">+372 (Estonia)</option>
+              <option value="+373">+373 (Moldova)</option>
+              <option value="+374">+374 (Armenia)</option>
+              <option value="+375">+375 (Belarus)</option>
+              <option value="+376">+376 (Andorra)</option>
+              <option value="+377">+377 (Monaco)</option>
+              <option value="+378">+378 (San Marino)</option>
+              <option value="+380">+380 (Ukraine)</option>
+              <option value="+381">+381 (Serbia)</option>
+              <option value="+382">+382 (Montenegro)</option>
+              <option value="+383">+383 (Kosovo)</option>
+              <option value="+385">+385 (Croatia)</option>
+              <option value="+386">+386 (Slovenia)</option>
+              <option value="+387">+387 (Bosnia & Herzegovina)</option>
+              <option value="+389">+389 (North Macedonia)</option>
+              <option value="+420">+420 (Czech Republic)</option>
+              <option value="+421">+421 (Slovakia)</option>
+              <option value="+423">+423 (Liechtenstein)</option>
+              <option value="+500">+500 (Falkland Islands)</option>
+              <option value="+501">+501 (Belize)</option>
+              <option value="+502">+502 (Guatemala)</option>
+              <option value="+503">+503 (El Salvador)</option>
+              <option value="+504">+504 (Honduras)</option>
+              <option value="+505">+505 (Nicaragua)</option>
+              <option value="+506">+506 (Costa Rica)</option>
+              <option value="+507">+507 (Panama)</option>
+              <option value="+508">+508 (St. Pierre & Miquelon)</option>
+              <option value="+509">+509 (Haiti)</option>
+              <option value="+590">+590 (Guadeloupe)</option>
+              <option value="+591">+591 (Bolivia)</option>
+              <option value="+592">+592 (Guyana)</option>
+              <option value="+593">+593 (Ecuador)</option>
+              <option value="+594">+594 (French Guiana)</option>
+              <option value="+595">+595 (Paraguay)</option>
+              <option value="+596">+596 (Martinique)</option>
+              <option value="+597">+597 (Suriname)</option>
+              <option value="+598">+598 (Uruguay)</option>
+              <option value="+599">+599 (Caribbean Netherlands/Curacao)</option>
+              <option value="+670">+670 (Timor-Leste)</option>
+              <option value="+672">+672 (Antarctic/External Territories)</option>
+              <option value="+673">+673 (Brunei)</option>
+              <option value="+674">+674 (Nauru)</option>
+              <option value="+675">+675 (Papua New Guinea)</option>
+              <option value="+676">+676 (Tonga)</option>
+              <option value="+677">+677 (Solomon Islands)</option>
+              <option value="+678">+678 (Vanuatu)</option>
+              <option value="+679">+679 (Fiji)</option>
+              <option value="+680">+680 (Palau)</option>
+              <option value="+681">+681 (Wallis & Futuna)</option>
+              <option value="+682">+682 (Cook Islands)</option>
+              <option value="+683">+683 (Niue)</option>
+              <option value="+685">+685 (Samoa)</option>
+              <option value="+686">+686 (Kiribati)</option>
+              <option value="+687">+687 (New Caledonia)</option>
+              <option value="+688">+688 (Tuvalu)</option>
+              <option value="+689">+689 (French Polynesia)</option>
+              <option value="+690">+690 (Tokelau)</option>
+              <option value="+691">+691 (Micronesia)</option>
+              <option value="+692">+692 (Marshall Islands)</option>
+              <option value="+850">+850 (North Korea)</option>
+              <option value="+852">+852 (Hong Kong)</option>
+              <option value="+853">+853 (Macau)</option>
+              <option value="+855">+855 (Cambodia)</option>
+              <option value="+856">+856 (Laos)</option>
+              <option value="+880">+880 (Bangladesh)</option>
+              <option value="+886">+886 (Taiwan)</option>
+              <option value="+960">+960 (Maldives)</option>
+              <option value="+961">+961 (Lebanon)</option>
+              <option value="+962">+962 (Jordan)</option>
+              <option value="+963">+963 (Syria)</option>
+              <option value="+964">+964 (Iraq)</option>
+              <option value="+965">+965 (Kuwait)</option>
+              <option value="+966">+966 (Saudi Arabia)</option>
+              <option value="+967">+967 (Yemen)</option>
+              <option value="+968">+968 (Oman)</option>
+              <option value="+970">+970 (Palestine)</option>
+              <option value="+971">+971 (United Arab Emirates)</option>
+              <option value="+972">+972 (Israel)</option>
+              <option value="+973">+973 (Bahrain)</option>
+              <option value="+974">+974 (Qatar)</option>
+              <option value="+975">+975 (Bhutan)</option>
+              <option value="+976">+976 (Mongolia)</option>
+              <option value="+977">+977 (Nepal)</option>
+              <option value="+992">+992 (Tajikistan)</option>
+              <option value="+993">+993 (Turkmenistan)</option>
+              <option value="+994">+994 (Azerbaijan)</option>
+              <option value="+995">+995 (Georgia)</option>
+              <option value="+996">+996 (Kyrgyzstan)</option>
+              <option value="+998">+998 (Uzbekistan)</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9]{7,15}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div class="relative">
+            <input type="text" id="travelDate" name="travelDate" required readonly class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 custom-date-input cursor-pointer">
+            <span id="dateplaceholder" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none">Travel Date</span>
+            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+              <i class="ri-calendar-event-line text-red-500 text-xl" aria-hidden="true"></i>
+            </div>
+            <!-- Custom Calendar Modal moved to page root for full-screen mobile overlay -->
+          </div>
+          <div>
+            <input type="number" name="travellerCount" min="1" placeholder="Traveller Count" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div class="md:col-span-2">
+            <textarea name="message" rows="3" placeholder="Message..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+          </div>
+        </div>
+          <button type="submit" class="w-full mt-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3.5 rounded-lg">Connect with an Expert</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Custom Calendar Modal (root-level for proper full-screen coverage) -->
+<div id="customCalendar" class="fixed inset-0 z-[9999] hidden" role="dialog" aria-modal="true">
+  <div id="calendarOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <div id="calendarPanel" class="relative bg-white rounded-xl shadow-2xl border border-gray-200 p-6 w-80 max-w-sm">
+      <!-- Clear Button (Top) -->
+      <div class="flex justify-center mb-4">
+        <button type="button" id="clearDate" class="px-4 py-2 text-sm text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors border border-gray-300">Clear All</button>
+      </div>
+      
+      <!-- Month Navigation -->
+      <div class="flex items-center justify-between mb-4">
+        <button type="button" id="prevMonth" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <div class="text-lg font-semibold text-gray-800" id="currentMonth"></div>
+        <button type="button" id="nextMonth" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Day Headers -->
+      <div class="grid grid-cols-7 gap-1 mb-2">
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Su</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Mo</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Tu</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">We</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Th</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Fr</div>
+        <div class="text-center text-xs font-medium text-gray-500 py-1">Sa</div>
+      </div>
+      
+      <!-- Calendar Days -->
+      <div id="calendarDays" class="grid grid-cols-7 gap-1 mb-4"></div>
+      
+      <!-- Selection Info -->
+      <div class="text-center mb-4">
+        <div class="text-xs text-gray-500">
+          <span id="multiModeIndicator" class="hidden">Multiple selection mode • </span>
+          Selected: <span id="selectedCount">0</span> date(s)
+        </div>
+      </div>
+      
+      <!-- Bottom Buttons -->
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" id="toggleMultiMode" class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-lg hover:bg-gray-200 transition-colors font-medium">Select Multiple</button>
+        <button type="button" id="confirmDates" class="px-4 py-2 bg-red-500 text-white text-sm rounded-lg hover:bg-red-600 transition-colors font-medium">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Quote modal open/close
+  (function(){
+    const openBtn = document.getElementById('open-quote-modal');
+    const modal = document.getElementById('quote-modal');
+    const closers = modal ? modal.querySelectorAll('[data-close-quote]') : [];
+    // All header dropdown panels
+    const headerDropdowns = document.querySelectorAll('.dropdown');
+    // Search overlays (so they don't remain open behind modal)
+    const quoteSearchOverlay = document.getElementById('searchOverlay');
+    const quoteSearchOverlayMobile = document.getElementById('searchOverlayMobile');
+
+    function openModal(e){
+      if(e) e.preventDefault();
+      if(!modal) return;
+      // Force close all header dropdowns and search overlays
+      headerDropdowns.forEach(d => d.classList.add('force-hidden'));
+      if (quoteSearchOverlay) quoteSearchOverlay.classList.add('hidden');
+      if (quoteSearchOverlayMobile) quoteSearchOverlayMobile.classList.add('hidden');
+      modal.classList.remove('hidden');
+      document.body.style.overflow='hidden';
+    }
+    function closeModal(){
+      if(!modal) return;
+      modal.classList.add('hidden');
+      document.body.style.overflow='';
+      // Restore header dropdown behavior after modal closes
+      headerDropdowns.forEach(d => d.classList.remove('force-hidden'));
+    }
+    if(openBtn){ openBtn.addEventListener('click', openModal); }
+    closers.forEach(el=> el.addEventListener('click', closeModal));
+    // Close when clicking outside the panel
+    if(modal){
+      modal.addEventListener('click', (e)=>{
+        if(e.target === modal) closeModal();
+      });
+    }
+
+    // Custom Calendar Implementation
+    const dateInput = document.getElementById('travelDate');
+    const placeholder = document.getElementById('dateplaceholder');
+    const calendar = document.getElementById('customCalendar');
+    // Ensure the calendar overlay is a direct child of <body> so it always covers the viewport (fixes mobile blur area)
+    if (calendar && calendar.parentElement !== document.body) {
+      document.body.appendChild(calendar);
+    }
+    const currentMonthEl = document.getElementById('currentMonth');
+    const calendarDays = document.getElementById('calendarDays');
+    const prevBtn = document.getElementById('prevMonth');
+    const nextBtn = document.getElementById('nextMonth');
+    const clearBtn = document.getElementById('clearDate');
+    const confirmBtn = document.getElementById('confirmDates');
+    const toggleMultiBtn = document.getElementById('toggleMultiMode');
+    const selectedCountEl = document.getElementById('selectedCount');
+    const multiModeIndicator = document.getElementById('multiModeIndicator');
+    
+    let currentDate = new Date();
+    let selectedDates = [];
+    let isMultiMode = false;
+    const today = new Date();
+    
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    function updateDatePlaceholder() {
+      if(dateInput && placeholder) {
+        if(selectedDates.length > 0) {
+          placeholder.style.opacity = '0';
+        } else {
+          placeholder.style.opacity = '1';
+        }
+      }
+    }
+    
+    function formatDate(date) {
+      const options = { month: 'short', day: 'numeric' };
+      return date.toLocaleDateString('en-US', options);
+    }
+    
+    function updateSelectedDisplay() {
+      if(selectedCountEl) {
+        selectedCountEl.textContent = selectedDates.length;
+      }
+      
+      if(selectedDates.length > 0) {
+        if(selectedDates.length === 1) {
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          dateInput.value = selectedDates[0].toLocaleDateString('en-US', options);
+        } else {
+          const sortedDates = [...selectedDates].sort((a, b) => a - b);
+          const firstDate = formatDate(sortedDates[0]);
+          const lastDate = formatDate(sortedDates[sortedDates.length - 1]);
+          dateInput.value = `${firstDate} - ${lastDate} (+${selectedDates.length - 2} more)`;
+        }
+      } else {
+        dateInput.value = '';
+      }
+      updateDatePlaceholder();
+    }
+    
+    function generateCalendar() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      
+      currentMonthEl.textContent = `${months[month]} ${year}`;
+      
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const startDate = new Date(firstDay);
+      startDate.setDate(startDate.getDate() - firstDay.getDay());
+      
+      calendarDays.innerHTML = '';
+      
+      for (let i = 0; i < 42; i++) {
+        const cellDate = new Date(startDate);
+        cellDate.setDate(startDate.getDate() + i);
+        
+        const dayEl = document.createElement('button');
+        dayEl.type = 'button';
+        dayEl.className = 'h-8 w-8 rounded-lg text-xs font-medium transition-all duration-200 hover:bg-red-50';
+        dayEl.textContent = cellDate.getDate();
+        
+        const isCurrentMonth = cellDate.getMonth() === month;
+        const isToday = cellDate.toDateString() === today.toDateString();
+        const isSelected = selectedDates.some(date => date.toDateString() === cellDate.toDateString());
+        const isPastDate = cellDate < today && !isToday;
+        
+        if (!isCurrentMonth) {
+          dayEl.className += ' text-gray-300 cursor-default';
+          dayEl.disabled = true;
+        } else if (isPastDate) {
+          dayEl.className += ' text-gray-400 cursor-not-allowed';
+          dayEl.disabled = true;
+        } else if (isSelected) {
+          dayEl.className += ' bg-red-500 text-white shadow-lg';
+        } else if (isToday) {
+          dayEl.className += ' bg-red-100 text-red-600 font-semibold';
+        } else {
+          dayEl.className += ' text-gray-700 hover:bg-red-50 hover:text-red-600';
+        }
+        
+        if (isCurrentMonth && !isPastDate) {
+          dayEl.addEventListener('click', () => toggleDate(cellDate));
+        }
+        
+        calendarDays.appendChild(dayEl);
+      }
+    }
+    
+    function toggleDate(date) {
+      const dateString = date.toDateString();
+      const existingIndex = selectedDates.findIndex(d => d.toDateString() === dateString);
+      
+      if (existingIndex >= 0) {
+        // Remove date if already selected
+        selectedDates.splice(existingIndex, 1);
+      } else {
+        if (!isMultiMode && selectedDates.length > 0) {
+          // Single mode: replace existing selection
+          selectedDates = [new Date(date)];
+        } else {
+          // Multi mode or first selection: add date
+          selectedDates.push(new Date(date));
+        }
+      }
+      
+      updateSelectedDisplay();
+      generateCalendar(); // Refresh to show selection
+    }
+    
+    function toggleMultiMode() {
+      isMultiMode = !isMultiMode;
+      
+      if(toggleMultiBtn) {
+        toggleMultiBtn.textContent = isMultiMode ? 'Single Select' : 'Select Multiple';
+        toggleMultiBtn.className = isMultiMode 
+          ? 'px-4 py-2 bg-red-100 text-red-700 text-sm rounded-lg hover:bg-red-200 transition-colors font-medium'
+          : 'px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-lg hover:bg-gray-200 transition-colors font-medium';
+      }
+      
+      if(multiModeIndicator) {
+        if(isMultiMode) {
+          multiModeIndicator.classList.remove('hidden');
+        } else {
+          multiModeIndicator.classList.add('hidden');
+        }
+      }
+    }
+    
+    function showCalendar() {
+      calendar.classList.remove('hidden');
+      // Lock body scroll while modal is open (mobile full-viewport coverage)
+      document.body.style.overflow = 'hidden';
+      generateCalendar();
+    }
+    
+    function hideCalendar() {
+      calendar.classList.add('hidden');
+      // Restore body scroll
+      document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    if(dateInput) {
+      dateInput.addEventListener('click', showCalendar);
+    }
+    
+    if(prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        generateCalendar();
+      });
+    }
+    
+    if(nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        generateCalendar();
+      });
+    }
+    
+    if(clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        selectedDates = [];
+        updateSelectedDisplay();
+        generateCalendar();
+      });
+    }
+    
+    if(toggleMultiBtn) {
+      toggleMultiBtn.addEventListener('click', toggleMultiMode);
+    }
+    
+    if(confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        hideCalendar();
+      });
+    }
+    
+    // Close calendar when clicking on backdrop
+    if(calendar) {
+      calendar.addEventListener('click', (e) => {
+        if (e.target === calendar) {
+          hideCalendar();
+        }
+      });
+    }
+    const calendarOverlay = document.getElementById('calendarOverlay');
+    if (calendarOverlay) {
+      calendarOverlay.addEventListener('click', hideCalendar);
+    }
+    
+    // Initialize
+    updateDatePlaceholder();
+    
+    // Search Overlay Functionality
+    const searchInput = document.getElementById('search-input');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const typeSpan = document.getElementById('type-span');
+    const searchResults = document.getElementById('searchResults');
+    const resultsList = document.getElementById('resultsList');
+    // Mobile equivalents
+    const searchInputMobile = document.getElementById('search-input-mobile');
+    const searchOverlayMobile = document.getElementById('searchOverlayMobile');
+    const typeSpanMobile = document.getElementById('type-span-mobile');
+    const searchResultsMobile = document.getElementById('searchResultsMobile');
+    const resultsListMobile = document.getElementById('resultsListMobile');
+    const priceRange = document.getElementById('priceRange');
+    const minPrice = document.getElementById('minPrice');
+    const maxPrice = document.getElementById('maxPrice');
+    
+    // Sample tour data for suggestions with images
+    const tourPackages = [
+      {
+        name: 'Exotic Thailand Package - 7 Days',
+        price: '₹45,000',
+        image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Luxurious Dubai Tour - 5 Days',
+        price: '₹65,000',
+        image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Adorable Bali Experience - 6 Days',
+        price: '₹52,000',
+        image: 'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Wonders of Goa - 4 Days',
+        price: '₹28,000',
+        image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Thailand Beach Paradise - 8 Days',
+        price: '₹58,000',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Dubai Shopping Festival - 3 Days',
+        price: '₹42,000',
+        image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Bali Cultural Tour - 7 Days',
+        price: '₹48,000',
+        image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&h=400&q=80'
+      },
+      {
+        name: 'Goa Adventure Package - 5 Days',
+        price: '₹35,000',
+        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=400&h=400&q=80'
+      }
+    ];
+    
+    // Destination suggestions (countries/cities) to show along with packages
+    const destinationList = [
+      { name: 'Goa', image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Thailand', image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Dubai', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Bali', image: 'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Singapore', image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Maldives', image: 'https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop' },
+      { name: 'Malaysia', image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Himachal Pradesh', image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=400&h=400&q=80' },
+      { name: 'Kerala', image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=400&h=400&q=80' }
+    ];
+    
+    // Show overlay when original search input is clicked or focused
+    if (searchInput && searchOverlay) {
+      searchInput.addEventListener('click', showSearchOverlay);
+      searchInput.addEventListener('focus', showSearchOverlay);
+    }
+    // Mobile: show overlay
+    function showSearchOverlayMobile() {
+      if (searchOverlayMobile) searchOverlayMobile.classList.remove('hidden');
+    }
+    if (searchInputMobile && searchOverlayMobile) {
+      searchInputMobile.addEventListener('click', showSearchOverlayMobile);
+      searchInputMobile.addEventListener('focus', showSearchOverlayMobile);
+    }
+    
+    function showSearchOverlay() {
+      searchOverlay.classList.remove('hidden');
+    }
+    
+    // Listen to typing in the original search input
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const value = e.target.value;
+        
+        // Stop/start typing animation based on user input
+        if (value.length > 0) {
+          // User is typing - stop animation and hide placeholder
+          if (window.searchAnimation) {
+            window.searchAnimation.stop();
+          }
+          if (typeSpan) {
+            typeSpan.style.display = 'none';
+          }
+          if (typeSpanMobile) {
+            typeSpanMobile.style.display = 'none';
+          }
+        } else {
+          // User cleared input - restart animation and show placeholder
+          if (typeSpan) {
+            typeSpan.style.display = 'block';
+          }
+          if (typeSpanMobile) {
+            typeSpanMobile.style.display = 'block';
+          }
+          if (window.searchAnimation) {
+            window.searchAnimation.start();
+          }
+        }
+        
+        // Show overlay if not already shown
+        if (searchOverlay.classList.contains('hidden')) {
+          showSearchOverlay();
+        }
+        
+        // Show/hide search results based on input
+        if (value.length > 0) {
+          showSearchSuggestions(value);
+        } else {
+          searchResults.classList.add('hidden');
+          if (searchResultsMobile) searchResultsMobile.classList.add('hidden');
+        }
+      });
+      
+      // Also stop animation when user focuses on input
+      searchInput.addEventListener('focus', () => {
+        if (searchInput.value.length > 0 && window.searchAnimation) {
+          window.searchAnimation.stop();
+        }
+      });
+      
+      // Restart animation when user leaves input (if empty)
+      searchInput.addEventListener('blur', () => {
+        if (searchInput.value.length === 0 && window.searchAnimation) {
+          window.searchAnimation.start();
+        }
+      });
+    }
+
+    // Mobile: listen to typing in the mobile search input (mirror desktop behavior)
+    if (searchInputMobile) {
+      searchInputMobile.addEventListener('input', (e) => {
+        const value = e.target.value;
+        // Stop/start typing animation based on user input and toggle placeholder
+        if (value.length > 0) {
+          if (window.searchAnimation) window.searchAnimation.stop();
+          if (typeSpanMobile) typeSpanMobile.style.display = 'none';
+          // Ensure mobile overlay is visible
+          if (searchOverlayMobile && searchOverlayMobile.classList.contains('hidden')) {
+            if (typeof showSearchOverlayMobile === 'function') {
+              showSearchOverlayMobile();
+            } else {
+              searchOverlayMobile.classList.remove('hidden');
+            }
+          }
+          // Show suggestions (updates both mobile and desktop containers)
+          showSearchSuggestions(value);
+        } else {
+          if (typeSpanMobile) typeSpanMobile.style.display = 'block';
+          if (searchResultsMobile) searchResultsMobile.classList.add('hidden');
+          if (searchResults) searchResults.classList.add('hidden');
+          if (window.searchAnimation) window.searchAnimation.start();
+        }
+      });
+
+      searchInputMobile.addEventListener('focus', () => {
+        if (searchInputMobile.value.length > 0 && window.searchAnimation) {
+          window.searchAnimation.stop();
+        }
+      });
+
+      searchInputMobile.addEventListener('blur', () => {
+        if (searchInputMobile.value.length === 0 && window.searchAnimation) {
+          window.searchAnimation.start();
+        }
+      });
+    }
+    
+    // Utility: parse price like "₹45,000" to number
+    function getPriceNumber(value){
+      if (typeof value === 'number') return value;
+      const n = String(value).replace(/[^0-9]/g, '');
+      return n ? parseInt(n, 10) : 0;
+    }
+    
+    // Show search suggestions (respects budget filters for packages)
+    function showSearchSuggestions(query) {
+      const q = query.toLowerCase();
+      
+      // Filter both packages and destinations
+      const minBudget = minPrice ? getPriceNumber(minPrice.value) : 0;
+      const maxBudget = maxPrice ? getPriceNumber(maxPrice.value) : Infinity;
+      const filteredPackages = tourPackages
+        .filter(pkg => pkg.name.toLowerCase().includes(q))
+        .filter(pkg => {
+          const p = getPriceNumber(pkg.price);
+          return p >= minBudget && p <= maxBudget;
+        })
+        .map(pkg => ({ type: 'package', name: pkg.name, price: pkg.price, image: pkg.image }));
+      
+      // Always allow destination matches (do not depend on package results)
+      const filteredDestinations = destinationList
+        .filter(d => d.name.toLowerCase().includes(q))
+        .map(d => ({ type: 'destination', name: d.name, image: d.image }));
+      
+      // Combine, with destinations first for quick access
+      const combined = [...filteredDestinations, ...filteredPackages];
+      
+      if (filteredPackages.length > 0 || filteredDestinations.length > 0) {
+        const html = combined.map(item =>
+          `<div class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer border border-gray-200 hover:border-gray-300 transition-colors">
+            <div class="flex-1">
+              <div class="font-medium text-gray-800 flex items-center gap-2">
+                ${item.name}
+                <span class="text-[10px] px-2 py-0.5 rounded-full border ${item.type==='package' ? 'bg-green-50 text-green-700 border-green-200' : 'bg-blue-50 text-blue-700 border-blue-200'}">${item.type==='package' ? 'Tour' : 'Destination'}</span>
+              </div>
+              <div class="text-sm text-gray-500">${item.type==='package' ? ('Starting from ' + item.price) : 'Explore trips and activities'}</div>
+            </div>
+            <div class="ml-3 flex-shrink-0">
+              <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-lg object-cover shadow-sm">
+            </div>
+          </div>`
+        ).join('');
+        if (resultsList) resultsList.innerHTML = html;
+        if (resultsListMobile) resultsListMobile.innerHTML = html;
+        if (searchResults) searchResults.classList.remove('hidden');
+        if (searchResultsMobile) searchResultsMobile.classList.remove('hidden');
+      } else {
+        // Empty state with expert CTA
+        const emptyHtml = `
+          <div class="p-6 text-center text-gray-600">
+            <div class="mx-auto w-16 h-16 rounded-full bg-red-50 flex items-center justify-center mb-3">
+              <i class="ri-search-eye-line text-red-500 text-2xl" aria-hidden="true"></i>
+            </div>
+            <div class="font-semibold text-gray-800 mb-1">No Trips match your search</div>
+            <div class="text-sm text-gray-500 mb-4">Try adjusting your keywords or budget range.</div>
+            <button id="ctaExpert" class="inline-flex items-center px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
+              Speak to our expert to get a custom quote under your budget
+            </button>
+          </div>
+        `;
+        if (resultsList) resultsList.innerHTML = emptyHtml;
+        if (resultsListMobile) resultsListMobile.innerHTML = emptyHtml;
+        if (searchResults) searchResults.classList.remove('hidden');
+        if (searchResultsMobile) searchResultsMobile.classList.remove('hidden');
+        // Bind expert CTA action
+        setTimeout(() => {
+          const cta = document.getElementById('ctaExpert');
+          if (cta) {
+            cta.addEventListener('click', () => {
+              const contact = document.getElementById('contact');
+              if (contact && contact.scrollIntoView) {
+                contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                window.location.href = 'https://saishatoursandtravels.in/#contact';
+              }
+            });
+          }
+        }, 0);
+      }
+    }
+    
+    // Close overlay when clicking outside
+    document.addEventListener('click', (e) => {
+      if (searchOverlay && !searchOverlay.contains(e.target) && !(searchInput && searchInput.contains(e.target))) {
+        searchOverlay.classList.add('hidden');
+      }
+      if (searchOverlayMobile && !searchOverlayMobile.contains(e.target) && !(searchInputMobile && searchInputMobile.contains(e.target))) {
+        searchOverlayMobile.classList.add('hidden');
+      }
+    });
+    
+    // Close search overlay when hovering over navigation links
+    document.querySelectorAll('.nav-link, .dropdown-container, nav ul li').forEach(navElement => {
+      navElement.addEventListener('mouseenter', () => {
+        if (searchOverlay && !searchOverlay.classList.contains('hidden')) {
+          searchOverlay.classList.add('hidden');
+        }
+        if (searchOverlayMobile && !searchOverlayMobile.classList.contains('hidden')) {
+          searchOverlayMobile.classList.add('hidden');
+        }
+      });
+    });
+    
+    // Price range functionality + live re-filtering
+    if (priceRange && minPrice && maxPrice) {
+      const refilter = () => {
+        const q = (searchInput && searchInput.value) || (searchInputMobile && searchInputMobile.value) || '';
+        if (q.length > 0) {
+          showSearchSuggestions(q);
+        }
+      };
+      
+      priceRange.addEventListener('input', (e) => {
+        const value = getPriceNumber(e.target.value);
+        maxPrice.value = value;
+        refilter();
+      });
+      
+      minPrice.addEventListener('input', (e) => {
+        let value = getPriceNumber(e.target.value);
+        if (value < 0) value = 0;
+        const currentMax = getPriceNumber(maxPrice.value);
+        if (value > currentMax) {
+          // keep min <= max
+          value = currentMax;
+          minPrice.value = value;
+        }
+        priceRange.min = value;
+        refilter();
+      });
+      
+      maxPrice.addEventListener('input', (e) => {
+        let value = getPriceNumber(e.target.value);
+        if (value > 500000) value = 500000;
+        const currentMin = getPriceNumber(minPrice.value);
+        if (value < currentMin) {
+          value = currentMin;
+          maxPrice.value = value;
+        }
+        priceRange.value = value;
+        refilter();
+      });
+    }
+    
+    // Filter button selections (click again to unselect)
+    document.querySelectorAll('[data-filter], [data-duration]').forEach(button => {
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', (e) => {
+        const btn = e.currentTarget;
+        const isActive = btn.classList.contains('bg-red-500');
+        const group = btn.parentElement.querySelectorAll('button');
+        
+        // Helper to set a button to inactive (gray)
+        const makeInactive = (b) => {
+          b.classList.remove('bg-red-500', 'text-white', 'hover:bg-red-500');
+          b.classList.add('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+          b.setAttribute('aria-pressed', 'false');
+        };
+        
+        // Helper to set a button to active (red)
+        const makeActive = (b) => {
+          b.classList.remove('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+          b.classList.add('bg-red-500', 'text-white', 'hover:bg-red-500');
+          b.setAttribute('aria-pressed', 'true');
+        };
+        
+        if (isActive) {
+          // Clicking the already selected button unselects it (no selection in group)
+          group.forEach(makeInactive);
+        } else {
+          // Activate clicked, deactivate siblings
+          group.forEach(makeInactive);
+          makeActive(btn);
+        }
+      });
+    });
+
+    // Handle form submit (demo only)
+    const form = document.getElementById('quoteForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        closeModal();
+        alert('Thanks! Our expert will contact you shortly.');
+      });
+    }
+  })();
+</script>
+
+<style>
+/* Custom Date Input Styling */
+.custom-date-input {
+  color: #374151;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-date-input:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Placeholder styling */
+#dateplaceholder {
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #9CA3AF;
+}
+
+/* Custom Calendar Panel Styling */
+#calendarPanel {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Calendar Header */
+#calendarPanel #currentMonth {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Buttons */
+#prevMonth, #nextMonth {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  transition: all 0.3s ease;
+}
+
+#prevMonth:hover, #nextMonth:hover {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Day Headers */
+#calendarPanel .grid > div {
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* Calendar Days */
+#calendarDays button {
+  position: relative;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#calendarDays button:not(:disabled):hover {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* Selected Date */
+#calendarDays button.bg-red-500 {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  transform: scale(1.05);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Today's Date */
+#calendarDays button.bg-red-100 {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%) !important;
+  border: 2px solid #ef4444;
+  font-weight: 700;
+  position: relative;
+}
+
+#calendarDays button.bg-red-100::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+/* Disabled Dates */
+#calendarDays button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Footer Buttons */
+#clearDate {
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+#clearDate:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+#todayDate {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transition: all 0.3s ease;
+}
+
+#todayDate:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #calendarPanel { width: 20rem; }
+}
+
+/* Enhanced button styling for pure red */
+#quoteForm button[type="submit"] {
+  background-color: #ff0000 !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+}
+
+#quoteForm button[type="submit"]:hover {
+  background-color: #dc0000 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+#quoteForm button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.25);
+}
+
+/* Country code select styling */
+#quoteForm select[name="countryCode"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  padding-right: 32px;
+  appearance: none;
+}
+
+/* Modal animations */
+#quote-modal {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+#quote-modal:not(.hidden) {
+  animation-name: fadeInModal;
+}
+
+#quote-modal.hidden {
+  animation-name: fadeOutModal;
+}
+
+#quote-modal > div:last-child {
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#quote-modal:not(.hidden) > div:last-child {
+  animation-name: scaleInModal;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutModal {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes scaleInModal {
+  from { 
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  #quote-modal > div:last-child {
+    margin-top: 20px;
+    width: 95vw;
+  }
+  
+  .custom-date-input {
+    background-size: 18px;
+    padding-right: 40px !important;
+  }
+}
+</style>
+
+</body>
+</html>
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!-- End of Header Section -->
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Saisha Tours and Travels</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%);
+        }
+        
+        .section-container {
+            background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.08);
+            border: 1px solid rgba(255, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .section-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.15);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 50%, #990000 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .accordion-content.active {
+            max-height: 2000px;
+        }
+        
+        .floating-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 1rem;
+            padding: 1rem 0.5rem;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%);
+            z-index: 100;
+            transition: width 0.3s ease;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fef2f2 100%);
+            border-left: 4px solid #ff0000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .alert-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 0, 0, 0.1) 50%, transparent 100%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        @media (max-width: 768px) {
+            .floating-nav {
+                display: none;
+            }
+        }
+        
+        .icon-3d {
+            filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .icon-3d:hover {
+            transform: translateY(-2px) scale(1.1);
+            filter: drop-shadow(0 8px 16px rgba(255, 0, 0, 0.4));
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff0000',
+                        secondary: '#cc0000'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-white to-red-50 min-h-screen">
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="floating-nav" id="floatingNav">
+        <nav class="flex flex-col space-y-2">
+            <a href="#hero" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Top"></a>
+            <a href="#definitions" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Definitions"></a>
+            <a href="#usage" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Usage"></a>
+            <a href="#bookings" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Bookings"></a>
+            <a href="#cancellations" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Cancellations"></a>
+            <a href="#privacy" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Privacy"></a>
+            <a href="#liability" class="w-3 h-3 rounded-full bg-red-200 hover:bg-red-500 transition-colors duration-300" title="Liability"></a>
+        </nav>
+    </div>
+
+    <main class="relative">
+        <section id="hero" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20legal%20document%20signing%20ceremony%20in%20modern%20office%20with%20red%20accents%2C%20business%20people%20reviewing%20contracts%2C%20elegant%20corporate%20environment%2C%20clean%20white%20background%20with%20red%20highlights%2C%20high-end%20legal%20services%20atmosphere%2C%204K%20resolution&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-red-600/90 via-red-500/80 to-transparent"></div>
+            <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+                <div class="fade-in-up opacity-0">
+                    <div class="w-20 h-20 flex items-center justify-center mx-auto mb-8 bg-white/20 rounded-2xl backdrop-blur-sm">
+                        <i class="ri-file-text-line text-4xl text-white icon-3d"></i>
+                    </div>
+                    <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                        Terms & Conditions
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+                        Your comprehensive guide to using Saisha Tours and Travels services safely and securely
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <button onclick="scrollToSection('definitions')" class="bg-white text-red-600 px-8 py-4 rounded-button font-semibold hover:bg-red-50 transition-all duration-300 transform hover:scale-105 whitespace-nowrap !rounded-button">
+                            Read Terms
+                        </button>
+                        <div class="flex items-center text-white/80">
+                            <i class="ri-shield-check-line text-2xl mr-3"></i>
+                            <span class="text-lg">Secure & Trusted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="alert-box section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0 stagger-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-xl flex-shrink-0">
+                            <i class="ri-information-line text-2xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">Important Notice</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                By accessing our platform, creating an account, or making a booking, you acknowledge that you have read, understood, and agreed to these Terms and Conditions in full. If you do not agree to any part of these terms, please refrain from using our services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="definitions" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0 stagger-2">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-book-open-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Definitions</h2>
+                            <p class="text-gray-600">Key terms used throughout this agreement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"User"</h4>
+                                <p class="text-gray-700">Any person accessing or using our website or services</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"Booking"</h4>
+                                <p class="text-gray-700">Any confirmed reservation for tours, flights, hotels, or other services</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"Supplier"</h4>
+                                <p class="text-gray-700">Third-party vendors such as hotels, airlines, or tour operators</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"Services"</h4>
+                                <p class="text-gray-700">All offerings available through our platform</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"Platform"</h4>
+                                <p class="text-gray-700">Our website, mobile applications, and affiliated channels</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border border-red-100">
+                                <h4 class="font-semibold text-red-600 mb-2">"Force Majeure"</h4>
+                                <p class="text-gray-700">Circumstances beyond our control like natural disasters or pandemics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="usage" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0 stagger-3">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-computer-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Use of Website and Services</h2>
+                            <p class="text-gray-600">Guidelines for proper platform usage</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-white to-red-50 rounded-xl p-8 mb-8" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20website%20interface%20on%20laptop%20screen%20showing%20travel%20booking%20platform%2C%20clean%20white%20design%20with%20red%20accents%2C%20professional%20user%20interface%2C%20secure%20online%20booking%20system%2C%20high-tech%20digital%20environment&width=800&height=400&seq=usage001&orientation=landscape'); background-size: cover; background-position: center;">
+                        <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-red-100 rounded-full flex-shrink-0 mt-1">
+                                        <i class="ri-check-line text-sm text-red-600"></i>
+                                    </div>
+                                    <span class="text-gray-700">Platform intended for personal, non-commercial use only</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-red-100 rounded-full flex-shrink-0 mt-1">
+                                        <i class="ri-check-line text-sm text-red-600"></i>
+                                    </div>
+                                    <span class="text-gray-700">Users must be at least 18 years old and authorized to use this platform</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-red-100 rounded-full flex-shrink-0 mt-1">
+                                        <i class="ri-close-line text-sm text-red-600"></i>
+                                    </div>
+                                    <span class="text-gray-700">Speculative or fraudulent bookings are strictly prohibited</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-red-100 rounded-full flex-shrink-0 mt-1">
+                                        <i class="ri-shield-check-line text-sm text-red-600"></i>
+                                    </div>
+                                    <span class="text-gray-700">All provided information must be accurate and complete</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bookings" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0 stagger-4">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-calendar-check-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Bookings and Reservations</h2>
+                            <p class="text-gray-600">Understanding our booking process and policies</p>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-8 mb-8">
+                        <div class="bg-white rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-xl mb-4">
+                                <i class="ri-plane-line text-2xl text-red-600 icon-3d"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Flight Bookings</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Correct passenger details required. Not liable for missed flights due to incomplete documents or airline policies.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-xl mb-4">
+                                <i class="ri-hotel-line text-2xl text-red-600 icon-3d"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Hotel Reservations</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Descriptions provided by suppliers. Additional fees like local taxes must be paid directly by guests.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-xl mb-4">
+                                <i class="ri-map-line text-2xl text-red-600 icon-3d"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Tour Packages</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Final payment confirms booking. All terms governed by the confirmed quotation after payment receipt.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box rounded-xl p-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-red-100 rounded-full">
+                                <i class="ri-alert-line text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-600 mb-1">Important Booking Notice</h4>
+                                <p class="text-gray-700 text-sm">All bookings are governed by the final quotation provided after payment. Prior discussions not included in the confirmed quotation are not binding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cancellations" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-close-circle-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Cancellations and Modifications</h2>
+                            <p class="text-gray-600">Policy details for changes and cancellations</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-red-50 to-white rounded-xl p-8 mb-8" style="background-image: url('https://readdy.ai/api/search-image?query=Calendar%20with%20cancellation%20marks%20and%20refund%20policy%20documents%2C%20professional%20office%20setting%20with%20red%20accents%2C%20business%20policy%20documentation%2C%20clean%20white%20background%20with%20red%20highlights%2C%20corporate%20policy%20management&width=800&height=400&seq=cancel001&orientation=landscape'); background-size: cover; background-position: center;">
+                        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-6">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-red-600 mb-4">Cancellation Timeline</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 flex items-center justify-center bg-green-100 rounded-full">
+                                                <span class="text-xs font-semibold text-green-600">30+</span>
+                                            </div>
+                                            <span class="text-gray-700">30+ days: Minimal charges</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 flex items-center justify-center bg-yellow-100 rounded-full">
+                                                <span class="text-xs font-semibold text-yellow-600">15-29</span>
+                                            </div>
+                                            <span class="text-gray-700">15-29 days: Moderate charges</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 flex items-center justify-center bg-red-100 rounded-full">
+                                                <span class="text-xs font-semibold text-red-600">&lt;15</span>
+                                            </div>
+                                            <span class="text-gray-700">Less than 15 days: High charges</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-red-600 mb-4">Emergency Modifications</h3>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Medical or family emergencies may be considered for modifications with proper documentation.</p>
+                                    <div class="bg-red-50 rounded-lg p-4">
+                                        <p class="text-sm text-red-600 font-medium">Refunds processed only after supplier confirmation. Convenience fees may be deducted.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="privacy" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-shield-user-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Data Protection and Privacy</h2>
+                            <p class="text-gray-600">How we protect and use your information</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-red-50 rounded-xl p-8" style="background-image: url('https://readdy.ai/api/search-image?query=Digital%20security%20and%20data%20protection%20concept%20with%20lock%20icons%2C%20secure%20servers%2C%20privacy%20shields%2C%20modern%20cybersecurity%20visualization%2C%20white%20background%20with%20red%20security%20elements%2C%20professional%20data%20protection%20imagery&width=800&height=400&seq=privacy001&orientation=landscape'); background-size: cover; background-position: center;">
+                        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-8">
+                            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-2xl mx-auto mb-4">
+                                        <i class="ri-lock-line text-2xl text-red-600 icon-3d"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Secure Collection</h3>
+                                    <p class="text-sm text-gray-600">Personal information collected securely for service provision</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-2xl mx-auto mb-4">
+                                        <i class="ri-user-settings-line text-2xl text-red-600 icon-3d"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Controlled Usage</h3>
+                                    <p class="text-sm text-gray-600">Data used solely for service improvement and communication</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-2xl mx-auto mb-4">
+                                        <i class="ri-shield-check-line text-2xl text-red-600 icon-3d"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">No Sale Policy</h3>
+                                    <p class="text-sm text-gray-600">We never sell your data to third parties</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert-box rounded-lg p-6">
+                                <h4 class="font-semibold text-red-600 mb-2">Payment Security</h4>
+                                <p class="text-gray-700 text-sm">All payment processing handled by secure gateways. We are not responsible for breaches at gateway level.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="liability" class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-50 rounded-2xl mr-6">
+                            <i class="ri-scales-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl font-bold text-gradient mb-2">Limitation of Liability</h2>
+                            <p class="text-gray-600">Understanding our liability limitations</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 border border-red-100">
+                            <h3 class="text-lg font-semibold text-red-600 mb-3">Liability Scope</h3>
+                            <p class="text-gray-700 leading-relaxed">Our liability is limited to the total amount paid by you. We are not responsible for personal injury, financial loss, or inconveniences resulting from events beyond our control.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 border border-red-100">
+                            <h3 class="text-lg font-semibold text-red-600 mb-3">Force Majeure Events</h3>
+                            <p class="text-gray-700 leading-relaxed">Acts of God, government restrictions, natural disasters, pandemics, or third-party failures are beyond our control and liability.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 border border-red-100">
+                            <h3 class="text-lg font-semibold text-red-600 mb-3">Governing Law</h3>
+                            <p class="text-gray-700 leading-relaxed">These terms are governed by Indian law. Disputes shall be resolved in Mumbai courts, with arbitration as specified in quotations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container rounded-2xl p-8 mb-12 fade-in-up opacity-0">
+                    <div class="text-center">
+                        <div class="w-20 h-20 flex items-center justify-center bg-red-100 rounded-2xl mx-auto mb-6">
+                            <i class="ri-copyright-line text-3xl text-red-600 icon-3d"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gradient mb-4">Acknowledgment</h2>
+                        <p class="text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
+                            By using Saisha Tours and Travels' platform, creating an account, or making a booking, you confirm that you have read, understood, and agreed to all terms, including those related to liability, cancellations, data use, and third-party services.
+                        </p>
+                        
+                        <div class="bg-gradient-to-r from-red-50 to-white rounded-xl p-8 border border-red-100">
+                            <h3 class="text-xl font-semibold text-red-600 mb-4">© 2025 Saisha Tours and Travels</h3>
+                            <p class="text-gray-600 mb-4">All rights reserved.</p>
+                            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+                                <span>Last Updated: January 2025</span>
+                                <span>•</span>
+                                <span>Version 2.1</span>
+                                <span>•</span>
+                                <span>Effective Immediately</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-110 opacity-0 pointer-events-none z-50">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+
+    <script id="scroll-progress">
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.getElementById('progressBar');
+            const backToTop = document.getElementById('backToTop');
+            
+            function updateProgress() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+                
+                if (scrollTop > 300) {
+                    backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    backToTop.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+            
+            window.addEventListener('scroll', updateProgress);
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <script id="animations">
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0');
+                        entry.target.classList.add('fade-in-up');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <script id="navigation">
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.floating-nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    scrollToSection(targetId);
+                });
+            });
+        });
+    </script>
+
+    <script id="accordion-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('[data-accordion]');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isActive = content.classList.contains('active');
+                    
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    if (!isActive) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
