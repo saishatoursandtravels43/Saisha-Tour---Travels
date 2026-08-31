@@ -1,0 +1,421 @@
+
+<!-- /////////////////////////////////////////////////////////////////////// -->
+<!-- Start of Footer Section -->
+<!-- /////////////////////////////////////////////////////////////////////// -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel & Tours - Footer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF0000',
+secondary: '#CC0000'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+@keyframes spin {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+.animate-spin {
+animation: spin linear infinite;
+}
+.footer-link {
+transition: all 0.3s ease;
+position: relative;
+}
+.footer-link:hover {
+color: #FF0000;
+transform: translateX(4px);
+}
+.footer-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #FF0000;
+transition: width 0.3s ease;
+}
+.footer-link:hover::after {
+width: 100%;
+}
+.social-icon {
+transition: all 0.3s ease;
+}
+.social-icon:hover {
+transform: scale(1.2);
+background-color: #CC0000;
+}
+.destination-card {
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+.destination-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(204, 0, 0, 0.8));
+opacity: 0;
+transition: opacity 0.3s ease;
+z-index: 1;
+}
+.destination-card:hover::before {
+opacity: 0;
+}
+.destination-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+.destination-card .destination-text {
+position: relative;
+z-index: 2;
+}
+.newsletter-form {
+background: linear-gradient(135deg, #FF0000, #CC0000);
+}
+.newsletter-input {
+border: none;
+outline: none;
+}
+.newsletter-input:focus {
+box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+.cta-button {
+transition: all 0.3s ease;
+}
+.cta-button:hover {
+background-color: #CC0000;
+transform: translateY(-2px);
+box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+.section-divider {
+background: linear-gradient(90deg, transparent, #FF0000, transparent);
+height: 1px;
+}
+</style>
+</head>
+<body>
+<footer class="bg-gray-900 text-white border-t-4 border-primary">
+<!-- Newsletter Section -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+<div class="newsletter-form rounded-lg p-16 mb-16 relative overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://readdy.ai/api/search-image?query=Stunning%20panoramic%20view%20of%20Santorini%20Greece%20with%20white%20buildings%20and%20blue%20domes%20against%20crystal%20clear%20Mediterranean%20sea%2C%20dramatic%20sunset%20sky%2C%20luxury%20travel%20destination%2C%20professional%20travel%20photography%2C%20ultra%20high%20resolution%204k%20quality&width=1920&height=600&seq=travel001&orientation=landscape"
+class="w-full h-full object-cover object-center" alt="Luxury Travel Destination">
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-black/90 backdrop-blur-[2px]"></div>
+<div class="absolute inset-0" style="background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%)"></div>
+<div class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Elegant%20travel%20pattern%20with%20compass%2C%20world%20map%2C%20airplane%20routes%2C%20and%20destination%20markers%2C%20sophisticated%20design%2C%20subtle%20and%20minimal&width=400&height=400&seq=pattern002&orientation=squarish')] opacity-5 mix-blend-overlay"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<div class="w-24 h-24 flex items-center justify-center mx-auto mb-8 bg-white/10 backdrop-blur-xl rounded-full border-2 border-white/30 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+<i class="ri-compass-3-line text-white text-5xl animate-spin" style="animation-duration: 8s;"></i>
+</div>
+<h3 class="text-4xl font-bold mb-4 text-white drop-shadow-lg">Unlock on Your Dream Trip</h3>
+<p class="text-white/95 mb-8 text-xl max-w-2xl mx-auto leading-relaxed">
+Unlock exclusive travel experiences, luxury getaways, and VIP deals curated just for you. Let's make your travel dreams a reality.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+<div class="flex-1 relative group">
+<i class="ri-mail-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-primary transition-colors duration-300"></i>
+<input type="email" placeholder="Your email for exclusive travel offers"
+class="newsletter-input w-full pl-12 pr-4 py-5 rounded-button text-gray-900 placeholder-gray-500 bg-white/95 backdrop-blur-md shadow-xl focus:ring-2 focus:ring-primary/30 transition-all duration-300">
+</div>
+<button class="cta-button bg-white text-primary px-10 py-5 rounded-button font-semibold whitespace-nowrap !rounded-button hover:bg-primary hover:text-white shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-white/30">
+Begin Your Journey
+</button>
+</div>
+<div class="mt-8 flex items-center justify-center gap-8 text-white/90">
+<div class="flex items-center gap-2">
+<i class="ri-shield-check-line text-xl"></i>
+<span class="text-sm">Secure Booking</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-star-line text-xl"></i>
+<span class="text-sm">Best Price Guarantee</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-customer-service-2-line text-xl"></i>
+<span class="text-sm">24/7 Support</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Footer Content -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
+<!-- Column 1: About Company -->
+<div class="space-y-6">
+<div>
+<h4 class="text-xl font-bold mb-4 text-white">About Company</h4>
+<div class="section-divider mb-6"></div>
+</div>
+<nav class="space-y-3">
+<a href="#" class="footer-link block text-white/80 hover:text-primary">About Us</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Why Choose Us</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Contact Us</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">We Are Hiring</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Terms & Conditions</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Privacy Policy</a>
+</nav>
+</div>
+<!-- Column 2: Tour Categories -->
+<div class="space-y-6">
+<div>
+<h4 class="text-xl font-bold mb-4 text-white">Tour Categories</h4>
+<div class="section-divider mb-6"></div>
+</div>
+<nav class="space-y-3">
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Domestic Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">International Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Spiritual Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Women's Special Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Seniors' Special Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Family Tour Packages</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Honeymoon Special Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Couples Only Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Luxury Group Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Corporate Tours</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Local Trips (Maharashtra)</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Short Trips</a>
+</nav>
+</div>
+<!-- Column 3: Services -->
+<div class="space-y-6">
+<div>
+<h4 class="text-xl font-bold mb-4 text-white">Our Services</h4>
+<div class="section-divider mb-6"></div>
+</div>
+<nav class="space-y-3">
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Design Your Own Trip</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Customized Travel Plans</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Tailor-Made Itineraries</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Special Occasion Trips</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Group Travel Planning</a>
+<a href="#" class="footer-link block text-white/80 hover:text-primary">Get Custom Quote</a>
+</nav>
+</div>
+<!-- Column 4: Popular Destinations -->
+<div class="space-y-6">
+<div>
+<h4 class="text-xl font-bold mb-4 text-white">Popular Destinations</h4>
+<div class="section-divider mb-6"></div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20Thailand%20beach%20with%20crystal%20clear%20turquoise%20water%2C%20white%20sand%2C%20palm%20trees%2C%20tropical%20paradise%2C%20bright%20sunny%20day%2C%20vibrant%20colors%2C%20travel%20destination%20photography%2C%20high%20quality%2C%20stunning%20landscape&width=120&height=120&seq=thailand001&orientation=squarish"
+alt="Thailand" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Thailand</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Stunning%20Bali%20rice%20terraces%20with%20lush%20green%20landscape%2C%20traditional%20Indonesian%20architecture%2C%20tropical%20vegetation%2C%20peaceful%20atmosphere%2C%20golden%20hour%20lighting%2C%20travel%20photography%2C%20exotic%20destination&width=120&height=120&seq=bali001&orientation=squarish"
+alt="Bali" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Bali</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Dubai%20modern%20skyline%20with%20Burj%20Khalifa%2C%20luxury%20buildings%2C%20futuristic%20architecture%2C%20desert%20city%2C%20golden%20sunset%2C%20impressive%20urban%20landscape%2C%20travel%20destination%2C%20high-end%20tourism&width=120&height=120&seq=dubai001&orientation=squarish"
+alt="Dubai" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Dubai</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Singapore%20Marina%20Bay%20Sands%20with%20infinity%20pool%2C%20modern%20city%20skyline%2C%20clean%20urban%20environment%2C%20futuristic%20architecture%2C%20vibrant%20city%20lights%2C%20luxury%20travel%20destination&width=120&height=120&seq=singapore001&orientation=squarish"
+alt="Singapore" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Singapore</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20Malaysia%20Petronas%20Towers%20with%20modern%20cityscape%2C%20tropical%20urban%20environment%2C%20impressive%20twin%20towers%2C%20vibrant%20Southeast%20Asian%20destination%2C%20travel%20photography&width=120&height=120&seq=malaysia001&orientation=squarish"
+alt="Malaysia" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Malaysia</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Goa%20pristine%20beach%20with%20golden%20sand%2C%20coconut%20palm%20trees%2C%20clear%20blue%20ocean%2C%20tropical%20Indian%20paradise%2C%20relaxing%20vacation%20spot%2C%20beach%20tourism%2C%20sunny%20weather&width=120&height=120&seq=goa001&orientation=squarish"
+alt="Goa" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Goa</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Kerala%20backwaters%20with%20traditional%20houseboat%2C%20lush%20green%20tropical%20vegetation%2C%20peaceful%20waterways%2C%20authentic%20Indian%20travel%20experience%2C%20serene%20natural%20beauty&width=120&height=120&seq=kerala001&orientation=squarish"
+alt="Kerala" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Kerala</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Himachal%20Pradesh%20snow-capped%20mountains%20with%20pine%20forests%2C%20beautiful%20hill%20station%2C%20peaceful%20mountain%20landscape%2C%20adventure%20tourism%2C%20pristine%20natural%20environment&width=120&height=120&seq=himachal001&orientation=squarish"
+alt="Himachal Pradesh" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Himachal</span>
+</div>
+</div>
+<div class="destination-card border-2 border-primary rounded-lg overflow-hidden aspect-square">
+<img src="https://readdy.ai/api/search-image?query=Kashmir%20valley%20with%20snow%20mountains%2C%20beautiful%20Dal%20Lake%2C%20traditional%20shikaras%2C%20paradise%20on%20earth%2C%20stunning%20Himalayan%20landscape%2C%20peaceful%20water%20reflection&width=120&height=120&seq=kashmir001&orientation=squarish"
+alt="Kashmir" class="w-full h-full object-cover">
+<div class="destination-text absolute inset-0 flex items-center justify-center">
+<span class="text-white font-semibold text-sm text-center">Kashmir</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="cta-button bg-primary text-white px-8 py-4 rounded-button font-semibold whitespace-nowrap !rounded-button hover:bg-white hover:text-primary transition-all duration-300 shadow-xl hover:shadow-primary/30 transform hover:scale-105">
+Plan Your Trip Now
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Company Logo & Social Media Section -->
+<div class="border-t border-primary/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Company Logo -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-lg">
+<i class="ri-plane-line text-white text-2xl"></i>
+</div>
+<div>
+<h3 class="font-['Pacifico'] text-2xl text-white">TravelLogo</h3>
+<p class="text-white/70 text-sm">Your Journey, Our Passion</p>
+</div>
+</div>
+<!-- Social Media Icons -->
+<div class="flex items-center gap-4">
+<span class="text-white/80 text-sm mr-2">Follow Us:</span>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-instagram-line text-white"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-twitter-x-line text-white"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-youtube-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyright Section -->
+<div class="border-t border-primary/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<div class="flex flex-col items-center justify-center gap-2">
+<div class="text-center">
+<p class="text-white/80 text-sm">© 2025 TravelLogo. All rights reserved.</p>
+<p class="text-white/60 text-xs mt-1">Unauthorized use is prohibited and punishable by law.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="newsletter-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const newsletterForm = document.querySelector('.newsletter-form');
+const emailInput = newsletterForm.querySelector('input[type="email"]');
+const subscribeBtn = newsletterForm.querySelector('button');
+subscribeBtn.addEventListener('click', function(e) {
+e.preventDefault();
+const email = emailInput.value.trim();
+if (email && email.includes('@')) {
+subscribeBtn.textContent = 'Subscribed!';
+subscribeBtn.style.backgroundColor = '#22C55E';
+emailInput.value = '';
+setTimeout(() => {
+subscribeBtn.textContent = 'Subscribe Now';
+subscribeBtn.style.backgroundColor = '';
+}, 2000);
+} else {
+emailInput.style.borderColor = '#FF0000';
+emailInput.setAttribute('placeholder', 'Please enter a valid email');
+setTimeout(() => {
+emailInput.style.borderColor = '';
+emailInput.setAttribute('placeholder', 'Enter your email address');
+}, 3000);
+}
+});
+});
+</script>
+<script id="destination-interaction">
+document.addEventListener('DOMContentLoaded', function() {
+const destinationCards = document.querySelectorAll('.destination-card');
+destinationCards.forEach(card => {
+card.addEventListener('click', function() {
+const destination = this.querySelector('.destination-text span').textContent;
+console.log(`Clicked on ${destination} destination`);
+});
+});
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const footerLinks = document.querySelectorAll('.footer-link');
+footerLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const linkText = this.textContent;
+console.log(`Navigating to: ${linkText}`);
+});
+});
+});
+</script>
+</body>
+</html>
+        <!-- ==================== FOOTER SECTION END ==================== -->
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+    <!-- End of Footer Section -->
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+     

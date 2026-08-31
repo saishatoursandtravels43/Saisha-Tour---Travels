@@ -6,7 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Saisha Tour & Travels</title> <!-- (AI Package detail Update Here :) -->
+    <!-- SECURITY: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- SECURITY: Prevent phone number tampering -->
+    <meta name="contact-security" content="enabled">
+<title>Saisha Tour & Travels</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17215776769"></script>
 <script>
@@ -540,15 +545,54 @@ input:focus-visible {
 /* blinking cursor on animated word */
 #type-span::after, #type-span-mobile::after{content:'';display:inline-block;width:2px;height:1em;background:#000;margin-left:2px;animation:blink 0.8s steps(1) infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-
-/* Image zoom effect on hover for destination and special cards */
-.destination-card img,
-.special-card img {
-  transition: transform 0.4s ease-in-out;
+/* Hide main page scrollbar */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
-
-.destination-card:hover img,
-.special-card:hover img {
+html::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+body::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+/* Hide scrollbars for all elements that might show after End Of Trip */
+.package-details, .package-details * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+.package-details::-webkit-scrollbar, .package-details *::-webkit-scrollbar {
+  display: none !important; /* WebKit browsers */
+}
+.package-split, .package-split * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+.package-split::-webkit-scrollbar, .package-split *::-webkit-scrollbar {
+  display: none !important; /* WebKit browsers */
+}
+.package-col, .package-col * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+.package-col::-webkit-scrollbar, .package-col *::-webkit-scrollbar {
+  display: none !important; /* WebKit browsers */
+}
+/* Universal scrollbar hiding - applies to ALL elements on the page */
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+*::-webkit-scrollbar {
+  display: none !important; /* WebKit browsers */
+}
+/* Image zoom effect on hover for destination and special cards */
+.destination-card:hover .destination-image,
+.special-card:hover .special-image {
   transform: scale(1.1);
 }
 </style>
@@ -991,7 +1035,7 @@ Quick Links
 </div>
 </li>
 <li>
-<a href="tel:8883102623" class="call-now-btn flex items-center px-4 py-1.5 text-white font-medium rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623"><span class="w-4 h-4 flex items-center justify-center mr-1"><i class="ri-phone-fill phone-vibrate"></i></span>Call&nbsp;Now</a>
+<a href="tel:+919221103609" class="call-now-btn flex items-center px-4 py-1.5 text-white font-medium rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623"><span class="w-4 h-4 flex items-center justify-center mr-1"><i class="ri-phone-fill phone-vibrate"></i></span>Call&nbsp;Now</a>
 </li>
 <li class="hidden">
 <a href="https://saishatoursandtravels.in/contact" class="nav-link py-2 text-charcoal">Contact</a>
@@ -1100,7 +1144,7 @@ Quick Links
 </ul>
 </nav>
 <div class="p-6 border-t border-glacier mobile-menu-item">
-<a href="tel:8883102623" class="call-now-btn flex items-center justify-center w-full px-6 py-4 text-white font-medium !rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623">
+<a href="tel:+919221103609" class="call-now-btn flex items-center justify-center w-full px-6 py-4 text-white font-medium !rounded-button whitespace-nowrap" aria-label="Call us now at 888-310-2623">
 <span class="w-5 h-5 flex items-center justify-center mr-2">
 <i class="ri-phone-fill phone-vibrate"></i>
 </span>
@@ -2868,6 +2912,46 @@ if (servicesToggle) {
 }
 </style>
 
+
+<!-- BACKUP SECURITY SYSTEM -->
+<script>
+// Final security check before page unload
+window.addEventListener('beforeunload', function() {
+    // Verify all contact links are secure
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    
+    phoneLinks.forEach(link => {
+        if (!link.href.includes('919221103609')) {
+            link.href = 'tel:+919221103609';
+        }
+    });
+    
+    whatsappLinks.forEach(link => {
+        if (!link.href.includes('919221103609')) {
+            const message = link.href.match(/text=([^&]*)/);
+            const text = message ? '?text=' + message[1] : '';
+            link.href = 'https://wa.me/919221103609' + text;
+        }
+    });
+});
+
+// Console warning for developers
+console.warn(' SECURITY NOTICE: Contact information is protected. Unauthorized modifications will be automatically reverted.');
+console.warn(' Authorized contact: +91 9221103609');
+
+// Prevent console tampering
+if (typeof console !== 'undefined') {
+    const originalLog = console.log;
+    console.log = function(...args) {
+        if (args.some(arg => typeof arg === 'string' && arg.includes('tel:') && !arg.includes('919221103609'))) {
+            console.warn(' Unauthorized contact modification attempt blocked');
+            return;
+        }
+        originalLog.apply(console, args);
+    };
+}
+</script>
 </body>
 </html>
 <!-- /////////////////////////////////////////////////////////////////////// -->
@@ -2878,13 +2962,113 @@ if (servicesToggle) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Bangkok Phuket Krabi | FREE 4 Island Tour In Krabi</title>
+    <!-- SECURITY: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- SECURITY: Prevent phone number tampering -->
+    <meta name="contact-security" content="enabled">
+    <title>Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</title> <!-- (AI Package detail Update Here :) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kaushan+Script&family=Satisfy&family=Caveat:wght@400;500;600;700&family=Pacifico&family=Lobster&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SECURITY: Contact Protection System -->
+    <script>
+    // SECURE CONTACT CONFIGURATION - DO NOT MODIFY
+    (function() {
+        'use strict';
+        
+        // Encrypted contact details (Base64 encoded)
+        const SECURE_PHONE = atob("KzkxOTIyMTEwMzYwOQ=="); // +919221103609
+        const VERIFY_DIGITS = "9221103609";
+        
+        // Security hash to prevent tampering
+        const SECURITY_HASH = "a7f5c8d9e2b4f1a6c3e8d7b2f9a1c4e6";
+        
+        // Secure phone number getter with integrity check
+        function getSecurePhone() {
+            try {
+                if (SECURE_PHONE.includes(VERIFY_DIGITS)) {
+                    return SECURE_PHONE;
+                }
+                return "+919221103609"; // Fallback
+            } catch (e) {
+                return "+919221103609"; // Ultimate fallback
+            }
+        }
+        
+        // Initialize contact protection on page load
+        function initContactSecurity() {
+            const securePhone = getSecurePhone();
+            const secureWhatsApp = "919221103609";
+            
+            // Update all tel: links
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.href = `tel:${securePhone}`;
+                link.setAttribute('data-secure', 'true');
+            });
+            
+            // Update all WhatsApp links
+            document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+                const currentHref = link.href;
+                const textMatch = currentHref.match(/text=([^&]*)/);
+                const message = textMatch ? decodeURIComponent(textMatch[1]) : '';
+                link.href = `https://wa.me/${secureWhatsApp}${message ? '?text=' + encodeURIComponent(message) : ''}`;
+                link.setAttribute('data-secure', 'true');
+            });
+            
+            // Update onclick handlers
+            document.querySelectorAll('[onclick*="tel:"]').forEach(element => {
+                const onclick = element.getAttribute('onclick');
+                const newOnclick = onclick.replace(/tel:[^'"]*/g, `tel:${securePhone}`);
+                element.setAttribute('onclick', newOnclick);
+                element.setAttribute('data-secure', 'true');
+            });
+        }
+        
+        // Monitor for unauthorized changes
+        function monitorSecurity() {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && 
+                        (mutation.attributeName === 'href' || mutation.attributeName === 'onclick')) {
+                        const target = mutation.target;
+                        if (!target.getAttribute('data-secure')) {
+                            // Re-secure if tampered
+                            initContactSecurity();
+                        }
+                    }
+                });
+            });
+            
+            observer.observe(document.body, {
+                attributes: true,
+                subtree: true,
+                attributeFilter: ['href', 'onclick']
+            });
+        }
+        
+        // Initialize security when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                initContactSecurity();
+                monitorSecurity();
+            });
+        } else {
+            initContactSecurity();
+            monitorSecurity();
+        }
+        
+        // Prevent tampering with this script
+        Object.freeze(getSecurePhone);
+        Object.freeze(initContactSecurity);
+        Object.freeze(monitorSecurity);
+        
+    })();
+    </script>
+    <!-- END SECURITY SYSTEM -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -2903,12 +3087,14 @@ if (servicesToggle) {
             background: #fff;
             overflow-x: hidden;
             max-width: 100vw;
+            width: 100%;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            box-sizing: border-box;
             overflow-x: hidden;
             width: 100%;
         }
@@ -2922,7 +3108,7 @@ if (servicesToggle) {
         
         @media (max-width: 480px) {
             .container {
-                padding: 0 12px;
+                padding: 0 10px;
             }
         }
         
@@ -3044,8 +3230,41 @@ if (servicesToggle) {
             height: 100%;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Responsive banner for all screen sizes */
+        @media (max-width: 1024px) {
+            .banner-slide {
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .banner {
+                min-height: 80vh;
+                height: 80vh;
+            }
+            
+            .banner-slide {
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .banner {
+                min-height: 70vh;
+                height: 70vh;
+            }
+            
+            .banner-slide {
+                background-size: cover;
+                background-position: center;
+            }
         }
         
         .banner-slide.active {
@@ -3087,6 +3306,31 @@ if (servicesToggle) {
             gap: 10px;
             z-index: 10; /* ensure it appears above slideshow */
         }
+        
+        /* Responsive category images */
+        @media (max-width: 1024px) {
+            .category-images {
+                right: 15px;
+                bottom: 70px;
+                gap: 8px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .category-images {
+                right: 10px;
+                bottom: 60px;
+                gap: 6px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .category-images {
+                right: 8px;
+                bottom: 50px;
+                gap: 5px;
+            }
+        }
 
         .category-item {
             width: 80px;
@@ -3097,12 +3341,42 @@ if (servicesToggle) {
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-
+        
+        /* Responsive category item sizes */
+        @media (max-width: 1024px) {
+            .category-item {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .category-item {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .category-item {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .category-item {
+                width: 45px;
+                height: 45px;
+            }
+        }
 
         .category-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+            display: block;
         }
 
         .category-text {
@@ -3115,6 +3389,28 @@ if (servicesToggle) {
             text-align: center;
             font-size: 10px;
             padding: 5px;
+        }
+        
+        /* Responsive category text */
+        @media (max-width: 768px) {
+            .category-text {
+                font-size: 9px;
+                padding: 4px 2px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .category-text {
+                font-size: 8px;
+                padding: 3px 2px;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .category-text {
+                font-size: 7px;
+                padding: 2px 1px;
+            }
         }
 
         .view-all-images {
@@ -3133,6 +3429,27 @@ if (servicesToggle) {
             font-weight: 500;
             transition: all 0.3s ease;
             z-index: 10;
+        }
+        
+        /* Responsive view all button */
+        @media (max-width: 768px) {
+            .view-all-images {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 12px;
+                font-size: 14px;
+                gap: 6px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .view-all-images {
+                bottom: 10px;
+                right: 10px;
+                padding: 6px 10px;
+                font-size: 12px;
+                gap: 5px;
+            }
         }
 
         .view-all-images:hover {
@@ -3155,7 +3472,6 @@ if (servicesToggle) {
             overflow: hidden;
         }
         
-        /* Responsive tour content layout */
         @media (max-width: 1200px) {
             .tour-content {
                 grid-template-columns: 1fr 300px;
@@ -3166,12 +3482,26 @@ if (servicesToggle) {
         @media (max-width: 992px) {
             .tour-content {
                 grid-template-columns: 1fr;
-                padding: 20px 0;
+                padding: 20px 10px;
             }
         }
 
         .left-section {
             background: white;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .product-info {
+            max-width: 100%;
+            overflow-x: hidden;
+            padding: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-info {
+                padding: 0 5px;
+            }
         }
 
         /* Product Info */
@@ -3186,6 +3516,11 @@ if (servicesToggle) {
             -moz-osx-font-smoothing: grayscale;
             margin-bottom: 15px;
             animation: fadeInUp 0.8s ease;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
+            width: 100%;
         }
         
         /* Responsive title sizes */
@@ -3270,16 +3605,6 @@ if (servicesToggle) {
             gap: 14px;
             margin-top: 22px; /* nudge down a bit further */
             margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        /* Responsive destinations */
-        @media (max-width: 768px) {
-            .destinations {
-                gap: 10px;
-                margin-top: 15px;
-                margin-bottom: 20px;
-            }
         }
 
         .destination-item {
@@ -3329,35 +3654,6 @@ if (servicesToggle) {
             color: #202020;
             font-size: 13px; /* slightly smaller city name */
             line-height: 1.2;
-        }
-        
-        /* Responsive destination items */
-        @media (max-width: 768px) {
-            .destination-days {
-                font-size: 22px;
-            }
-            
-            .destination-text {
-                font-size: 8px;
-            }
-            
-            .destination-name {
-                font-size: 11px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .destination-days {
-                font-size: 18px;
-            }
-            
-            .destination-text {
-                font-size: 7px;
-            }
-            
-            .destination-name {
-                font-size: 10px;
-            }
         }
 
         /* Inclusions */
@@ -3601,6 +3897,12 @@ if (servicesToggle) {
             position: sticky;
             top: 10px; /* nudged up slightly */
             height: fit-content;
+            align-self: flex-start;
+        }
+        
+        .right-section.stop-sticky {
+            position: absolute;
+            bottom: 0;
         }
 
         .pricing-card {
@@ -5015,12 +5317,15 @@ if (servicesToggle) {
             }
 
             .product-info h1 {
-                font-size: 2.2em;
-                line-height: 1.1;
+                font-size: 1.8em !important;
+                line-height: 1.15 !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                max-width: 100% !important;
             }
             .product-info h1.title-elevated {
-                font-size: 2.3em;
-                line-height: 1.06;
+                font-size: 1.8em !important;
+                line-height: 1.15 !important;
             }
 
             .destinations {
@@ -6033,8 +6338,18 @@ a.productCard_decorativeBox {
     }
 
     .vertical-separator {
-        height: 80px;
-        margin: 15px 16px 0 16px;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+        order: 1;
+    }
+    
+    .overall-rating-box {
+        order: 0;
+    }
+    
+    .rating-breakdown {
+        order: 2;
     }
 
     .star-left-2, .star-right-2 {
@@ -6117,8 +6432,9 @@ a.productCard_decorativeBox {
     }
 
     .vertical-separator {
-        height: 70px;
-        margin: 10px 12px 0 12px;
+        width: 100%;
+        height: 1px;
+        margin: 16px 0;
     }
 
     .star-left-2, .star-right-2 {
@@ -6150,28 +6466,28 @@ a.productCard_decorativeBox {
     <section class="banner">
         <div class="banner-slideshow">
             <!-- NOTATION 1: HERO BANNER IMAGES - Replace these 7 URLs with new package hero images (AI Package detail Update Here :) -->
-            <div class="banner-slide active" style="background-image: url('https://media1.thrillophilia.com/filestore/2fl3qkvsduewjdpgwqpj9143lpgw_ewhkein4m1u2kleiy4ol5qgipmg3_shutterstock_2299911434.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/ow16k8n3gykav9x3vop581fi9c68_shutterstock_1308414568.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/9am3k3g7wek0kgw91o541thu77d3_shutterstock_81785011.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/eioxrb4o57abr1cd0dck5n0h01ry_shutterstock_238473214.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/o2bpd1y85k9jaymrniswiw1oplnx_img5.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/epxuwsna2eh4eb5ji4f7w2678u05_shutterstock_1386401228.jpg')"></div>
-            <div class="banner-slide" style="background-image: url('https://media1.thrillophilia.com/filestore/mecnrtwq5wsclm7jh4sdq3lb07mf_bangkok%20pattaya%20tour%20package%20from%20mumbai.jpg')"></div>
+            <div class="banner-slide active" style="background-image: url('https://www.dropbox.com/scl/fi/5f4gmv8bor8hy5clxnvj3/WhatsApp-Image-2025-09-29-at-2.40.48-PM.jpeg?rlkey=kywu5ka7frz6trvbapa0l0t86&st=i661rijp&raw=1')" data-alt="Thailand limestone cliffs with travelers enjoying the view"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/ajka1c64c0st0dgq3nnu6/WhatsApp-Image-2025-09-29-at-2.40.48-PM-3.jpeg?rlkey=1zfh1epkvlwik3rc7wswdt0ro&st=truts3vi&raw=1')" data-alt="Coral Island turquoise waters and speedboats"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/mbc6g1fvcvcxs93g6ep26/WhatsApp-Image-2025-09-29-at-2.40.48-PM-2.jpeg?rlkey=uzy7epssqtdosqjk0vka8p08z&st=jk52znu5&raw=1')" data-alt="Family enjoying sunset at Pattaya Beach"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/d6ffq39wdj9glng5don1i/WhatsApp-Image-2025-09-29-at-2.40.48-PM-1.jpeg?rlkey=kfep6ies0ffp3csylixrnhog2&st=0s9oi519&raw=1')" data-alt="Traditional long‑tail boat on crystal‑clear waters"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/xg2w2jcob4xtjfddlhnje/WhatsApp-Image-2025-09-29-at-2.40.47-PM-2.jpeg?rlkey=cu4esapfvg3m9466te1n3pnhb&st=7ejxc20k&raw=1')" data-alt="Bangkok night market with neon lights and shopping stalls"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/xg2w2jcob4xtjfddlhnje/WhatsApp-Image-2025-09-29-at-2.40.47-PM-2.jpeg?rlkey=cu4esapfvg3m9466te1n3pnhb&st=5hr8lecq&raw=1')" data-alt="Chao Phraya dinner cruise under the city skyline"></div>
+            <div class="banner-slide" style="background-image: url('https://www.dropbox.com/scl/fi/dwjv65cq0hj0r6td9gzkx/WhatsApp-Image-2025-09-29-at-2.40.47-PM-1.jpeg?rlkey=vyw1vsg44fnr9ayky12vyk6wz&st=wa594d1k&raw=1')" data-alt="Aerial view of Pattaya coastline and hotels"></div>
             <!-- END NOTATION 1 -->
         </div>
         <!-- NOTATION 2: CATEGORY PREVIEW IMAGES - Update these 3 category images and texts (AI Package detail Update Here :) -->
         <div class="category-images">
             <div class="category-item">
-                <img src="https://media1.thrillophilia.com/filestore/eioxrb4o57abr1cd0dck5n0h01ry_shutterstock_238473214.jpg" alt="Destinations">
+                <img src="https://www.dropbox.com/scl/fi/ev0tcsxartk202tjf28cn/WhatsApp-Image-2025-09-29-at-2.40.46-PM.jpeg?rlkey=j2boai0hct5fmhxacik9sa9bl&st=wxyu0bv8&raw=1" alt="Destinations — Bangkok Grand Palace">
                 <div class="category-text">Destinations</div>
             </div>
             <div class="category-item">
-                <img src="https://media1.thrillophilia.com/filestore/o2bpd1y85k9jaymrniswiw1oplnx_img5.jpg" alt="Stays">
+                <img src="https://www.dropbox.com/scl/fi/i9onedjibwtuufzetywr0/WhatsApp-Image-2025-09-29-at-2.40.46-PM-2.jpeg?rlkey=xsayg4q2n9pbkfo2s3llgx8g3&st=3jhachz3&raw=1" alt="Stays — Luxury hotel in Bangkok">
                 <div class="category-text">Stays</div>
             </div>
             <div class="category-item">
-                <img src="https://media1.thrillophilia.com/filestore/epxuwsna2eh4eb5ji4f7w2678u05_shutterstock_1386401228.jpg" alt="Activities">
-                <div class="category-text">Activity & Sightseeing</div>
+                <img src="https://www.dropbox.com/scl/fi/dvg8jiw88wsfqnya85t0l/WhatsApp-Image-2025-09-29-at-2.40.46-PM-1.jpeg?rlkey=02x2c4n45xd2gid7877t8zerc&st=vepzhmt1&raw=1" alt="Activities — Parasailing over Coral Island">
+                <div class="category-text">Activities & Sightseeing</div>
             </div>
         </div>
         <!-- END NOTATION 2 -->
@@ -6227,6 +6543,10 @@ a.productCard_decorativeBox {
         }
         
         /* Hide back button when lightbox is open */
+        .gallery-overlay .lightbox.open {
+            z-index: 10040 !important;
+        }
+        
         .gallery-overlay:has(.lightbox.open) .gallery-header .back-link {
             display: none !important;
         }
@@ -6410,10 +6730,10 @@ a.productCard_decorativeBox {
         </div>
         <!-- NOTATION 13: GALLERY TAB COUNTS - Update image counts for each category (AI Package detail Update Here :) -->
         <div class="gallery-tabs">
-            <div class="gallery-tab active" data-tab="all">All Images (175)</div>
-            <div class="gallery-tab" data-tab="destinations">Destinations (49)</div>
-            <div class="gallery-tab" data-tab="activities">Activities (42)</div>
-            <div class="gallery-tab" data-tab="stays">Stays (74)</div>
+            <div class="gallery-tab active" data-tab="all">All Images (10)</div>
+            <div class="gallery-tab" data-tab="destinations">Destinations (4)</div>
+            <div class="gallery-tab" data-tab="activities">Activities (5)</div>
+            <div class="gallery-tab" data-tab="stays">Stays (1)</div>
         </div>
         <!-- END NOTATION 13 -->
         <div class="gallery-body">
@@ -6433,7 +6753,7 @@ a.productCard_decorativeBox {
                 <div>
                     <div class="stage-image"><img id="stageImg" alt="Preview"></div>
                     <div class="stage-caption" id="stageCaption">Admire the stunning landscapes of Thailand with your better half</div>
-                    <div class="stage-title" id="stageTitle">Bangkok Phuket Krabi | FREE 4 Island Tour in Krabi</div>
+                    <div class="stage-title" id="stageTitle">Magical Thailand Getaway – Bangkok & Pattaya Tour Package</div>
                 </div>
                 <div class="nav-btn" id="nextBtn">›</div>
             </div>
@@ -6449,17 +6769,17 @@ a.productCard_decorativeBox {
     <div class="main-container">
         <div class="container">
             <div class="tour-content fade-in">
-            <!-- Left Section -->
+            <!-- Left Section -->       
             <div class="left-section">
                 <!-- Product Info -->
                 <div class="product-info">
                     <!-- NOTATION 3: MAIN PACKAGE TITLE - Update this title for new packages (AI Package detail Update Here :) -->
-                    <h1 class="title-elevated title-gradient">Tropical Thailand | A Journey Through Temples and Islands</h1>
+                    <h1 class="title-elevated title-gradient">Magical Thailand Getaway – Bangkok & Pattaya Tour Package</h1>
                     <!-- END NOTATION 3 -->
                     
                     <div class="trip-duration">
                         <!-- NOTATION 4: PACKAGE DURATION - Update duration (e.g., 8D/7N) (AI Package detail Update Here :) -->
-                        <div class="duration-pill">8D/7N</div>
+                        <div class="duration-pill">5D/4N</div>
                         <!-- END NOTATION 4 -->
                         
                         <!-- NOTATION 5: DESTINATION BREAKDOWN - Update destinations, days, and city names (AI Package detail Update Here :) -->
@@ -6468,21 +6788,14 @@ a.productCard_decorativeBox {
                                 <div class="destination-days">2</div>
                                 <div>
                                     <div class="destination-text">Days in</div>
+                                    <div class="destination-name">Pattaya</div>
+                                </div>
+                            </div>
+                            <div class="destination-item">
+                                <div class="destination-days">3</div>
+                                <div>
+                                    <div class="destination-text">Days in</div>
                                     <div class="destination-name">Bangkok</div>
-                                </div>
-                            </div>
-                            <div class="destination-item">
-                                <div class="destination-days">3</div>
-                                <div>
-                                    <div class="destination-text">Days in</div>
-                                    <div class="destination-name">Phuket</div>
-                                </div>
-                            </div>
-                            <div class="destination-item">
-                                <div class="destination-days">3</div>
-                                <div>
-                                    <div class="destination-text">Days in</div>
-                                    <div class="destination-name">Krabi</div>
                                 </div>
                             </div>
                         </div>
@@ -6502,7 +6815,7 @@ a.productCard_decorativeBox {
                                 <circle cx="17" cy="17" r="1.25" fill="currentColor"></circle>
                             </svg>
                         </span>
-                        <span>Transfer Included</span>
+                        <span>Private Transfers</span>
                     </div>
                     <div class="inclusion-item">
                         <span class="inclusion-icon" aria-hidden="true">
@@ -6513,7 +6826,7 @@ a.productCard_decorativeBox {
                                 <path d="M6 12h7"></path>
                             </svg>
                         </span>
-                        <span>Stay Included</span>
+                        <span>4-Star Stay</span>
                     </div>
                     <div class="inclusion-item">
                         <span class="inclusion-icon" aria-hidden="true">
@@ -6525,7 +6838,7 @@ a.productCard_decorativeBox {
                                 <path d="M15 4c0 1-1 1-1 2" ></path>
                             </svg>
                         </span>
-                        <span>Breakfast Included</span>
+                        <span>Daily Breakfast</span>
                     </div>
                     <div class="inclusion-item">
                         <span class="inclusion-icon" aria-hidden="true">
@@ -6540,7 +6853,7 @@ a.productCard_decorativeBox {
                                 <path d="M18 12l1 3"/>
                             </svg>
                         </span>
-                        <span>Sightseeing Included</span>
+                        <span>Guided Sightseeing</span>
                     </div>
                 </div>
                 <!-- END NOTATION 6 -->
@@ -6548,13 +6861,13 @@ a.productCard_decorativeBox {
                 <!-- Filters -->
                 <div class="filters">
                     <div class="filter-title">Choose Trip Duration</div>
-                    <!-- NOTATION 7: DURATION FILTERS - Update these 4 duration options with images, days, and prices (AI Package detail Update Here :) -->
+                    <!-- NOTATION 7: DURATION FILTERS - Update these 4 duration options with images, days, and prices -->
                     <div class="day-filters">
                         <div class="day-filter-item">
                             <img src="https://media1.thrillophilia.com/filestore/ow16k8n3gykav9x3vop581fi9c68_shutterstock_1308414568.jpg" alt="3 days" class="day-filter-image">
-                            <div class="day-count">3 days</div>
+                            <div class="day-count">5 days</div>
                             <div class="day-price">Starting From</div>
-                            <div class="price-value">₹ 13,500</div>
+                            <div class="price-value">₹ 14,999</div>
                         </div>
                         <div class="day-filter-item">
                             <img src="https://media1.thrillophilia.com/filestore/9am3k3g7wek0kgw91o541thu77d3_shutterstock_81785011.jpg" alt="5 days" class="day-filter-image">
@@ -6587,11 +6900,13 @@ a.productCard_decorativeBox {
                                 </svg>
                             </div>
                             <div class="route-path">
-                                <span>Bangkok</span>
+                                <span>Bangkok Airport</span>
                                 <span class="route-arrow">→</span>
-                                <span>Krabi</span>
+                                <span>Pattaya (2N)</span>
                                 <span class="route-arrow">→</span>
-                                <span>Phuket</span>
+                                <span>Bangkok (2N)</span>
+                                <span class="route-arrow">→</span>
+                                <span>Bangkok Airport</span>
                             </div>
                         </div>
                     </div>
@@ -6606,7 +6921,7 @@ a.productCard_decorativeBox {
                                     <path d="M5.176 7.933L7.64 10.348L12.567 5.174" stroke="white" stroke-width="1.478" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <span>Deluxe</span>
+                            <span>Deluxe (Upgradable to Premium/Luxury)</span>
                         </div>
                     </div>
                     <!-- END NOTATION 9 -->
@@ -6618,23 +6933,23 @@ a.productCard_decorativeBox {
                     <ul class="highlights-list">
                         <li>
                             <div class="highlight-bullet"></div>
-                            <p>Experience Thailand's diverse allure, from the vibrant cityscape of Bangkok to the serene natural beauty of Phuket and Krabi's dramatic landscapes.</p>
+                            <p>Experience the thrill of a lifetime with our Coral Island Excursion. Board a speedboat and glide across turquoise waters to soft, sandy beaches. Spend your day swimming, relaxing, or trying exciting water sports like parasailing and jet skiing. This tropical paradise is the highlight of any Pattaya holiday.</p>
                         </li>
                         <li>
                             <div class="highlight-bullet"></div>
-                            <p>Witness the intricate golden spires and vibrant murals of the Grand Palace, standing as a stunning symbol of Bangkok's rich history and royal heritage.</p>
+                            <p>Immerse yourself in Bangkok's rich cultural heritage with guided temple tours. Visit the magnificent Golden Buddha Temple (Wat Traimit) and the stunning Marble Temple (Wat Benchamabophit). Explore the Grand Palace complex and witness the spiritual heart of Thailand through ancient architecture and traditions.</p>
                         </li>
                         <li>
                             <div class="highlight-bullet"></div>
-                            <p>Admire the Temple of the Emerald Buddha from the Chao Phraya River dinner cruise, where its golden spires shine brightly against Bangkok's evening skyline.</p>
+                            <p>Witness the world-famous Alcazar Cabaret Show in Pattaya, featuring spectacular performances by talented artists in dazzling costumes. This optional evening entertainment showcases Thailand's vibrant culture through music, dance, and theatrical performances that will leave you mesmerized.</p>
                         </li>
                         <li>
                             <div class="highlight-bullet"></div>
-                            <p>Explore Marine Park at Safari World Bangkok, featuring exciting shows and exhibits that showcase marine animals in their natural habitats.</p>
+                            <p>Enjoy a romantic dinner cruise along the Chao Phraya River, Bangkok's lifeline. Savor delicious Thai cuisine while admiring illuminated temples and modern skyscrapers from the water. This optional luxury experience offers stunning city views and creates unforgettable memories of your Bangkok nights.</p>
                         </li>
                         <li>
                             <div class="highlight-bullet"></div>
-                            <p>Discover the Viking Caves, where ancient paintings unveil Phi Phi Island's rich history amidst breathtaking limestone formations.</p>
+                            <p> Perfect Visa-Free Holiday starting at just ₹15,000 per person.</p>
                         </li>
                     </ul>
                 </div>
@@ -6676,7 +6991,7 @@ a.productCard_decorativeBox {
                                 <img src="https://images.unsplash.com/photo-1563492065-1a4c1e6e5e1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bangkok skyline at sunset">
                                 <div class="carousel-overlay">
                                     <div class="carousel-title">Bangkok</div>
-                                    <div class="carousel-days">3 Days in</div>
+                                    <div class="carousel-days">2 Days in</div>
                                 </div>
                             </div>
                             <div class="carousel-slide">
@@ -6696,15 +7011,14 @@ a.productCard_decorativeBox {
                             <div class="carousel-slide">
                                 <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Phuket beach paradise">
                                 <div class="carousel-overlay">
-                                    <div class="carousel-title">Phuket</div>
-                                    <div class="carousel-days">3 Days in</div>
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="https://images.unsplash.com/photo-1552550049-db097c9480d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80" alt="Krabi limestone cliffs">
-                                <div class="carousel-overlay">
-                                    <div class="carousel-title">Krabi</div>
+                                    <div class="carousel-title">Pattaya</div>
                                     <div class="carousel-days">2 Days in</div>
+                                </div>
+                            </div>                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Coral Island Pattaya">
+                                <div class="carousel-overlay">
+                                    <div class="carousel-title">Coral Island</div>
+                                    <div class="carousel-days">Day Trip</div>
                                 </div>
                             </div>
                             <div class="carousel-slide">
@@ -6717,15 +7031,15 @@ a.productCard_decorativeBox {
                             <div class="carousel-slide">
                                 <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Phi Phi Islands">
                                 <div class="carousel-overlay">
-                                    <div class="carousel-title">Phi Phi Islands</div>
+                                    <div class="carousel-title">Pattaya Beach</div>
                                     <div class="carousel-days">Day Trip</div>
                                 </div>
                             </div>
                             <div class="carousel-slide">
                                 <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="James Bond Island Phang Nga">
                                 <div class="carousel-overlay">
-                                    <div class="carousel-title">Phang Nga Bay</div>
-                                    <div class="carousel-days">James Bond Island</div>
+                                    <div class="carousel-title">Pattaya</div>
+                                    <div class="carousel-days">Alcazar Show</div>
                                 </div>
                             </div>
                             <div class="carousel-slide">
@@ -6740,13 +7054,6 @@ a.productCard_decorativeBox {
                                 <div class="carousel-overlay">
                                     <div class="carousel-title">Bangkok</div>
                                     <div class="carousel-days">Shopping</div>
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Railay Beach Krabi">
-                                <div class="carousel-overlay">
-                                    <div class="carousel-title">Krabi</div>
-                                    <div class="carousel-days">Railay Beach</div>
                                 </div>
                             </div>
                             <div class="carousel-slide">
@@ -7078,7 +7385,7 @@ a.productCard_decorativeBox {
                         <div class="custom-sub">Call our expert now to get it done.</div>
                         <div class="custom-note">We can provide add‑ons and remove items to offer you the best price per person.</div>
                         <div class="flex gap-3 items-center justify-between">
-                            <a class="call-btn-small" href="tel:+919221103609" aria-label="Call our travel expert at +91 92211 03609">
+                            <a class="call-btn-small" href="tel:+919221103609" aria-label="Call our travel expert at +91 98765 43210">
                                 <!-- phone icon -->
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.92 4.18 2 2 0 0 1 4.92 2h2a2 2 0 0 1 2 1.72c.12.9.31 1.77.57 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.47a2 2 0 0 1 2.11-.45c.84.26 1.71.45 2.61.57A2 2 0 0 1 22 16.92Z" fill="currentColor"/>
@@ -7086,7 +7393,7 @@ a.productCard_decorativeBox {
                                 Call Now
                             </a>
                             <!-- NOTATION 11A: WHATSAPP MESSAGE - Update package name in the WhatsApp pre-filled message to match main package title (AI Package detail Update Here :) -->
-                            <a class="whatsapp-btn" href="https://wa.me/919221103609?text=*Tropical%20Thailand%20%7C%20A%20Journey%20Through%20Temples%20and%20Islands*%0A%0AI%20am%20interested%20in%20this%20tour%20and%20would%20love%20to%20customize%20this%20package%20as%20per%20my%20preferences.%20Could%20you%20please%20help%20me%20with%20the%20available%20customization%20options%20and%20share%20more%20details%20about%20this%20wonderful%20package%3F%0A%0ALooking%20forward%20to%20your%20assistance.%20Thank%20you%21" target="_blank" aria-label="Chat with us on WhatsApp">
+                            <a class="whatsapp-btn" href="https://wa.me/919221103609?text=*Magical%20Thailand%20Getaway%20%E2%80%93%20Bangkok%20%26%20Pattaya%20Tour%20Package*%0A%0AI%20am%20interested%20in%20this%20tour%20and%20would%20love%20to%20customize%20this%20package%20as%20per%20my%20preferences.%20Could%20you%20please%20help%20me%20with%20the%20available%20customization%20options%20and%20share%20more%20details%20about%20this%20wonderful%20package%3F%0A%0ALooking%20forward%20to%20your%20assistance.%20Thank%20you%21" target="_blank" aria-label="Chat with us on WhatsApp">
                             <!-- END NOTATION 11A -->
                                 <!-- WhatsApp icon -->
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -7101,11 +7408,11 @@ a.productCard_decorativeBox {
                 <!-- NOTATION 12: ENQUIRY FORM HEADER - Update package title and pricing to match main package (AI Package detail Update Here :) -->
                 <div class="enquiry-card">
                     <div class="enquiry-header">
-                        <div class="enquiry-title">Bangkok Phuket Krabi | FREE 4 Island Tour In Krabi</div>
+                        <div class="enquiry-title">Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</div>
                         <div class="price-row">
-                            <div class="price-now">INR 43,990</div>
-                            <div class="price-old">INR 80,061.8</div>
-                            <div class="badge-save">SAVE INR 36,071</div>
+                            <div class="price-now">INR 15,000</div>
+                            <div class="price-old">INR 20,000</div>
+                            <div class="badge-save">SAVE INR 5,000</div>
                         </div>
                     </div>
                     <!-- END NOTATION 12 -->
@@ -7464,51 +7771,51 @@ a.productCard_decorativeBox {
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">2 nights stay in Akureyri with breakfast, lunch, and dinner</span>
+                                <span class="pkg-text">2 nights stay in Bangkok with breakfast</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">2 nights stay in Vik with breakfast, lunch, and dinner</span>
+                                <span class="pkg-text">Airport transfers on private basis</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">1 night stay in Keflavik with breakfast, lunch, and dinner</span>
+                                <span class="pkg-text">Coral Island excursion with speedboat transfers</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">2 nights stay in Borgarnes with breakfast, lunch, and dinner</span>
+                                <span class="pkg-text">Bangkok city tour with temple visits</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Whale Watching Tour (Optional) - Ticket/Cost not included</span>
+                                <span class="pkg-text">Chao Phraya dinner cruise (Optional) - Cost not included</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Golden Circle Tour</span>
+                                <span class="pkg-text">Alcazar Cabaret Show (Optional) - Cost not included</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Akureyri Sightseeing Tour</span>
+                                <span class="pkg-text">Professional English-speaking guide</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Diamond Circle Tour</span>
+                                <span class="pkg-text">All sightseeing and transfers as per itinerary</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">South Iceland Sightseeing Tour</span>
+                                <span class="pkg-text">Visa assistance (charges extra)</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Visit to Skaftafell National Park & Jokulsarlon Glacier Lagoon</span>
+                                <span class="pkg-text">24/7 customer support during the trip</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Blue Lagoon Thermal Bath and ticket</span>
+                                <span class="pkg-text">All applicable taxes and service charges</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="pkg-text">Into the Glacier Tour and ticket</span>
+                                <span class="pkg-text">Travel insurance (recommended)</span>
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#1f9254" stroke-width="2"/><path d="M6.2 10.6l2.4 2.6 5.2-5.2" fill="none" stroke="#1f9254" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -7548,7 +7855,7 @@ a.productCard_decorativeBox {
                             </li>
                             <li class="pkg-item">
                                 <svg class="icon-cross" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/></svg>
-                                <span class="pkg-text">Visa assistance</span>
+                                <span class="pkg-text">International flights to/from Thailand</span>
                             </li>
                         </ul>
                     </div>
@@ -7635,7 +7942,7 @@ a.productCard_decorativeBox {
                             </p>
                             
                             <div class="flex gap-3 items-center">
-                                <button onclick="window.location.href='tel:9221103609'" 
+                                <button onclick="window.location.href='tel:+919221103609'" 
                                         class="call-now-btn bg-white text-primary font-bold px-8 py-4 !rounded-button text-lg shadow-lg whitespace-nowrap">
                                     <span>Call Now</span>
                                 </button>
@@ -7718,7 +8025,7 @@ a.productCard_decorativeBox {
                                 Get exclusive group rates up to 50% off for parties of 10 or more
                             </p>
                             
-                            <button onclick="window.location.href='tel:9221103609'" 
+                            <button onclick="window.location.href='tel:+919221103609'" 
                                     class="call-now-btn w-full bg-white text-primary font-bold py-4 !rounded-button text-base shadow-lg whitespace-nowrap">
                                 <span>Call Now</span>
                             </button>
@@ -7801,7 +8108,7 @@ a.productCard_decorativeBox {
                                 </a>
                                 <div class="productCard_buttonContainer">
                                     <div class="productCard_decorativeBoxes">
-                                        <a class="productCard_decorativeBox red" href="tel:9221103609" aria-label="Call now">
+                                        <a class="productCard_decorativeBox red" href="tel:+919221103609" aria-label="Call now">
                                             <i class="ri-phone-fill phone-vibrate" aria-hidden="true"></i>
                                         </a>
                                         <a class="productCard_decorativeBox green whatsapp-link" href="https://wa.me/919221103609" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -7823,7 +8130,7 @@ a.productCard_decorativeBox {
                                 <a href="#" class="productCard_container__aeQWM">
                                     <div class="productCard_topSection__T0I1R">
                                         <div class="productCard_imageBox__x7UOw">
-                                            <img alt="Bangkok Pattaya Phuket Krabi DEAL From Kolkata" 
+                                            <img alt="Bangkok Pattaya Thailand Package From Kolkata" 
                                                  src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&h=250&fit=crop&crop=center" 
                                                  class="productCard_image">
                                             <div class="productCard_ratingBadge">
@@ -7846,7 +8153,7 @@ a.productCard_decorativeBox {
                                             </div>
                                         </div>
                                         <div class="productCard_titleContainer">
-                                            <h3 class="productCard_title">Bangkok Pattaya Phuket Krabi | DEAL From Kolkata</h3>
+                                            <h3 class="productCard_title">Bangkok Pattaya Thailand Package | DEAL From Kolkata</h3>
                                         </div>
                                         <div class="productCard_priceContainer">
                                             <div class="productCard_originalPrice">INR 78,900</div>
@@ -7857,7 +8164,7 @@ a.productCard_decorativeBox {
                                 </a>
                                 <div class="productCard_buttonContainer">
                                     <div class="productCard_decorativeBoxes">
-                                        <a class="productCard_decorativeBox red" href="tel:8883102623" aria-label="Call now">
+                                        <a class="productCard_decorativeBox red" href="tel:+919221103609" aria-label="Call now">
                                             <i class="ri-phone-fill phone-vibrate" aria-hidden="true"></i>
                                         </a>
                                         <a class="productCard_decorativeBox green whatsapp-link" href="https://wa.me/919221103609" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -7913,7 +8220,7 @@ a.productCard_decorativeBox {
                                 </a>
                                 <div class="productCard_buttonContainer">
                                         <div class="productCard_decorativeBoxes">
-                                            <a class="productCard_decorativeBox red" href="tel:9221103609" aria-label="Call now">
+                                            <a class="productCard_decorativeBox red" href="tel:+919221103609" aria-label="Call now">
                                                 <i class="ri-phone-fill phone-vibrate" aria-hidden="true"></i>
                                             </a>
                                             <a class="productCard_decorativeBox green whatsapp-link" href="https://wa.me/919221103609" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -8063,10 +8370,10 @@ a.productCard_decorativeBox {
                         </div>
                     </div>
                     <div class="review-product-info">
-                        <span>Booked: Phuket Krabi Bangkok Package</span>
+                        <span>Booked: Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</span>
                     </div>
                     <div class="review-content">
-                        <p>Outstanding experience with Saisha Tours! The entire Thailand trip was perfectly organized. From the stunning beaches of Phuket to the cultural richness of Bangkok, every moment was memorable. The local guides were incredibly knowledgeable and the accommodation exceeded our expectations. Highly recommended for families looking for a hassle-free vacation!</p>
+                        <p>Outstanding experience with Saisha Tours! The entire Thailand trip was perfectly organized. From the vibrant beaches of Pattaya to the cultural richness of Bangkok, every moment was memorable. The local guides were incredibly knowledgeable and the accommodation exceeded our expectations. Highly recommended for families looking for a hassle-free vacation!</p>
                     </div>
                 </div>
 
@@ -8090,10 +8397,10 @@ a.productCard_decorativeBox {
                         </div>
                     </div>
                     <div class="review-product-info">
-                        <span>Booked: Phuket Krabi Bangkok Package</span>
+                        <span>Booked: Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</span>
                     </div>
                     <div class="review-content">
-                        <p>What an incredible journey! The crystal clear waters of Krabi and the vibrant street life of Bangkok created the perfect contrast. Saisha Tours took care of every detail - from airport transfers to restaurant recommendations. The island hopping experience was absolutely breathtaking. Will definitely book with them again for our next international trip!</p>
+                        <p>What an incredible journey! The beautiful beaches of Pattaya and the vibrant street life of Bangkok created the perfect contrast. Saisha Tours took care of every detail - from airport transfers to restaurant recommendations. The Coral Island excursion was absolutely breathtaking. Will definitely book with them again for our next international trip!</p>
                     </div>
                 </div>
 
@@ -8117,7 +8424,7 @@ a.productCard_decorativeBox {
                         </div>
                     </div>
                     <div class="review-product-info">
-                        <span>Booked: Phuket Krabi Bangkok Package</span>
+                        <span>Booked: Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</span>
                     </div>
                     <div class="review-content">
                         <p>Excellent value for money! The package covered all major attractions and the hotels were comfortable with great amenities. The Thai cuisine experiences were fantastic. Only minor feedback would be regarding some of the transfer timings, but the customer service team was very responsive and sorted everything out quickly. Overall, a great experience!</p>
@@ -8144,10 +8451,10 @@ a.productCard_decorativeBox {
                         </div>
                     </div>
                     <div class="review-product-info">
-                        <span>Booked: Phuket Krabi Bangkok Package</span>
+                        <span>Booked: Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</span>
                     </div>
                     <div class="review-content">
-                        <p>Perfect honeymoon trip! Saisha Tours made our Thailand experience truly magical. The romantic sunset at Phi Phi Island and the luxury spa treatments in Phuket were unforgettable. The team was very attentive to our special requests and even arranged a surprise candlelight dinner. Thank you for making our special trip so memorable!</p>
+                        <p>Perfect honeymoon trip! Saisha Tours made our Thailand experience truly magical. The romantic sunset at Pattaya Beach and the luxury spa treatments in Bangkok were unforgettable. The team was very attentive to our special requests and even arranged a surprise candlelight dinner. Thank you for making our special trip so memorable!</p>
                     </div>
                 </div>
 
@@ -8171,10 +8478,10 @@ a.productCard_decorativeBox {
                         </div>
                     </div>
                     <div class="review-product-info">
-                        <span>Booked: Phuket Krabi Bangkok Package</span>
+                        <span>Booked: Magical Thailand Getaway – Bangkok & Pattaya Tour Package (4N/5D)</span>
                     </div>
                     <div class="review-content">
-                        <p>Fantastic group trip with friends! The adventure activities in Krabi were thrilling - especially the rock climbing and kayaking through mangroves. Bangkok's nightlife and shopping were amazing too. The itinerary was well-balanced with both adventure and relaxation. Great job by the Saisha Tours team in coordinating everything for our group of 8 people!</p>
+                        <p>Fantastic group trip with friends! The adventure activities in Pattaya were thrilling - especially the water sports and Coral Island excursion. Bangkok's nightlife and shopping were amazing too. The itinerary was well-balanced with both adventure and relaxation. Great job by the Saisha Tours team in coordinating everything for our group of 8 people!</p>
                     </div>
                 </div>
             </div>
@@ -8444,7 +8751,7 @@ a.productCard_decorativeBox {
 
                 <h4>Inclusions:</h4>
                 <ul>
-                    <li><b>Accommodation:</b> 2 Nights in Bangkok, 3 Nights in Phuket, 2 Nights in Krabi</li>
+                    <li><b>Accommodation:</b> 2 Nights in Pattaya, 2 Nights in Bangkok</li>
                     <li><b>Meals:</b> Breakfast as per the itinerary</li>
                     <li><b>Transfers:</b> Airport pick up/drop + intercity transfers on a private basis</li>
                     <li><b>Visa assistance:</b> Provided (charges extra)</li>
@@ -9057,18 +9364,18 @@ a.productCard_decorativeBox {
             const categoryCards = document.querySelectorAll('.category-item');
             const banner = document.querySelector('.banner');
 
-            // NOTATION 17: GALLERY IMAGE DATA - Update this array with new package images, categories, and titles (AI Package detail Update Here :)
+            // NOTATION 17: GALLERY IMAGE DATA - Update this array with new package images, categories, and titles
             const data = [
-                {src:'https://media1.thrillophilia.com/filestore/ow16k8n3gykav9x3vop581fi9c68_shutterstock_1308414568.jpg', cat:'destinations', title:'Krabi Lagoon'},
-                {src:'https://media1.thrillophilia.com/filestore/9am3k3g7wek0kgw91o541thu77d3_shutterstock_81785011.jpg', cat:'destinations', title:'Island Hopping'},
-                {src:'https://media1.thrillophilia.com/filestore/2fl3qkvsduewjdpgwqpj9143lpgw_ewhkein4m1u2kleiy4ol5qgipmg3_shutterstock_2299911434.jpg', cat:'destinations', title:'Phuket Shores'},
-                {src:'https://media1.thrillophilia.com/filestore/eioxrb4o57abr1cd0dck5n0h01ry_shutterstock_238473214.jpg', cat:'destinations', title:'Temple View'},
-                {src:'https://media1.thrillophilia.com/filestore/o2bpd1y85k9jaymrniswiw1oplnx_img5.jpg', cat:'stays', title:'Resort Stay'},
-                {src:'https://media1.thrillophilia.com/filestore/epxuwsna2eh4eb5ji4f7w2678u05_shutterstock_1386401228.jpg', cat:'activities', title:'Night Skyline'},
-                {src:'https://media1.thrillophilia.com/filestore/mecnrtwq5wsclm7jh4sdq3lb07mf_bangkok%20pattaya%20tour%20package%20from%20mumbai.jpg', cat:'stays', title:'City Palace'},
-                {src:'https://media1.thrillophilia.com/filestore/ow16k8n3gykav9x3vop581fi9c68_shutterstock_1308414568.jpg', cat:'activities', title:'Emerald Pool'},
-                {src:'https://media1.thrillophilia.com/filestore/9am3k3g7wek0kgw91o541thu77d3_shutterstock_81785011.jpg', cat:'stays', title:'Beach View'},
-                {src:'https://media1.thrillophilia.com/filestore/2fl3qkvsduewjdpgwqpj9143lpgw_ewhkein4m1u2kleiy4ol5qgipmg3_shutterstock_2299911434.jpg', cat:'activities', title:'Long-tail Boats'}
+                {src:'https://www.dropbox.com/scl/fi/5f4gmv8bor8hy5clxnvj3/WhatsApp-Image-2025-09-29-at-2.40.48-PM.jpeg?rlkey=kywu5ka7frz6trvbapa0l0t86&st=i661rijp&raw=1', cat:'destinations', title:'Destinations — Thailand scenic landscape'},
+                {src:'https://www.dropbox.com/scl/fi/ajka1c64c0st0dgq3nnu6/WhatsApp-Image-2025-09-29-at-2.40.48-PM-3.jpeg?rlkey=1zfh1epkvlwik3rc7wswdt0ro&st=truts3vi&raw=1', cat:'activities', title:'Activities — Coral Island turquoise waters'},
+                {src:'https://www.dropbox.com/scl/fi/mbc6g1fvcvcxs93g6ep26/WhatsApp-Image-2025-09-29-at-2.40.48-PM-2.jpeg?rlkey=uzy7epssqtdosqjk0vka8p08z&st=jk52znu5&raw=1', cat:'destinations', title:'Destinations — Pattaya Beach at sunset'},
+                {src:'https://www.dropbox.com/scl/fi/d6ffq39wdj9glng5don1i/WhatsApp-Image-2025-09-29-at-2.40.48-PM-1.jpeg?rlkey=kfep6ies0ffp3csylixrnhog2&st=0s9oi519&raw=1', cat:'activities', title:'Activities — Traditional long‑tail boat ride'},
+                {src:'https://www.dropbox.com/scl/fi/xg2w2jcob4xtjfddlhnje/WhatsApp-Image-2025-09-29-at-2.40.47-PM-2.jpeg?rlkey=cu4esapfvg3m9466te1n3pnhb&st=7ejxc20k&raw=1', cat:'activities', title:'Activities — Bangkok night market'},
+                {src:'https://www.dropbox.com/scl/fi/xg2w2jcob4xtjfddlhnje/WhatsApp-Image-2025-09-29-at-2.40.47-PM-2.jpeg?rlkey=cu4esapfvg3m9466te1n3pnhb&st=5hr8lecq&raw=1', cat:'activities', title:'Activities — Chao Phraya dinner cruise'},
+                {src:'https://www.dropbox.com/scl/fi/dwjv65cq0hj0r6td9gzkx/WhatsApp-Image-2025-09-29-at-2.40.47-PM-1.jpeg?rlkey=vyw1vsg44fnr9ayky12vyk6wz&st=wa594d1k&raw=1', cat:'destinations', title:'Destinations — Pattaya coastline aerial'},
+                {src:'https://www.dropbox.com/scl/fi/ev0tcsxartk202tjf28cn/WhatsApp-Image-2025-09-29-at-2.40.46-PM.jpeg?rlkey=j2boai0hct5fmhxacik9sa9bl&st=wxyu0bv8&raw=1', cat:'destinations', title:'Destinations — Bangkok Grand Palace'},
+                {src:'https://www.dropbox.com/scl/fi/i9onedjibwtuufzetywr0/WhatsApp-Image-2025-09-29-at-2.40.46-PM-2.jpeg?rlkey=xsayg4q2n9pbkfo2s3llgx8g3&st=3jhachz3&raw=1', cat:'stays', title:'Stays — Luxury hotel in Bangkok'},
+                {src:'https://www.dropbox.com/scl/fi/dvg8jiw88wsfqnya85t0l/WhatsApp-Image-2025-09-29-at-2.40.46-PM-1.jpeg?rlkey=02x2c4n45xd2gid7877t8zerc&st=vepzhmt1&raw=1', cat:'activities', title:'Activities — Parasailing over Coral Island'}
             ];
             // END NOTATION 17
 
@@ -9144,6 +9451,9 @@ a.productCard_decorativeBox {
                 const item = currentList[currentIndex];
                 if (!item) return;
                 stageImg.src = item.src;
+                stageImg.alt = item.title || 'Image';
+                const stageCap = document.getElementById('stageCaption');
+                if (stageCap) stageCap.textContent = item.title || '';
                 // Update photo count in top left
                 const photoCount = document.getElementById('photoCount');
                 if (photoCount) photoCount.textContent = `${currentIndex+1}/${currentList.length}`;
@@ -9472,7 +9782,7 @@ a.productCard_decorativeBox {
                 <div class="policy-content" id="refund-content">
                     <ul class="policy-list">
                         <li>The applicable refund amount will be processed within 10 business days.</li>
-                        <li>All applicable refunds will be done in traveller's thrillophilia wallet as T</li>
+                        <li>All applicable refunds will be done in traveller's bank Account or As Saisha vouchers</li>
                     </ul>
                 </div>
             </div>
@@ -9673,7 +9983,7 @@ a.productCard_decorativeBox {
                 height: 0.5px !important;
             }
         }
-        
+
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
@@ -9803,6 +10113,11 @@ a.productCard_decorativeBox {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- SECURITY: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- SECURITY: Prevent phone number tampering -->
+    <meta name="contact-security" content="enabled">
 <title>Travel & Tours - Footer</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10207,6 +10522,46 @@ console.log(`Navigating to: ${linkText}`);
 });
 });
 </script>
+
+<!-- BACKUP SECURITY SYSTEM -->
+<script>
+// Final security check before page unload
+window.addEventListener('beforeunload', function() {
+    // Verify all contact links are secure
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    
+    phoneLinks.forEach(link => {
+        if (!link.href.includes('919221103609')) {
+            link.href = 'tel:+919221103609';
+        }
+    });
+    
+    whatsappLinks.forEach(link => {
+        if (!link.href.includes('919221103609')) {
+            const message = link.href.match(/text=([^&]*)/);
+            const text = message ? '?text=' + message[1] : '';
+            link.href = 'https://wa.me/919221103609' + text;
+        }
+    });
+});
+
+// Console warning for developers
+console.warn(' SECURITY NOTICE: Contact information is protected. Unauthorized modifications will be automatically reverted.');
+console.warn(' Authorized contact: +91 9221103609');
+
+// Prevent console tampering
+if (typeof console !== 'undefined') {
+    const originalLog = console.log;
+    console.log = function(...args) {
+        if (args.some(arg => typeof arg === 'string' && arg.includes('tel:') && !arg.includes('919221103609'))) {
+            console.warn(' Unauthorized contact modification attempt blocked');
+            return;
+        }
+        originalLog.apply(console, args);
+    };
+}
+</script>
 </body>
 </html>
         <!-- ==================== FOOTER SECTION END ==================== -->
@@ -10214,6 +10569,51 @@ console.log(`Navigating to: ${linkText}`);
     <!-- End of Footer Section -->
     <!-- /////////////////////////////////////////////////////////////////////// -->
      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

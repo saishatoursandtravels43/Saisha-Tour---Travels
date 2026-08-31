@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Discount Banner</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#ef4444'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff0000 0%, #ef4444 50%, #f87171 100%);
+        }
+        
+        .decorative-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .decorative-shape-1 {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            right: 20%;
+        }
+        
+        .decorative-shape-2 {
+            width: 80px;
+            height: 80px;
+            bottom: -40px;
+            left: 15%;
+        }
+        
+        .decorative-shape-3 {
+            width: 60px;
+            height: 60px;
+            top: 20%;
+            right: 10%;
+        }
+        
+        .image-overlay {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        }
+        
+        @media (max-width: 767px) {
+            .decorative-shape-1 {
+                width: 80px;
+                height: 80px;
+                top: -40px;
+                right: 10%;
+            }
+            
+            .decorative-shape-2 {
+                width: 60px;
+                height: 60px;
+                bottom: -30px;
+                left: 10%;
+            }
+            
+            .decorative-shape-3 {
+                display: none;
+            }
+        }
+        
+        .mobile-gradient {
+            background: linear-gradient(180deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+        }
+        
+        /* Pulse Rings Animation */
+        .call-now-btn {
+            position: relative;
+        }
+        
+        .call-now-btn::before,
+        .call-now-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(220, 38, 38, 0.6);
+            border-radius: inherit;
+            transform: translate(-50%, -50%);
+            animation: pulseRing 2s ease-out infinite;
+        }
+        
+        .call-now-btn::after {
+            animation-delay: 1s;
+        }
+        
+        @keyframes pulseRing {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+            }
+        }
+        
+        .call-now-btn:hover::before,
+        .call-now-btn:hover::after {
+            animation-duration: 1s;
+        }
+        
+        .call-now-btn:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+        
+        .call-now-btn:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+        
+        /* Simple Floating Elements */
+        .floating-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .float-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+        
+        .float-1 {
+            width: 40px;
+            height: 40px;
+            left: 15%;
+            animation: moveUpDown1 4s ease-in-out infinite;
+        }
+        
+        .float-2 {
+            width: 30px;
+            height: 30px;
+            right: 20%;
+            animation: moveUpDown2 5s ease-in-out infinite;
+        }
+        
+        .float-3 {
+            width: 35px;
+            height: 35px;
+            left: 70%;
+            animation: moveUpDown3 6s ease-in-out infinite;
+        }
+        
+        .float-4 {
+            width: 25px;
+            height: 25px;
+            right: 60%;
+            animation: moveUpDown4 4.5s ease-in-out infinite;
+        }
+        
+        @keyframes moveUpDown1 {
+            0%, 100% { transform: translateY(80vh); }
+            50% { transform: translateY(20px); }
+        }
+        
+        @keyframes moveUpDown2 {
+            0%, 100% { transform: translateY(20px); }
+            50% { transform: translateY(80vh); }
+        }
+        
+        @keyframes moveUpDown3 {
+            0%, 100% { transform: translateY(60vh); }
+            50% { transform: translateY(10px); }
+        }
+        
+        @keyframes moveUpDown4 {
+            0%, 100% { transform: translateY(10px); }
+            50% { transform: translateY(70vh); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 bg-gray-50">
+    <div class="w-full max-w-7xl">
+        <!-- Desktop & Tablet Layout -->
+        <div class="hidden md:block">
+            <div class="relative overflow-hidden rounded-2xl gradient-bg shadow-2xl">
+                <!-- Floating Background Elements -->
+                <div class="floating-bg">
+                    <div class="float-element float-1"></div>
+                    <div class="float-element float-2"></div>
+                    <div class="float-element float-3"></div>
+                    <div class="float-element float-4"></div>
+                </div>
+                
+                <!-- Decorative Elements -->
+                <div class="decorative-shape decorative-shape-1"></div>
+                <div class="decorative-shape decorative-shape-2"></div>
+                <div class="decorative-shape decorative-shape-3"></div>
+                
+                <div class="relative z-10 flex items-center min-h-[400px] lg:min-h-[500px]">
+                    <!-- Left Content -->
+                    <div class="w-full md:w-2/5 lg:w-2/5 p-8 lg:p-12">
+                        <h1 class="text-white font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 lg:mb-6">
+                            Bigger Group?<br>
+                            <span class="text-white">Bigger Discount!</span>
+                        </h1>
+                        
+                        <p class="text-white/90 text-sm md:text-base lg:text-lg mb-6 lg:mb-8 leading-relaxed">
+                            Get exclusive group rates up to 50% off for parties of 10 or more
+                        </p>
+                        
+                        <button onclick="window.location.href='tel:9221103609'" 
+                                class="call-now-btn bg-white text-primary font-bold px-8 py-4 !rounded-button text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap">
+                            <span>Call Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Right Images - Desktop & Tablet -->
+                    <div class="hidden md:block w-3/5 h-full p-4 lg:p-6">
+                        <div class="h-full grid grid-cols-2 gap-4 lg:gap-6">
+                            <!-- Large Image -->
+                            <div class="col-span-2 h-48 lg:h-64 rounded-xl overflow-hidden relative">
+                                <img src="https://readdy.ai/api/search-image?query=group%20of%20diverse%20friends%20celebrating%20together%20at%20golden%20hour%20sunset%20with%20arms%20around%20each%20other%20laughing%20and%20cheering%20with%20warm%20orange%20and%20pink%20sky%20background%2C%20joyful%20expressions%2C%20casual%20summer%20clothing%2C%20outdoor%20celebration%2C%20high%20quality%20photography%2C%20cinematic%20lighting%2C%20friendship%20and%20happiness&width=800&height=400&seq=celebration1&orientation=landscape" 
+                                     alt="Friends celebrating together" 
+                                     class="w-full h-full object-cover object-center">
+                                <div class="absolute inset-0 image-overlay"></div>
+                            </div>
+                            
+                            <!-- Bottom Left -->
+                            <div class="h-32 lg:h-40 rounded-xl overflow-hidden relative">
+                                <img src="https://readdy.ai/api/search-image?query=overhead%20view%20of%20multiple%20hands%20toasting%20with%20wine%20glasses%20over%20elegant%20dinner%20table%20with%20warm%20candlelight%2C%20fine%20dining%20experience%2C%20group%20celebration%2C%20golden%20lighting%2C%20luxury%20restaurant%20setting%2C%20hands%20reaching%20together%20in%20toast%2C%20festive%20atmosphere&width=400&height=300&seq=toasting1&orientation=squarish" 
+                                     alt="Group toasting with wine glasses" 
+                                     class="w-full h-full object-cover object-center">
+                                <div class="absolute inset-0 image-overlay"></div>
+                            </div>
+                            
+                            <!-- Bottom Right -->
+                            <div class="h-32 lg:h-40 rounded-xl overflow-hidden relative">
+                                <img src="https://readdy.ai/api/search-image?query=group%20of%20people%20enjoying%20outdoor%20activities%20together%2C%20hiking%20or%20picnic%20scene%20with%20beautiful%20natural%20landscape%2C%20friends%20laughing%20and%20having%20fun%20in%20nature%2C%20warm%20sunlight%20filtering%20through%20trees%2C%20adventure%20and%20friendship%2C%20active%20lifestyle%20photography&width=400&height=300&seq=outdoor1&orientation=squarish" 
+                                     alt="Group enjoying outdoor activities" 
+                                     class="w-full h-full object-cover object-center">
+                                <div class="absolute inset-0 image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Layout -->
+        <div class="block md:hidden">
+            <div class="relative overflow-hidden rounded-2xl mobile-gradient shadow-2xl">
+                <!-- Floating Background Elements -->
+                <div class="floating-bg">
+                    <div class="float-element float-1"></div>
+                    <div class="float-element float-2"></div>
+                    <div class="float-element float-3"></div>
+                    <div class="float-element float-4"></div>
+                </div>
+                
+                <!-- Decorative Elements -->
+                <div class="decorative-shape decorative-shape-1"></div>
+                <div class="decorative-shape decorative-shape-2"></div>
+                
+                <div class="relative z-10 p-6">
+                    <!-- Hero Image -->
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://readdy.ai/api/search-image?query=group%20of%20diverse%20friends%20celebrating%20together%20at%20golden%20hour%20sunset%20with%20arms%20around%20each%20other%20laughing%20and%20cheering%20with%20warm%20orange%20and%20pink%20sky%20background%2C%20joyful%20expressions%2C%20casual%20summer%20clothing%2C%20outdoor%20celebration%2C%20high%20quality%20photography%2C%20cinematic%20lighting%2C%20friendship%20and%20happiness&width=600&height=400&seq=celebration2&orientation=landscape" 
+                             alt="Friends celebrating together" 
+                             class="w-full h-full object-cover object-center">
+                        <div class="absolute inset-0 image-overlay"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="text-center">
+                        <h1 class="text-white font-bold text-2xl leading-tight mb-4">
+                            Bigger Group?<br>
+                            <span class="text-white">Bigger Discount!</span>
+                        </h1>
+                        
+                        <p class="text-white/90 text-sm mb-6 leading-relaxed px-2">
+                            Get exclusive group rates up to 50% off for parties of 10 or more
+                        </p>
+                        
+                        <button onclick="window.location.href='tel:9221103609'" 
+                                class="call-now-btn w-full bg-white text-primary font-bold py-4 !rounded-button text-base hover:bg-gray-50 transition-all duration-300 shadow-lg whitespace-nowrap">
+                            <span>Call Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

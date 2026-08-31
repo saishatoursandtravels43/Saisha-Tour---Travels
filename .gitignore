@@ -1,6 +1,20 @@
+# Editor configs
+.cursor/
+.superdesign/
+.vscode/
+.windsurfrules
+CLAUDE.md
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 # OS files
 Thumbs.db
 .DS_Store
+desktop.ini
 
 # Node/JS
 node_modules/
@@ -12,16 +26,6 @@ node_modules/
 # Env files
 .env
 .env.*
-
-# Editors
-.vscode/*
-!.vscode/extensions.json
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
 # Logs
 npm-debug.log*
